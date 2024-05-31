@@ -142,6 +142,10 @@
     <ClInclude Include="ModeCombat.h" />
     <ClInclude Include="Ruse.h" />
     <ClInclude Include="TroupeElite.h" />
+    <ClCompile Include="TasDeCartes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TasDeCartes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
