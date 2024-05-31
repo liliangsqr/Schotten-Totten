@@ -131,6 +131,7 @@
     <ClCompile Include="CarteClan.cpp" />
     <ClCompile Include="CarteTactique.cpp" />
     <ClCompile Include="ModeCombat.cpp" />
+    <ClCompile Include="Ruse.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
     <ClCompile Include="TroupeElite.cpp" />
   </ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="CarteClan.h" />
     <ClInclude Include="CarteTactique.h" />
     <ClInclude Include="ModeCombat.h" />
+    <ClInclude Include="Ruse.h" />
     <ClInclude Include="TroupeElite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
