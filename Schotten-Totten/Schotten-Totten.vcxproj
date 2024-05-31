@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Schotten-Totten.cpp" />
+    <ClCompile Include="TasDeCartes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TasDeCartes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
