@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Carte.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Carte.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
