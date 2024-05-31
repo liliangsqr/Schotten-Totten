@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Carte.cpp" />
+    <ClCompile Include="CarteClan.cpp" />
+    <ClCompile Include="CarteTactique.cpp" />
+    <ClCompile Include="ModeCombat.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
+    <ClCompile Include="TroupeElite.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Carte.h" />
+    <ClInclude Include="CarteClan.h" />
+    <ClInclude Include="CarteTactique.h" />
+    <ClInclude Include="ModeCombat.h" />
+    <ClInclude Include="TroupeElite.h" />
     <ClCompile Include="TasDeCartes.cpp" />
   </ItemGroup>
   <ItemGroup>
