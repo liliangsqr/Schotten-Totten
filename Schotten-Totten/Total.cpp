@@ -2,9 +2,9 @@
 
 Total::Total()
 {
-    for (auto& itCoul : ENUMCOULEURS) {
-        for (auto& itVal ENUMVALEURS) {
-            Ajouter(make_unique<Carte(itVal, itCoul)>);
-        }
-    }
+	for (auto& itVal : ENUMVAL) {
+		for (auto& itCoul : ENUMCOUL) {
+			tas.push_back(make_unique<Carte(itVal, itCoul)>);
+		}
+	}
 }
