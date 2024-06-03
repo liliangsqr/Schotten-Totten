@@ -1,8 +1,13 @@
 #include <iostream>
-#include "TasDeCartes.h"
+#include "CarteClan.h"
+#include "CarteTactique.h"
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    CarteClan carteClanTest(5,"bleu");
+    carteClanTest.toString();
 
+    CarteTactique carteTactiqueTest("fou", "detruit tous le plateau");
+    carteTactiqueTest.toString();
 }
