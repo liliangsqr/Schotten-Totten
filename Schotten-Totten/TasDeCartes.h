@@ -1,10 +1,34 @@
 #pragma once
 #include <vector>
+#include <algorithm>
+#include <memory>
+#include "Carte.h"
+
+using namespace std;
 
 class TasDeCartes
 {
-private :
-	// ATTRIBUTS
-	
-};
+protected :
+    // Attributs
+    vector<unique_ptr<Carte>> tas;
 
+    // Constructeurs
+public :
+    // Méthodes
+
+    // Mélange le tas aléatoirement
+    void Melanger() { random_shuffle(tas.begin(), tas.end()); }
+
+    // Ajoute une carte en rvalue sur le haut du tas
+    void Ajouter(unique_ptr<Carte>&& carte)
+    {
+        tas.push_back(move(carte));
+    }
+
+    // Retourne une référence const vers la carte à la position index afin de seulement la consulter
+    // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
+    const Carte& operator[](unsigned int index)
+    {
+        return *tas[index];
+    }
+};
