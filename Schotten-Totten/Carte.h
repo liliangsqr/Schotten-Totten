@@ -13,8 +13,8 @@ protected :
 public:
 
 	#pragma region GETTERS
-		T getValeur() { return pValeur; }
-		string getCouleur() { return pCouleur; }
+	T getValeur() { return pValeur; }
+	string getCouleur() { return pCouleur; }
 	#pragma endregion
 	void toString() { cout << "La Carte est un \"" << pValeur << " " << pCouleur<<"\""<<endl; }
 

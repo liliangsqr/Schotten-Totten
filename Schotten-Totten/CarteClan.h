@@ -3,8 +3,8 @@
 class CarteClan : public Carte<int>
 {
 private:
-	// valeur 
-	// couleur
+	// int pValeur 
+	// string pCouleur
 public:
 	CarteClan(const unsigned int& initValeur, const string& initCouleur) {
 		Carte::pValeur = initValeur;
