@@ -3,7 +3,7 @@
 class TotalTactique : public Total
 {
 	// Attributs
-	// vector<Carte> tas
+	// vector<unique_ptr<Carte>> tas
 
 public:
 	// Constructeurs

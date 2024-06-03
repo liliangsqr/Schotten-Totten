@@ -1,13 +1,12 @@
 #include <iostream>
 #include "CarteClan.h"
 #include "CarteTactique.h"
+#include "Total.h"
+#include "TotalClassique.h"
+#include "TotalTactique.h"
 using namespace std;
 
 int main()
 {
-    CarteClan carteClanTest(5,"bleu");
-    carteClanTest.toString();
-
-    CarteTactique carteTactiqueTest("fou", "detruit tous le plateau");
-    carteTactiqueTest.toString();
+    TotalClassique tot = TotalClassique();
 }

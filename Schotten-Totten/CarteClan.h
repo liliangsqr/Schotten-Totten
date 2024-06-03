@@ -3,13 +3,13 @@
 class CarteClan : public Carte
 {
 private:
-	// string pCouleur
-	int pValeur;
+	// unsigned int pCouleur
+	unsigned int pValeur;
 
 public:
-	CarteClan(const unsigned int& initValeur, const string& initCouleur) {
-		Carte::pValeur = initValeur;
-		Carte::pCouleur = initCouleur;
+	CarteClan(unsigned int initValeur, unsigned int initCouleur) {
+		pValeur = initValeur;
+		pCouleur = initCouleur;
 	}
 };
 

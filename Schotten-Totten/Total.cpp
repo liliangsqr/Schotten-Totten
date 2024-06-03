@@ -2,9 +2,9 @@
 
 Total::Total()
 {
-	for (auto& itVal : ENUMVAL) {
-		for (auto& itCoul : ENUMCOUL) {
-			tas.push_back(make_unique<Carte(itVal, itCoul)>);
-		}
-	}
+    for (unsigned int itVal = 0; itVal != 9; itVal++) {
+        for (unsigned int itCoul = 0; itCoul != 6; itCoul++) {
+            tas.push_back(make_unique<CarteClan>(itVal, itCoul));
+        }
+    }
 }

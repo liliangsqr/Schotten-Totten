@@ -8,17 +8,18 @@ using namespace std;
 class Carte
 {
 protected : 
-	string pCouleur;
+	int pCouleur;
+
 public:
 
 	#pragma region GETTERS
-	string getCouleur() { return pCouleur; }
+	int getCouleur() { return pCouleur; }
 	#pragma endregion
 
 protected:
 
 	#pragma region SETTERS
-	void setCouleur(string& couleur) { pCouleur = couleur; }
+	void setCouleur(int& couleur) { pCouleur = couleur; }
 #pragma endregion
 
 

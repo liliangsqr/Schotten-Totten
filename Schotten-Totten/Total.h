@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <memory>
-#include "Carte.h"
+#include "CarteClan.h"
 #include "Enum.h"
 
 using namespace std;
@@ -11,6 +11,7 @@ class Total
 protected :
 	// Attributs
 	vector<unique_ptr<Carte>> tas;
+
 
 public :
 	// Constructeurs & destructeur

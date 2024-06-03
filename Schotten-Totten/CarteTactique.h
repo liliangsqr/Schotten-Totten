@@ -3,14 +3,14 @@
 class CarteTactique : public Carte
 {
 private:
-	// string pCouleur
-	string pValeur;
-	string pEffet; 
+	// unsigned int pCouleur
+	unsigned int pValeur;
+	unsigned int pNom; 
 public:
-	CarteTactique(const string& initNom, const string& initCoul, const string& initEffet){
-		pValeur = initNom;
+	CarteTactique(unsigned int initVal, unsigned int initCoul, unsigned int initNom){
+		pValeur = initVal;
 		pCouleur = initCoul;
-		pEffet = initEffet;
+		pNom = initNom;
 	}
 };
 
