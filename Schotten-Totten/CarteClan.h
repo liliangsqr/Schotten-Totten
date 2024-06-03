@@ -4,8 +4,8 @@ using namespace std;
 class CarteClan : public Carte
 {
 private:
-	// string pCouleur
-	int pValeur;
+	// unsigned int pCouleur
+	unsigned int pValeur;
 
 public:
 	CarteClan(const unsigned int& initValeur, const string& initCouleur) {

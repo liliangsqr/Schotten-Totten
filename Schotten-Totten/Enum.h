@@ -1,11 +1,13 @@
-
+enum class Valeurs {
+    Un,Deux,Trois,Quatre,Cinq,Six,Sept,Huit,Neuf,Fin
+};
 
 enum class Couleur {
-    Vert,Bleu,Rouge,Jaune,Marron,Violet
+    Vert,Bleu,Rouge,Jaune,Marron,Violet,Fin
 };
 
 enum class CategorieCarteTactique{
-    TTroupeElite,ModeCombat,Ruse,Action
+    TTroupeElite,ModeCombat,Ruse,Action,Fin
 };
 
 enum class NomCarteTactique{
@@ -17,7 +19,8 @@ enum class NomCarteTactique{
     ChasseurDeTete,
     Stratege,
     Banshee,
-    Traitre
+    Traitre,
+    Fin
 };
 
 

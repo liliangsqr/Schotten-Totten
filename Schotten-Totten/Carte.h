@@ -8,7 +8,8 @@ using namespace std;
 class Carte
 {
 protected : 
-	string pCouleur;
+	int pCouleur;
+
 public:
 
 	#pragma region GETTERS
@@ -20,7 +21,7 @@ protected:
 
 	
 	#pragma region SETTERS
-	void setCouleur(string& couleur) { pCouleur = couleur; }
+	void setCouleur(int& couleur) { pCouleur = couleur; }
 #pragma endregion
 
 
