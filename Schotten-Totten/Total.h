@@ -1,7 +1,9 @@
 #pragma once
 #include <vector>
-#include "Carte.h"
 #include <memory>
+#include "Carte.h"
+#include "Enum.h"
+
 using namespace std;
 
 class Total

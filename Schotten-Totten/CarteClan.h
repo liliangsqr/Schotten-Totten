@@ -1,10 +1,11 @@
 #pragma once
 #include "Carte.h"
-class CarteClan : public Carte<int>
+class CarteClan : public Carte
 {
 private:
-	// int pValeur 
 	// string pCouleur
+	int pValeur;
+
 public:
 	CarteClan(const unsigned int& initValeur, const string& initCouleur) {
 		Carte::pValeur = initValeur;
