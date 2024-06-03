@@ -4,7 +4,7 @@ class CarteTactique : public Carte<string>
 {
 private:
 	// string Nom (Valeur)
-	// string Effet (couleur)
+	// string couleur (couleur)
 public:
 	CarteTactique(const string& initNom, const string& initEffet){
 		Carte::pValeur = initNom;
