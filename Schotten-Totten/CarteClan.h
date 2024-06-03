@@ -15,7 +15,7 @@ public:
 
 	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" <<endl; }
 
-	int& getValeur() { return pValeur; }
+	unsigned int getValeur() { return pValeur; }
 
 };
 

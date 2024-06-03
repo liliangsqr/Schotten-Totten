@@ -7,8 +7,9 @@ using namespace std;
 
 class Carte
 {
-protected : 
-	int pCouleur;
+protected :
+
+	string pCouleur;
 
 public:
 

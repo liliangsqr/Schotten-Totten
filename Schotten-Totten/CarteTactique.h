@@ -8,8 +8,8 @@ private:
 	string pNom;
 	string pEffet; 
 public:
-	CarteTactique(const string& initVal, const string& initCoul, const string& initEffet){
-		pValeur = initVal;
+	CarteTactique(const string& initNom, const string& initCoul, const string& initEffet) {
+		pNom = initNom;
 		pCouleur = initCoul;
 		pEffet = initEffet;
 
