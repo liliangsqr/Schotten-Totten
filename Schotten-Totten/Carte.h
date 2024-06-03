@@ -5,10 +5,9 @@
 
 using namespace std;
 
-template <class T> class Carte
+ class Carte
 {
 protected : 
-	T pValeur;
 	string pCouleur;
 public:
 
@@ -16,7 +15,7 @@ public:
 		T getValeur() { return pValeur; }
 		string getCouleur() { return pCouleur; }
 	#pragma endregion
-	void toString() { cout << "La Carte est un \"" << pValeur << " " << pCouleur<<"\""<<endl; }
+		void toString();
 
 protected:
 

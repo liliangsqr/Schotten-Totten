@@ -7,11 +7,10 @@ private:
 	// string Effet (couleur)
 	string pEffet; 
 public:
-	CarteTactique(const string& initNom, const string& initEffet){
+	CarteTactique(const string& initNom = "", const string& initCouelur = "", const string& initEffet = "") {
 		Carte::pValeur = initNom;
-		pEffet = Iiiinite.
-
-
+		Carte::pCouleur = initCouelur	;
+		pEffet = initEffet;
 	}
 };
 
