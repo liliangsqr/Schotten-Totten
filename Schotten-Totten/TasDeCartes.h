@@ -18,7 +18,7 @@ public :
     // Mélange le tas aléatoirement
     void Melanger() { random_shuffle(tas.begin(), tas.end()); }
 
-    // Ajoute une carte en rvalue sur le haut du tas
+    // Ajoute/move une carte en RVALUE sur le haut du tas
     void Ajouter(unique_ptr<Carte>&& carte)
     {
         tas.push_back(move(carte));

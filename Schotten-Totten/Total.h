@@ -1,12 +1,21 @@
 #pragma once
-#include "TasDeCartes.h"
-class Total : public TasDeCartes
-{
-	// Attributs
-	// vector<Cartes> tas
-public :
-	// Constructeurs
+#include <vector>
+#include <memory>
+#include "Carte.h"
+#include "Enum.h"
 
+using namespace std;
+
+class Total
+{
+protected :
+	// Attributs
+	vector<unique_ptr<Carte>> tas;
+
+public :
+	// Constructeurs & destructeur
+
+	// Remplis le tas uniquement de toutes les cartes clan
 	Total();
 };
 
