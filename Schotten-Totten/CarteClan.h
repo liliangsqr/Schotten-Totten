@@ -8,12 +8,12 @@ private:
 	unsigned int pValeur;
 
 public:
-	CarteClan(const unsigned int& initValeur, const string& initCouleur) {
+	CarteClan(unsigned int initValeur, unsigned int initCouleur) {
 		pValeur = initValeur;
 		pCouleur = initCouleur;
 	}
 
-	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" <<endl; }
+	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" << endl; }
 
 	unsigned int getValeur() { return pValeur; }
 

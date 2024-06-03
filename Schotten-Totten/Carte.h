@@ -9,12 +9,12 @@ class Carte
 {
 protected :
 
-	string pCouleur;
+	unsigned int  pCouleur;
 
 public:
 
 	#pragma region GETTERS
-	string& getCouleur() { return pCouleur; }
+	unsigned int& getCouleur() { return pCouleur; }
 	void toString();
 	#pragma endregion
 
