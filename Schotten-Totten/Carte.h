@@ -12,11 +12,13 @@ protected :
 public:
 
 	#pragma region GETTERS
-	string getCouleur() { return pCouleur; }
+	string& getCouleur() { return pCouleur; }
+	void toString();
 	#pragma endregion
 
 protected:
 
+	
 	#pragma region SETTERS
 	void setCouleur(string& couleur) { pCouleur = couleur; }
 #pragma endregion

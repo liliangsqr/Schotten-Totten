@@ -1,5 +1,6 @@
 #pragma once
 #include "Carte.h"
+using namespace std;
 class CarteClan : public Carte
 {
 private:
@@ -8,8 +9,13 @@ private:
 
 public:
 	CarteClan(const unsigned int& initValeur, const string& initCouleur) {
-		Carte::pValeur = initValeur;
-		Carte::pCouleur = initCouleur;
+		pValeur = initValeur;
+		pCouleur = initCouleur;
 	}
+
+	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" <<endl; }
+
+	int& getValeur() { return pValeur; }
+
 };
 

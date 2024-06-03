@@ -1,6 +1,7 @@
 #include <iostream>
 #include "CarteClan.h"
 #include "CarteTactique.h"
+#include "vector"
 using namespace std;
 
 int main()
@@ -8,6 +9,7 @@ int main()
     CarteClan carteClanTest(5,"bleu");
     carteClanTest.toString();
 
-    CarteTactique carteTactiqueTest("fou", "detruit tous le plateau");
+    CarteTactique carteTactiqueTest("Fou","Noire", "detruit tous le plateau");
     carteTactiqueTest.toString();
+
 }
