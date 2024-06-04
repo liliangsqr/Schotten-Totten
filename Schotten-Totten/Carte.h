@@ -23,7 +23,7 @@ protected:
 	
 	#pragma region SETTERS
 	void setCouleur(int& couleur) { pCouleur = couleur; }
-#pragma endregion
+	#pragma endregion
 
 
 	

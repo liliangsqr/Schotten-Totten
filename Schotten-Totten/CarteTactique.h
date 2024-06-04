@@ -16,8 +16,8 @@ public:
 
 	}
 
-	unsigned int& getValeur() { return pValeur; }
-	unsigned int& getEffet() { return pEffet; }
+	unsigned int getValeur() { return pValeur; }
+	unsigned int getEffet() { return pEffet; }
 
 	void toString() { cout << "Carte [" << pEffet << "," << pCouleur << "] et as pour effet : " << pEffet << endl; }
 };
