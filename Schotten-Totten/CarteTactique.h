@@ -15,7 +15,6 @@ public:
 		pNom = initNom;
 	}
 
-	unsigned int getValeur() { return pValeur; }
 	const string& getNom() { return pNom; }
 
 	void toString() { cout << "Carte [" << pNom << "," << pCouleur << "] et as pour effet : " << pNom << endl; }

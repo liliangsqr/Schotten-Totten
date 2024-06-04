@@ -15,9 +15,6 @@ public:
 	}
 
 	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" << endl; }
-
-	unsigned int getValeur() { return pValeur; }
-
 };
 
 #endif CARTECLAN_H
