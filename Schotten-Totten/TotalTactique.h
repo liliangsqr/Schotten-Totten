@@ -5,6 +5,7 @@ class TotalTactique : public Total
 {
 	// Attributs
 	// vector<unique_ptr<Carte>> tas
+	// unsigned int capacite
 
 public:
 	// Constructeurs

@@ -12,6 +12,7 @@ class TasDeCartes
 protected :
     // Attributs
     vector<unique_ptr<Carte>> tas;
+    unsigned int capacite;
 
     // Constructeurs
 public :

@@ -5,21 +5,19 @@
 class CarteTactique : public Carte
 {
 private:
-	unsigned int pValeur;
+	// unsigned int pValeur;
 	// unsigned int pCouleur
-	unsigned int pEffet; 
+	string pNom;
 public:
-	CarteTactique(unsigned int initVal, unsigned int initCoul, unsigned int initEffet) {
+	CarteTactique(unsigned int initVal, unsigned int initCoul, const string& initNom) {
 		pValeur = initVal;
 		pCouleur = initCoul;
-		pEffet = initEffet;
-
+		pNom = initNom;
 	}
 
-	unsigned int& getValeur() { return pValeur; }
-	unsigned int& getEffet() { return pEffet; }
+	const string& getNom() { return pNom; }
 
-	void toString() { cout << "Carte [" << pEffet << "," << pCouleur << "] et as pour effet : " << pEffet << endl; }
+	void toString() { cout << "Carte [" << pNom << "," << pCouleur << "] et as pour effet : " << pNom << endl; }
 };
 
 #endif CARTETACTIQUE_H
