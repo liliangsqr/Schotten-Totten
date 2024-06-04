@@ -9,10 +9,10 @@ using namespace std;
 
 int main()
 {
-    CarteClan carteClanTest(5,"bleu");
+    CarteClan carteClanTest(5,5);
     carteClanTest.toString();
 
-    CarteTactique carteTactiqueTest("Fou","Noire", "detruit tous le plateau");
+    CarteTactique carteTactiqueTest(0,0,0);
     carteTactiqueTest.toString();
 
 }
