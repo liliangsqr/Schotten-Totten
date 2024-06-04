@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOTALTACTIQUE_H
+#define TOTALTACTIQUE_H
 #include "Total.h"
 class TotalTactique : public Total
 {
@@ -12,3 +13,4 @@ public:
 	TotalTactique();
 };
 
+#endif TOTALTACTIQUE_H

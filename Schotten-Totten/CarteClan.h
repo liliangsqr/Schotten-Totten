@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CARTECLAN_H
+#define CARTECLAN_H
 #include "Carte.h"
 class CarteClan : public Carte
 {
@@ -13,3 +14,4 @@ public:
 	}
 };
 
+#endif CARTECLAN_H

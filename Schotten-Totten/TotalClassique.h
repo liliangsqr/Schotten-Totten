@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOTALCLASSIQUE_H
+#define TOTALCLASSIQUE_H
 #include "Total.h"
 class TotalClassique : public Total
 {
@@ -16,3 +17,4 @@ public :
 	vector<unique_ptr<Carte>> GetTas() { return tas; }
 };
 
+#endif TOTALCLASSIQUE_H

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TASDECARTES_H
+#define TASDECARTES_H
+
 #include <vector>
 #include <algorithm>
 #include <memory>
@@ -17,7 +19,7 @@ public :
     // Méthodes
 
     // Mélange le tas aléatoirement
-    void Melanger() { random_shuffle(tas.begin(), tas.end()); }
+    void Melanger();
 
     // Ajoute/move une carte en RVALUE sur le haut du tas
     void Ajouter(unique_ptr<Carte>&& carte)
@@ -32,3 +34,5 @@ public :
         return *tas[index];
     }
 };
+
+#endif TASDECARTES_H

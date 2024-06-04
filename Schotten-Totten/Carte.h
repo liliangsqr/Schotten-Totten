@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CARTE_H
+#define CARTE_H
 #include <string>
 #include <iomanip>
 #include <iostream>
@@ -11,7 +12,6 @@ protected :
 	int pCouleur;
 
 public:
-
 	#pragma region GETTERS
 	int getCouleur() { return pCouleur; }
 	#pragma endregion
@@ -26,3 +26,4 @@ protected:
 	
 };
 
+#endif CARTE_H

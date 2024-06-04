@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOTAL_H
+#define TOTAL_H
 #include <vector>
 #include <memory>
 #include "CarteClan.h"
@@ -20,3 +21,4 @@ public :
 	Total();
 };
 
+#endif TOTAL_H
