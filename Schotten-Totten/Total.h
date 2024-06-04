@@ -4,14 +4,15 @@
 #include <memory>
 #include "CarteClan.h"
 #include "Enum.h"
+#include "TasDeCartes.h"
 
 using namespace std;
 
-class Total
+class Total : public TasDeCartes
 {
-protected :
 	// Attributs
-	vector<unique_ptr<Carte>> tas;
+	// vector<unique_ptr<Carte>> tas;
+	// unsigned int capacite
 
 
 public :

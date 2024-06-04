@@ -131,6 +131,7 @@
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="CarteClan.cpp" />
     <ClCompile Include="CarteTactique.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="ModeCombat.cpp" />
     <ClCompile Include="Ruse.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />
     <ClInclude Include="CarteTactique.h" />
+    <ClInclude Include="Main.h" />
     <ClInclude Include="ModeCombat.h" />
     <ClInclude Include="Ruse.h" />
     <ClInclude Include="Total.h" />
