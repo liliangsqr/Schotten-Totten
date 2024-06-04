@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <memory>
 #include "Carte.h"
-
 using namespace std;
 
 class TasDeCartes

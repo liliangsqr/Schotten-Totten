@@ -1,6 +1,7 @@
 #ifndef CARTECLAN_H
 #define CARTECLAN_H
 #include "Carte.h"
+using namespace std;
 class CarteClan : public Carte
 {
 private:
@@ -12,6 +13,11 @@ public:
 		pValeur = initValeur;
 		pCouleur = initCouleur;
 	}
+
+	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" << endl; }
+
+	unsigned int getValeur() { return pValeur; }
+
 };
 
 #endif CARTECLAN_H
