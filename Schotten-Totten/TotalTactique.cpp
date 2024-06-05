@@ -1,7 +1,4 @@
 #include "TotalTactique.h"
-#include "CarteTactique.h"
-#include <memory>
-
 TotalTactique::TotalTactique() : Total()
 {
 	// Il reste à ajouter les cartes tactiques
@@ -16,4 +13,9 @@ TotalTactique::TotalTactique() : Total()
     }
 
     capacite = 64;
+}
+
+void TotalTactique::Ajouter(unique_ptr<CarteTactique>&& carte)
+{
+    tas.push_back(move(carte));
 }

@@ -13,11 +13,10 @@ protected :
 	unsigned int  pCouleur;
 
 public:
-	#pragma region GETTERS
 	unsigned int GetValeur() const { return pValeur; }
 	unsigned int getCouleur() const { return pCouleur; }
-	#pragma endregion
 	
+	virtual ~Carte() = default;
 };
 
 #endif CARTE_H
