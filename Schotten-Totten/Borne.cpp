@@ -42,7 +42,7 @@ bool Borne::EstBrelan(const vector<unique_ptr<Carte>>& cartes) {
     return false;
 }
 
-bool Borne::EstCouleur(const vector<unique_ptr<Carte>>& cartes) {
+bool Borne::EstCouleur(const TasBorne cartes) {
     if (cartes.size() < 3) return false;
 
     unsigned int couleur = cartes[0]->getCouleur();

@@ -27,7 +27,9 @@ public :
     {
         tas.push_back(move(carte));
     }
-
+    unsigned int GetSizeTas() const {
+        return tas.size();
+    }
     // Retourne une référence const vers la carte à la position index afin de seulement la consulter
     // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
     const T& operator[](unsigned int index)
