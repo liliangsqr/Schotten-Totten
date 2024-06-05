@@ -13,6 +13,7 @@ protected :
 	unsigned int  pCouleur;
 
 public:
+	Carte(unsigned int initValeur, unsigned int initCouleur) :pValeur(initValeur), pCouleur(initCouleur) {}
 	unsigned int GetValeur() const { return pValeur; }
 	unsigned int getCouleur() const { return pCouleur; }
 	
