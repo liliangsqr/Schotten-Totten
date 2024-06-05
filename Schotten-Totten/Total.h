@@ -8,10 +8,11 @@
 
 using namespace std;
 
-class Total : public TasDeCartes
+// Sert de base aux totaux spécialisés
+class Total : public TasDeCartes<Carte>
 {
 	// Attributs
-	// vector<unique_ptr<Carte>> tas;
+	// vector<unique_ptr<T>> tas;
 	// unsigned int capacite
 
 
