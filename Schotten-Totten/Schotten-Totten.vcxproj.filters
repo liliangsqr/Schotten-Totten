@@ -13,95 +13,122 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Fichiers Carte">
+      <UniqueIdentifier>{b3f59ea5-063f-463d-b4b9-81d36bdcc69d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fichiers Carte">
+      <UniqueIdentifier>{d8f0156a-f9a1-4280-bba5-a609ebebb857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fichier Borne">
+      <UniqueIdentifier>{0c2683ae-4bec-44f1-921d-6c2d5426c116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fichiers Borne">
+      <UniqueIdentifier>{a2022f94-1289-4c2e-9655-7861ed21f012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fichiers Joueurs">
+      <UniqueIdentifier>{97971ddd-23f3-4185-a2c7-283fa758d46b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fichiers Joueur">
+      <UniqueIdentifier>{df262454-75a2-440e-81a2-80896830ef4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fichiers Tas sans liens">
+      <UniqueIdentifier>{b43f2e50-126a-40c1-b48b-9a07e99d4652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fichier Tas sans lien">
+      <UniqueIdentifier>{8290dd1f-b12c-46fb-b4e5-41cfaee170bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Schotten-Totten.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Carte.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Carte</Filter>
     </ClCompile>
     <ClCompile Include="CarteClan.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Carte</Filter>
     </ClCompile>
     <ClCompile Include="CarteTactique.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="TroupeElite.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ModeCombat.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Carte</Filter>
     </ClCompile>
     <ClCompile Include="Ruse.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Carte</Filter>
     </ClCompile>
-    <ClCompile Include="Total.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="TroupeElite.cpp">
+      <Filter>Fichiers sources\Fichiers Carte</Filter>
     </ClCompile>
-    <ClCompile Include="TotalClassique.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="TotalTactique.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="ModeCombat.cpp">
+      <Filter>Fichiers sources\Fichiers Carte</Filter>
     </ClCompile>
     <ClCompile Include="TasBorne.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Joueur.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichier Borne</Filter>
     </ClCompile>
     <ClCompile Include="IA.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Joueur</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueur.cpp">
+      <Filter>Fichiers sources\Fichiers Joueur</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Fichiers sources\Fichiers Joueur</Filter>
+    </ClCompile>
+    <ClCompile Include="TasDeCartes.cpp">
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
+    </ClCompile>
+    <ClCompile Include="Total.cpp">
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
+    </ClCompile>
+    <ClCompile Include="TotalClassique.cpp">
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
+    </ClCompile>
+    <ClCompile Include="TotalTactique.cpp">
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carte.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichiers Carte</Filter>
     </ClInclude>
     <ClInclude Include="CarteClan.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichiers Carte</Filter>
     </ClInclude>
     <ClInclude Include="CarteTactique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="TroupeElite.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichiers Carte</Filter>
     </ClInclude>
     <ClInclude Include="ModeCombat.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichiers Carte</Filter>
     </ClInclude>
-    <ClCompile Include="TasDeCartes.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClInclude Include="Ruse.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichiers Carte</Filter>
+    </ClInclude>
+    <ClInclude Include="TasDeCartes.h">
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
     </ClInclude>
     <ClInclude Include="Total.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
     </ClInclude>
     <ClInclude Include="TotalClassique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
     </ClInclude>
     <ClInclude Include="TotalTactique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Joueur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="IA.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TasDeCartes.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="TroupeElite.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Carte</Filter>
+    </ClInclude>
+    <ClInclude Include="TasBorne.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Borne</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="IA.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Joueurs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
