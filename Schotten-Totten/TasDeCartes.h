@@ -7,11 +7,12 @@
 #include "Carte.h"
 using namespace std;
 
+template<class T>
 class TasDeCartes
 {
 protected :
     // Attributs
-    vector<unique_ptr<Carte>> tas;
+    vector<unique_ptr<T>> tas;
     unsigned int capacite;
 
     // Constructeurs
@@ -22,14 +23,14 @@ public :
     void Melanger();
 
     // Ajoute/move une carte en RVALUE sur le haut du tas
-    void Ajouter(unique_ptr<Carte>&& carte)
+    void Ajouter(unique_ptr<T>&& carte)
     {
         tas.push_back(move(carte));
     }
 
     // Retourne une référence const vers la carte à la position index afin de seulement la consulter
     // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
-    const Carte& operator[](unsigned int index)
+    const T& operator[](unsigned int index)
     {
         return *tas[index];
     }
