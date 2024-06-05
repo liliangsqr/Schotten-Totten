@@ -5,11 +5,11 @@ TotalTactique::TotalTactique() : Total()
     for (unsigned int itNom = 0; itNom != 9; itNom++) {
         // Carte Espion
         if (itNom == 1) {
-            std::unique_ptr<Carte> carte = std::make_unique<CarteTactique>(6, 0, itNom);
+            std::unique_ptr<Carte> carte = std::make_unique<CarteTactique>(6, 0, "nomtest");
             tas.push_back(std::move(carte));
         }
         else {
-            std::unique_ptr<Carte> carte = std::make_unique<CarteTactique>(0, 0, itNom);
+            std::unique_ptr<Carte> carte = std::make_unique<CarteTactique>(0, 0, "nomtest");
             tas.push_back(std::move(carte));
         }
     }
