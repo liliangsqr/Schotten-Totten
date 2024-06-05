@@ -9,14 +9,10 @@ private:
 	// unsigned int pCouleur
 	string pNom;
 public:
-	CarteTactique(unsigned int initVal, unsigned int initCoul, const string& initNom) {
-		pValeur = initVal;
-		pCouleur = initCoul;
-		pNom = initNom;
-	}
+
+	CarteTactique(unsigned int initValeur, unsigned int initCouleur, const string& initNom) :Carte(initValeur, initCouleur), pNom(initNom) {}
 
 	const string& getNom() { return pNom; }
-
 	void toString() { cout << "Carte [" << pNom << "," << pCouleur << "] et as pour effet : " << pNom << endl; }
 };
 

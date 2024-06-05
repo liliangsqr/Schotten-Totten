@@ -13,11 +13,12 @@ protected :
 	unsigned int  pCouleur;
 
 public:
-	#pragma region GETTERS
+	Carte(unsigned int initValeur, unsigned int initCouleur) :pValeur(initValeur), pCouleur(initCouleur) {}
 	unsigned int GetValeur() const { return pValeur; }
 	unsigned int getCouleur() const { return pCouleur; }
-	#pragma endregion
 	
+	// Sert à faire fonctionner le dynamic cast
+	virtual ~Carte() = default;
 };
 
 #endif CARTE_H
