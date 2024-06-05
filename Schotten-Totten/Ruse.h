@@ -9,7 +9,6 @@ private:
 	//pCouleur
 public:
 	TroupeRuse(unsigned int initValeur, unsigned int initCouleur, const string& initNom) :CarteTactique(initValeur, initCouleur, initNom) {}
-
 };
 
 #endif RUSE_H
