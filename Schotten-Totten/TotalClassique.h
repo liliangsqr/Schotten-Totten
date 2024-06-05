@@ -15,7 +15,7 @@ public :
 
 	// Méthodes
 
-	vector<unique_ptr<Carte>> GetTas() { return tas; }
+	const vector<unique_ptr<Carte>>& GetTas() { return tas; }
 };
 
 #endif TOTALCLASSIQUE_H

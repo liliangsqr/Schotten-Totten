@@ -17,6 +17,7 @@ public:
 	unsigned int GetValeur() const { return pValeur; }
 	unsigned int getCouleur() const { return pCouleur; }
 	
+	// Sert à faire fonctionner le dynamic cast
 	virtual ~Carte() = default;
 };
 
