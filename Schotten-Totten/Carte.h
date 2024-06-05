@@ -9,23 +9,14 @@ using namespace std;
 class Carte
 {
 protected :
-
+	unsigned int pValeur;
 	unsigned int  pCouleur;
 
 public:
 	#pragma region GETTERS
-	unsigned int& getCouleur() { return pCouleur; }
-	void toString();
+	unsigned int GetValeur() const { return pValeur; }
+	unsigned int getCouleur() const { return pCouleur; }
 	#pragma endregion
-
-protected:
-
-	
-	#pragma region SETTERS
-	void setCouleur(int& couleur) { pCouleur = couleur; }
-	#pragma endregion
-
-
 	
 };
 

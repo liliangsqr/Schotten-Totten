@@ -6,7 +6,7 @@ class CarteClan : public Carte
 {
 private:
 	// unsigned int pCouleur
-	unsigned int pValeur;
+	// unsigned int pValeur;
 
 public:
 	CarteClan(unsigned int initValeur, unsigned int initCouleur) {
@@ -15,9 +15,6 @@ public:
 	}
 
 	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" << endl; }
-
-	unsigned int getValeur() { return pValeur; }
-
 };
 
 #endif CARTECLAN_H

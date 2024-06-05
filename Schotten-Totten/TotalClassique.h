@@ -5,12 +5,13 @@ class TotalClassique : public Total
 {
 	// Attributs
 	// vector<unique_ptr<Carte>> tas
+	// unsigned int capacite
 
 public :
 	// Constructeurs
 
 	// Constructeur par défaut, remplis le paquet avec toutes les cartes clan
-	TotalClassique() : Total() { }
+	TotalClassique() : Total() { capacite = 54; }
 
 	// Méthodes
 

@@ -14,4 +14,6 @@ TotalTactique::TotalTactique() : Total()
             tas.push_back(make_unique<CarteTactique>(0, 0, itNom));
         }
     }
+
+    capacite = 64;
 }
