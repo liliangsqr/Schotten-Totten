@@ -9,8 +9,9 @@ using namespace std;
 
 int main()
 {
+    // Test de création d'un jeu complet du mode classique
+    TotalClassique totCla = TotalClassique();
 
-    TotalClassique tot;
-    cout<<tot.GetTas();
-
+    // Test de création d'un jeu complet du mode tactique
+    TotalTactique totTac = TotalTactique();
 }

@@ -1,28 +1,30 @@
-
-
-
-
 #include <vector>
 #include <algorithm>
 #include <map>
 #include "Carte.h"
-#include "CarteClan.h"
-#include "string.h"
-#include "CarteTactique.h"
+#include <string.h>
+#include "TasBorne.h"
+#include "ModeCombat.h"
+
 using namespace std ;
 
 class Borne {
 private:
-    TasBorne CarteJ1 ;
-    TasBorne CarteJ2 ;
+    TasDeCartes<ModeCombat> OnTop;
+    TasBorne CarteJ1;
+    TasBorne CarteJ2;
 
 public:
-    void AjouterCarte(int joueur,unique_ptr<Carte>carte);
-    bool EstSuiteDeCouleur(const vector<unique_ptr<Carte>>& cartes);
-    bool EstBrelan(const vector<unique_ptr<Carte>>& cartes);
-    bool EstCouleur(const vector<unique_ptr<Carte>>& cartes);
-    bool EstSuite(const vector<unique_ptr<Carte>>& cartes);
-    int Somme(const vector<unique_ptr<Carte>>& cartes);
+
+    Borne() = default;
+
+    string GetInfo() const {
+        string info = "Borne Info:\n";
+        info += "OnTop size: " + to_string(OnTop.GetSizeTas()) + "\n";
+        info += "CarteJ1 size: " + to_string(CarteJ1.GetSize()) + "\n";
+        info += "CarteJ2 size: " + to_string(CarteJ2.GetSize()) + "\n";
+        return info;
+    }
 };
 
 
