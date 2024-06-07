@@ -1,12 +1,10 @@
-#pragma once
-
 #include "Borne.h"
 
-void Borne::AjouterCarte(int joueur, unique_ptr<Carte>carte) {
+void Borne::AjouterCarte(int joueur, unique_ptr<Carte>&& carte) {
     if(joueur==1){
-        CarteJ1.push_back(move(carte));
+        CarteJ1.Ajouter(move(carte));
     } else if (joueur ==2){
-        CarteJ2.push_back(move(carte));
+        CarteJ2.Ajouter(move(carte));
     }
 }
 
@@ -30,7 +28,7 @@ bool Borne::EstBrelan(const vector<unique_ptr<Carte>>& cartes) {
 
     map<unsigned int, int> compte;
     for (const auto& carte : cartes) {
-        ++compte[carte->getValeur()];
+        ++compte[carte.get()->GetValeur()];
     }
 
     for (const auto& [valeur, nb] : compte) {
@@ -42,12 +40,12 @@ bool Borne::EstBrelan(const vector<unique_ptr<Carte>>& cartes) {
     return false;
 }
 
-bool Borne::EstCouleur(const TasBorne cartes) {
-    if (cartes.size() < 3) return false;
+bool Borne::EstCouleur(const TasBorne& cartes) {
+    if (cartes.GetSize() < 3) return false;
 
-    unsigned int couleur = cartes[0]->getCouleur();
-    for (size_t i = 1; i < cartes.size(); ++i) {
-        if (cartes[i]->getCouleur() != couleur) {
+    unsigned int couleur = cartes[0].getCouleur();
+    for (unsigned int i = 1; i < cartes.GetSize(); ++i) {
+        if (cartes[i].getCouleur() != couleur) {
             return false;
         }
     }
@@ -55,11 +53,11 @@ bool Borne::EstCouleur(const TasBorne cartes) {
     return true;
 }
 
-bool Borne:: EstSuite(const vector<unique_ptr<Carte>>& cartes) {
+bool Borne::EstSuite(const vector<unique_ptr<Carte>>& cartes) {
     if (cartes.size() < 3) return false;
 
     for (size_t i = 1; i < cartes.size(); ++i) {
-        if (cartes[i - 1]->getValeur() != cartes[i]->getValeur() - 1) {
+        if (cartes[i - 1]->GetValeur() != cartes[i]->GetValeur() - 1) {
             return false;
         }
     }
@@ -67,10 +65,10 @@ bool Borne:: EstSuite(const vector<unique_ptr<Carte>>& cartes) {
     return true;
 }
 
-int Borne :: Somme(const vector<unique_ptr<Carte>>& cartes) {
+int Borne::Somme(const vector<unique_ptr<Carte>>& cartes) {
     int somme = 0;
     for (const auto& carte : cartes) {
-        somme += carte->getValeur();
+        somme += carte->GetValeur();
     }
     return somme;
 }

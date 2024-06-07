@@ -17,6 +17,9 @@ protected :
     vector<unique_ptr<T>> tas;
     unsigned int capacite;
 
+    // Le constructeur en protected empêche une instanciation directe de TasBorne
+    TasDeCartes() = default;
+
     // Constructeurs
 public :
     // Méthodes
@@ -37,10 +40,15 @@ public :
 
     // Retourne une référence const vers le T à la position index afin de seulement la consulter
     // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
-    const T& operator[](unsigned int index)
+    const T& operator[](unsigned int index) const
     {
+        if (index >= tas.size()) {
+            throw out_of_range("Index hors limites");
+        }
         return *tas[index];
     }
+
+    unsigned int GetCapacite() const { return capacite; }
 };
 
 #endif TASDECARTES_H
