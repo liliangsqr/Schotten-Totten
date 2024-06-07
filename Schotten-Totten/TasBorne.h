@@ -1,14 +1,20 @@
 #pragma once
 #include "TasDeCartes.h"
-#include "CarteClan.h"
+#include "Carte.h"
 #include <vector>
 #include <memory>
 
-class TasBorne : public TasDeCartes<CarteClan> {
+class TasBorne : public TasDeCartes<Carte> {
+    // Attributs
+    // vector<unique_ptr<Carte>> tas;
+    // unsigned int capacite;
+
 public:
-    TasBorne() = default;
-    unsigned int GetSize() const {
-        return tas.size();
+
+    TasBorne() { capacite = 3; }
+
+    const unsigned int GetSize() const {
+        return (const unsigned int)tas.size();
     }
 };
 
