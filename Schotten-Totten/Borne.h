@@ -1,20 +1,16 @@
-
-
-
-
 #include <vector>
 #include <algorithm>
 #include <map>
 #include "Carte.h"
 #include <string.h>
 #include "TasBorne.h"
-#include "CarteTactique.h"
+#include "ModeCombat.h"
 
 using namespace std ;
 
 class Borne {
 private:
-    TasDeCartes<CarteTactique> OnTop;
+    TasDeCartes<ModeCombat> OnTop;
     TasBorne CarteJ1;
     TasBorne CarteJ2;
 
