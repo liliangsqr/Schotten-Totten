@@ -3,20 +3,35 @@
 #include "Combinaison.h"include
 #include "TotalClassique.h"
 #include "TasDeCartes.h"
+#include "Jeu.h"
+#include "Combinaison.h"
 
 class JeuClassique : public Jeu
 {
 private:
-	TasDeCartes<CarteClan> totalCarteClassique;
+	TotalClassique total;
 	vector<Joueur> totalJoueurs;
-	//Frontiere bornes;
-public:
-	
-	void Initialiser();
-	bool Terminer();
-	void JouerTours(const Joueur& joueur);
-	//Combinaison EvaluerCombinaisonJoueur();
+	// Frontiere frontiere;
 
-	TasDeCartes<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }
+	// Empêche toute instatiation en dehors de la classe
+	JeuClassique();
+
+	
+public: // Partie publique, sert à accéder à l'instance unique
+	static JeuClassique& getInstance() {
+		static JeuClassique instance;
+		return instance;
+	}
+
+	// On empêche toute copie ou assignation
+	JeuClassique(const JeuClassique&) = delete;
+	JeuClassique& operator=(const JeuClassique&) = delete;
+
+	void initialiser();
+	bool terminer();
+	void jouerTour(Joueur& joueur);
+	Combinaison evaluerCombinaisonJoueur();
+
+	// TasDeCartes<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }
 
 };
