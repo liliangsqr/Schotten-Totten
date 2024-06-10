@@ -17,7 +17,6 @@ protected :
     vector<unique_ptr<T>> tas;
     unsigned int capacite;
 
-    // Constructeurs
 public :
     // Méthodes
 
@@ -49,6 +48,8 @@ public :
     const vector<unique_ptr<T>>& getCartes() const {
         return tas;
     }
+
+    unsigned int GetCapacite { return capacite; }
 };
 
 #endif TASDECARTES_H
