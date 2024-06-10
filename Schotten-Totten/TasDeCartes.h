@@ -45,6 +45,10 @@ public :
     unsigned int GetSizeTas() const {
         return tas.size();
     }
+
+    const vector<unique_ptr<T>>& getCartes() const {
+        return tas;
+    }
 };
 
 #endif TASDECARTES_H

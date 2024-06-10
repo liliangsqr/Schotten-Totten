@@ -1,9 +1,7 @@
-//
-// Created by Mac on 10/6/2024.
-//
 
-#ifndef SCHOTTEN_TOTTEN_COMBINAISONTYPE_H
-#define SCHOTTEN_TOTTEN_COMBINAISONTYPE_H
+
+#ifndef SCHOTTEN_TOTTEN_
+#define SCHOTTEN_TOTTEN_
 
 
 enum class CombinaisonType {
@@ -17,4 +15,4 @@ enum class CombinaisonType {
 
 
 
-#endif //SCHOTTEN_TOTTEN_COMBINAISONTYPE_H
+#endif
