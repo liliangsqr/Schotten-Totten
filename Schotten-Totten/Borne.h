@@ -27,7 +27,7 @@ public:
 
     string GetInfo() const {
         string info = "Borne Info:\n";
-        info += "OnTop size: " + to_string(OnTop.GetCapacite()) + "\n";
+        info += "OnTop size: " + to_string(OnTop.getCapacite()) + "\n";
         info += "CarteJ1 size: " + to_string(CarteJ1.GetSize()) + "\n";
         info += "CarteJ2 size: " + to_string(CarteJ2.GetSize()) + "\n";
         return info;

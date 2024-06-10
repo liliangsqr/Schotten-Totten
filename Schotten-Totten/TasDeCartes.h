@@ -45,6 +45,8 @@ public :
     unsigned int GetSizeTas() const {
         return tas.size();
     }
+
+
 };
 
 #endif TASDECARTES_H

@@ -20,11 +20,9 @@ private:
 
     bool estBrelan() ;
 
-
     bool estCouleur() ;
 
     bool estSuite() ;
-
 
     bool estSomme() ;
 public:
