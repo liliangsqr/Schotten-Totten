@@ -9,5 +9,6 @@ using namespace std;
 
 int main()
 {
-    Total tot = Total();
+    TotalClassique tot = TotalClassique();
+    cout << tot.GetTas().size() << endl;
 }
