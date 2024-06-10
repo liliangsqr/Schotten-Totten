@@ -10,7 +10,7 @@ bool JeuClassique::terminer()
 	
 }
 
-void JeuClassique::jouerTour(const Joueur& joueur)
+void JeuClassique::jouerTour(Joueur& joueur)
 {
 
 }

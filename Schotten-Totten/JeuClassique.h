@@ -1,6 +1,7 @@
-#pragma once
+#ifndef JEUCLASSIQUE_H
+#define JEUCLASSIQUE_H
+
 #include "Joueur.h"
-#include "Combinaison.h"include
 #include "TotalClassique.h"
 #include "TasDeCartes.h"
 #include "Jeu.h"
@@ -32,6 +33,9 @@ public: // Partie publique, sert à accéder à l'instance unique
 	void jouerTour(Joueur& joueur);
 	Combinaison evaluerCombinaisonJoueur();
 
-	// TasDeCartes<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }
+	// TotalClassique<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }
 
 };
+
+
+#endif
