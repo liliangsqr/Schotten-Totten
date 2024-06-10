@@ -11,6 +11,8 @@ private:
 public:
 	CarteClan(unsigned int initValeur, unsigned int initCouleur) : Carte(initValeur, initCouleur) {}
 
+    unsigned int getValeur() const { return pValeur; }
+
 	void toString() { cout << "Carte [" << pValeur << "," << pCouleur << "]" << endl; }
 };
 

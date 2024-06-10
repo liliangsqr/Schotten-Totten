@@ -12,22 +12,25 @@
 #include "CombinaisonType.h"
 
 
-class CombinaisonCartes{
+class Combinaison{
 private:
     std::vector<CarteClan> cartes;
+   static bool comparerCartes(const CarteClan& a, const CarteClan& b);
 
-    bool estSuiteDeCouleur() ;
+    bool estSuiteDeCouleur() const ;
 
-    bool estBrelan() ;
+    bool estBrelan() const;
 
-    bool estCouleur() ;
 
-    bool estSuite() ;
+    bool estCouleur() const ;
 
-    bool estSomme() ;
+    bool estSuite() const ;
+
+
+    bool estSomme() const ;
 public:
-    void ajouterCarte(const CarteClan &carte) ;
+    void ajouterCarte(const CarteClan& carte);
 
-    CombinaisonType getMeilleureCombinaison() ;
+    CombinaisonType getMeilleureCombinaison() const ;
 };
 
