@@ -1,32 +1,28 @@
 #ifndef JEU_H
 #define JEU_H
+#include "Frontiere.h"
+#include "Joueur.h"
 
-// Jeu est un Singleton, pour y accéder : Jeu& jeuObj = Jeu::getInstance();
+
+// Jeu est une classe abstraite, ses classes filles sont des singletons
 class Jeu
 {
-	// Partie publique, pour accéder à l'instance unique
 public :
-
-	static Jeu& getInstance() {
-		static Jeu instanceJeu;
-		return instanceJeu;
-	}
-
-	// On "supprime" les méthodes qui copient
-	Jeu(const Jeu&) = delete;
-	Jeu& operator=(const Jeu&) = delete;
+	virtual ~Jeu() = default;
 
 
+protected :
+	// ATTRIBUTS
+	Frontiere frontiere;
 
-	// Partie privée, on met le constructeur et le destructeur pour s'assurer qu'une seule instance existe
-private :
-	Jeu() {
+	// CONSTRUCTEURS
+	Jeu() = default;
 
-	}
-
-	~Jeu() {
-
-	}
+	// METHODES
+	virtual void initialiser() = 0;
+	virtual bool terminer() = 0;
+	virtual void jouerTour(Joueur& joueurActuel) = 0;
+	virtual Combinaison evaluerCombinaisonJoueur() = 0;
 };
 
 
