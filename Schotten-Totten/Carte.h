@@ -14,7 +14,7 @@ protected :
 
 public:
 	Carte(unsigned int initValeur, unsigned int initCouleur) : pValeur(initValeur), pCouleur(initCouleur) {}
-	unsigned int GetValeur() const { return pValeur; }
+	unsigned int getValeur() const { return pValeur; }
 	unsigned int getCouleur() const { return pCouleur; }
 	
 	// Sert à faire fonctionner le dynamic cast
