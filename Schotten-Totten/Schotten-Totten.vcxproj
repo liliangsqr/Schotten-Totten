@@ -132,7 +132,9 @@
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="CarteClan.cpp" />
     <ClCompile Include="CarteTactique.cpp" />
+    <ClCompile Include="Frontiere.cpp" />
     <ClCompile Include="IA.cpp" />
+    <ClCompile Include="Jeu.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ModeCombat.cpp" />
@@ -149,7 +151,9 @@
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />
     <ClInclude Include="CarteTactique.h" />
+    <ClInclude Include="Frontiere.h" />
     <ClInclude Include="IA.h" />
+    <ClInclude Include="Jeu.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="ModeCombat.h" />
