@@ -5,8 +5,8 @@ using namespace std;
 class CarteClan : public Carte
 {
 private:
-	// unsigned int pCouleur
-	// unsigned int pValeur;
+	 unsigned int pCouleur
+	 unsigned int pValeur;
 
 public:
 	CarteClan(unsigned int initValeur, unsigned int initCouleur) {
