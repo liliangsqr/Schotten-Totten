@@ -84,6 +84,9 @@
     <ClCompile Include="TotalTactique.cpp">
       <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
     </ClCompile>
+    <ClCompile Include="Borne.cpp">
+      <Filter>Fichiers sources\Fichier Borne</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carte.h">
@@ -112,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="TotalTactique.h">
       <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
+    </ClInclude>
+    <ClInclude Include="Borne.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Borne</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
