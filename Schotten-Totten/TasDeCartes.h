@@ -45,6 +45,10 @@ public :
         return tas.size();
     }
 
+    const vector<unique_ptr<T>>& getCartes() const {
+        return tas;
+    }
+
     unsigned int GetCapacite { return capacite; }
 };
 
