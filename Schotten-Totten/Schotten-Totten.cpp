@@ -9,5 +9,9 @@ using namespace std;
 
 int main()
 {
-    Total tot = Total();
+    // Test de création d'un jeu complet du mode classique
+    TotalClassique totCla = TotalClassique();
+
+    // Test de création d'un jeu complet du mode tactique
+    TotalTactique totTac = TotalTactique();
 }
