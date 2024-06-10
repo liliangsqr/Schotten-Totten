@@ -10,7 +10,6 @@ class Jeu
 public :
 	virtual ~Jeu() = default;
 
-
 protected :
 	// ATTRIBUTS
 	Frontiere frontiere;
