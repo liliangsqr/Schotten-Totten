@@ -1,14 +1,15 @@
 #pragma once
 #include "Joueur.h"
-#include "Combinaison.h"include
+#include "Combinaison.h"
 #include "TotalClassique.h"
 #include "TasDeCartes.h"
+#include "Jeu.h"
 
 class JeuClassique : public Jeu
 {
 private:
-	TasDeCartes<CarteClan> totalCarteClassique;
-	vector<Joueur> totalJoueurs;
+	TotalClassique total;
+	vector<unique_ptr<Joueur>> totalJoueurs;
 	//Frontiere bornes;
 public:
 	
