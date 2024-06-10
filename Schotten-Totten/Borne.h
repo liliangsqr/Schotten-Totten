@@ -34,11 +34,7 @@ public:
     }
 
     void AjouterCarte(int joueur, unique_ptr<Carte>&& carte);
-    bool EstSuiteDeCouleur(const vector<unique_ptr<Carte>>& cartes);
-    bool EstBrelan(const vector<unique_ptr<Carte>>& cartes);
-    bool EstCouleur(const TasBorne& cartes);
-    bool EstSuite(const vector<unique_ptr<Carte>>& cartes);
-    int Somme(const vector<unique_ptr<Carte>>& cartes);
+
 };
 
 #endif
