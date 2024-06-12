@@ -9,9 +9,9 @@ class Frontiere
 private :
     std::vector<Borne> bornes;
 public:
-    Frontiere():bornes(9){;}
-    const Borne& getBorne(int index) const;
-    int getNombreDeBornesRevendiquablesParJoueur1() const;
+    Frontiere():bornes(9){;}                                  
+    const Borne& getBorne(int index) const;                 
+    int getNombreDeBornesRevendiquablesParJoueur1() const;  //!\\ fusionner et mettre un objet joueur en paramètre 
     int getNombreDeBornesRevendiquablesParJoueur2() const;
 	
 };
