@@ -141,6 +141,7 @@
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ModeCombat.cpp" />
+    <ClCompile Include="OnTop.cpp" />
     <ClCompile Include="Ruse.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
     <ClCompile Include="TasBorne.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="ModeCombat.h" />
+    <ClInclude Include="OnTop.h" />
     <ClInclude Include="Ruse.h" />
     <ClInclude Include="TasBorne.h" />
     <ClInclude Include="Total.h" />

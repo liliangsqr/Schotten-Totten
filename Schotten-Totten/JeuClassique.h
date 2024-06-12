@@ -11,8 +11,8 @@ class JeuClassique : public Jeu
 {
 private:
 	TotalClassique total;
-	vector<Joueur> totalJoueurs;
-	// Frontiere frontiere;
+	vector<unique_ptr<Joueur>> totalJoueurs;
+	Frontiere frontiere;
 
 	// Empêche toute instatiation en dehors de la classe
 	JeuClassique();
@@ -28,7 +28,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	JeuClassique(const JeuClassique&) = delete;
 	JeuClassique& operator=(const JeuClassique&) = delete;
 
-	void initialiser();
+	void initialiser(unsigned int nbJoueurs = 2);
 	bool terminer();
 	void jouerTour(Joueur& joueur);
 	Combinaison evaluerCombinaisonJoueur();
