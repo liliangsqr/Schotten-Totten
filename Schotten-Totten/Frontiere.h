@@ -11,7 +11,7 @@ private :
 public:
     Frontiere():bornes(9){;}                                  
     const Borne& getBorne(int index) const;                 
-    int getNombreDeBornesRevendiquablesParJoueur1() const;  //!\\ fusionner et mettre un objet joueur en paramètre 
+    int getNombreDeBornesRevendiquablesParJoueur1() const;
     int getNombreDeBornesRevendiquablesParJoueur2() const;
 	
 };
