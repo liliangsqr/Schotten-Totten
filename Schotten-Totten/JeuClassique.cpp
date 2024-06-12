@@ -1,6 +1,6 @@
 #include "JeuClassique.h"
 
-void JeuClassique::initialiser(unsigned int nbJoueurs =2)// initialisation des cartes création des joueurs.
+void JeuClassique::initialiser()
 {
 	//initialisation du tas de carte par defaut avec TotalClassqieur();
 

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MAIN_H
+#define MAIN_H
+
 #include "TasDeCartes.h"
 class Main : public TasDeCartes<Carte>
 {
@@ -8,3 +10,5 @@ class Main : public TasDeCartes<Carte>
 public :
 
 };
+
+#endif

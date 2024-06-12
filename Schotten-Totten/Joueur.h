@@ -1,6 +1,9 @@
-#pragma once 
+#ifndef JOUEUR_H
+#define JOUEUR_H
+
 #include <string>
 using namespace std;
+
 
 class Joueur
 {
@@ -9,9 +12,10 @@ private:
 public:
 	Joueur(const string& initNom) :pNom(initNom) {}
 
-	string& getNom() { return pNom; }
+	const string& getNom() { return pNom; }
 	void Jouer();
 	void Piocher();
 	void Revendiquer();
 };
 
+#endif
