@@ -17,23 +17,31 @@ private:
 	// Empêche toute instatiation en dehors de la classe
 	JeuClassique();
 
+	// Méthodes d'initialisation
+	void creerJoueurs
+
 	
 public: // Partie publique, sert à accéder à l'instance unique
+
+	// Permet d'accéder à l'instance et appelle le contructeur par défaut au premier appel
 	static JeuClassique& getInstance() {
 		static JeuClassique instance;
 		return instance;
 	}
 
-	// On empêche toute copie ou assignation
-	JeuClassique(const JeuClassique&) = delete;
-	JeuClassique& operator=(const JeuClassique&) = delete;
+	// Initialisation de tout le jeu, distribution des cartes dans les mains et dans la pioche, création des joueurs
+	void initialiser();
 
-	void initialiser(unsigned int nbJoueurs = 2);
 	bool terminer();
+	
 	void jouerTour(Joueur& joueur);
+	
 	Combinaison evaluerCombinaisonJoueur();
 
-	// TotalClassique<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }
+
+	// On empêche toute copie ou assignation
+	JeuClassique(const JeuClassique&) = delete;
+	void operator=(const JeuClassique&) = delete;
 
 };
 

@@ -10,6 +10,7 @@
 #include "ModeCombat.h"
 #include"Combinaison.h"
 #include "TasDeCartes.h"
+#include "Joueur.h"
 
 using namespace std ;
 
@@ -17,8 +18,12 @@ class Borne {
     // Attributs
 private:
     TasDeCartes<ModeCombat> OnTop;
-    TasBorne CarteJ1;
-    TasBorne CarteJ2;
+
+    // Associe, sur une borne, un tas à un Joueur (il peut y avoir n joueurs)
+    map<string, TasBorne> tasJoueurs;
+
+    // TasBorne CarteJ1;
+    // TasBorne CarteJ2;
 
 public:
     // Constructeurs
@@ -34,16 +39,20 @@ public:
         info += "CarteJ2 size: " + to_string(CarteJ2.GetSize()) + "\n";
         return info;
     }
-    const TasBorne& getTasBorneJ1() const{
-        return CarteJ1;
-    }
-    const TasBorne& getTasBorneJ2() const{
-        return CarteJ2;
+
+    // Ajouter le joueur et son TasBorne à la map
+    void AjouterJoueur(const string& nomJoueur, const TasBorne& tasBorne) {
+        tasJoueurs[nomJoueur] = tasBorne;
     }
 
-    void AjouterCarte(int joueur, unique_ptr<Carte>&& carte);
-    bool estRevendiquableParJoueur1() const;
-    bool estRevendiquableParJoueur2() const;
+
+    const TasBorne& getTasBorne(const string& nomJoueur) const {
+        return tasJoueurs.at(nomJoueur); // Récupérer le tasborne associé au joueur
+    }
+
+
+    void AjouterCarte(Joueur joueur, unique_ptr<Carte>&& carte);
+    bool estRevendiquableParJoueur(Joueur joueur) const;
 
 
 };

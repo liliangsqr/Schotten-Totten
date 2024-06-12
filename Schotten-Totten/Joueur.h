@@ -1,17 +1,24 @@
-#pragma once 
+#ifndef JOUEUR_H
+#define JOUEUR_H
+
 #include <string>
+#include "Main.h"
+#include "TotalClassique.h"
+#include "Pioche.h"
 using namespace std;
+
 
 class Joueur
 {
 private: 
 	string pNom;
+	Main pMain;
 public:
 	Joueur(const string& initNom) :pNom(initNom) {}
 
 	string& getNom() { return pNom; }
-	void Jouer();
-	void Piocher();
-	void Revendiquer();
+	void PoserCarte(unsigned int positionCarte, TasDeCartes<Carte> tas);
+	void Piocher(Pioche pioche);
 };
 
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TASBORNE_H
+#define TASBORNE_H
+
 #include "TasDeCartes.h"
 #include "Carte.h"
 #include <vector>
@@ -18,3 +20,4 @@ public:
     }
 };
 
+#endif

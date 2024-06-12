@@ -1,6 +1,8 @@
 #ifndef TOTALCLASSIQUE_H
 #define TOTALCLASSIQUE_H
 #include "Total.h"
+
+
 class TotalClassique : public Total
 {
 	// Attributs

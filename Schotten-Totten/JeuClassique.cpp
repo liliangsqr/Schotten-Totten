@@ -1,6 +1,6 @@
 #include "JeuClassique.h"
 
-void JeuClassique::initialiser(unsigned int nbJoueurs =2)// initialisation des cartes création des joueurs.
+void JeuClassique::initialiser()
 {
 	//initialisation du tas de carte par defaut avec TotalClassqieur();
 	//initialisation des bornes dans Frontiere();
@@ -17,11 +17,13 @@ void JeuClassique::initialiser(unsigned int nbJoueurs =2)// initialisation des c
 bool JeuClassique::terminer()
 {
 	//aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagner
+
 }
 
 void JeuClassique::jouerTour(Joueur& joueur)
 {
-
+	joueur.Jouer();
+	joueur.Piocher();
 }
 
 Combinaison JeuClassique::evaluerCombinaisonJoueur()
