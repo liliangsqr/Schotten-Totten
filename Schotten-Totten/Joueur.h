@@ -1,9 +1,12 @@
-#pragma once 
+#ifndef JOUEUR_H
+#define JOUEUR_H
+
 #include <string>
 #include "Main.h"
 #include "TotalClassique.h"
 #include "Pioche.h"
 using namespace std;
+
 
 class Joueur
 {
@@ -18,3 +21,4 @@ public:
 	void Piocher(Pioche pioche);
 };
 
+#endif

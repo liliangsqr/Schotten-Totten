@@ -5,19 +5,28 @@
 
 
 
-bool Combinaison:: comparerCartes(const CarteClan& a, const CarteClan& b) {
+bool Combinaison:: comparerCartes(const Carte& a, const Carte& b) {
     return a.getValeur() < b.getValeur();
 }
 
 bool Combinaison::estSuiteDeCouleur() const {
     if (cartes.size() < 3) return false;
-    std::vector<CarteClan> sortedCartes = cartes;
+    std::vector<Carte> sortedCartes = cartes;
     std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
     return sortedCartes[0].getCouleur() == sortedCartes[1].getCouleur() &&
            sortedCartes[1].getCouleur() == sortedCartes[2].getCouleur() &&
            sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
            sortedCartes[1].getValeur() + 1 == sortedCartes[2].getValeur();
 }
+
+bool Combinaison::estSuite() const {
+    if (cartes.size() < 3) return false;
+    std::vector<Carte> sortedCartes = cartes;
+    std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
+    return sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
+           sortedCartes[1].getValeur() + 1 == sortedCartes[2].getValeur();
+}
+
 
 bool Combinaison::estBrelan() const {
     if (cartes.size() < 3) return false;
@@ -31,13 +40,6 @@ bool Combinaison::estCouleur() const {
            cartes[1].getCouleur() == cartes[2].getCouleur();
 }
 
-bool Combinaison::estSuite() const {
-    if (cartes.size() < 3) return false;
-    std::vector<CarteClan> sortedCartes = cartes;
-    std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
-    return sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
-           sortedCartes[1].getValeur() + 1 == sortedCartes[2].getValeur();
-}
 
 bool Combinaison::estSomme() const {
     if (cartes.size() < 3) return false;
@@ -45,7 +47,7 @@ bool Combinaison::estSomme() const {
     return somme <= 9;
 }
 
-void Combinaison::ajouterCarte(const CarteClan& carte) {
+void Combinaison::ajouterCarte(const Carte& carte) {
     cartes.push_back(carte);
 }
 

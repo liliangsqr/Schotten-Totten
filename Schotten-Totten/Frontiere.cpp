@@ -14,7 +14,7 @@ const Borne& Frontiere::getBorne(int i) const {
 
 int Frontiere::getNombreDeBornesRevendiquablesParJoueur1() const {
     int count = 0;
-    for (auto it = bornes.cbegin(); it != bornes.cend(); ++it) {
+    for (auto it = bornes.begin(); it != bornes.end(); ++it) {
         if (it->estRevendiquableParJoueur1()) {
             count++;
         }
@@ -24,7 +24,7 @@ int Frontiere::getNombreDeBornesRevendiquablesParJoueur1() const {
 
 int Frontiere::getNombreDeBornesRevendiquablesParJoueur2() const {
     int count = 0;
-    for (auto it = bornes.cbegin(); it != bornes.cend(); ++it) {
+    for (auto it = bornes.begin(); it != bornes.end(); ++it) {
         if (it->estRevendiquableParJoueur1()) {
             count++;
         }
