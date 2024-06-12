@@ -1,17 +1,29 @@
 #include "JeuClassique.h"
 
-void JeuClassique::initialiser()
+void JeuClassique::creerJoueurs(unsigned int nbJoueurs)
 {
-	//initialisation du tas de carte par defaut avec TotalClassqieur();
-	//initialisation des bornes dans Frontiere();
+    for (unsigned int i = 0; i < nbJoueurs; i++) {
+        string nomJoueur = "Joueur " + to_string(i + 1);
+        unique_ptr<Joueur> joueur = make_unique<Joueur>(nomJoueur);
+        totalJoueurs.push_back(move(joueur));
+    }
+}
 
-	string nomJoueur;
-	for (unsigned int i = 1; i <= nbJoueurs; i++)
-	{
-		nomJoueur = "Joueur" + i;
-		unique_ptr<Joueur> joueur = make_unique<Joueur>(nomJoueur);
-		totalJoueurs.push_back(joueur);
-	}
+void JeuClassique::DistribuerCartes(unsigned int nbJoueurs, unsigned int nbCartesMain = 7)
+{
+    for (unsigned int i; i < total.GetSizeTas(); i++) {
+
+    }
+}
+
+void JeuClassique::initialiser(unsigned int nbJoueurs)
+{
+    creerJoueurs(nbJoueurs);
+    // Total est rempli des cartes clan par son constructeur par défaut
+    
+    // Distribution des cartes
+    total.Melanger();
+    DistribuerCartes();
 }
 
 bool JeuClassique::terminer()

@@ -18,7 +18,12 @@ private:
 	JeuClassique();
 
 	// Méthodes d'initialisation
-	void creerJoueurs
+
+	// Crée les joueurs, les référence avec des unique_ptr, et les ajoute dans totalJoueurs
+	void creerJoueurs(unsigned int nbJoueurs);
+
+	// Distribue les cartes dans les mains et la pioche au début du jeu
+	void DistribuerCartes(unsigned int nbJoueurs, unsigned int nbCartesMain = 7);
 
 	
 public: // Partie publique, sert à accéder à l'instance unique
@@ -30,7 +35,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	}
 
 	// Initialisation de tout le jeu, distribution des cartes dans les mains et dans la pioche, création des joueurs
-	void initialiser();
+	void initialiser(unsigned int nbJoueurs);
 
 	bool terminer();
 	
