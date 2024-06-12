@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Affichage.cpp" />
     <ClCompile Include="Borne.cpp" />
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="CarteClan.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="TroupeElite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Affichage.h" />
     <ClInclude Include="Borne.h" />
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />

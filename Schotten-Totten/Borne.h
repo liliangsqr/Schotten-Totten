@@ -50,7 +50,7 @@ public:
         return tasJoueurs.at(nomJoueur); // Récupérer le tasborne associé au joueur
     }
 
-
+    //ajouter les cartes au tas
     void AjouterCarte(Joueur joueur, unique_ptr<Carte>&& carte);
     bool estRevendiquableParJoueur(Joueur joueur) const;
 
