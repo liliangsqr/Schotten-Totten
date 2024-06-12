@@ -11,8 +11,8 @@ bool Combinaison:: comparerCartes(const Carte& a, const Carte& b) {
 
 bool Combinaison::estSuiteDeCouleur() const {
     if (cartes.size() < 3) return false;
-    std::vector<Carte> sortedCartes = cartes;
-    std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
+    vector<Carte> sortedCartes = cartes;
+    sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
     return sortedCartes[0].getCouleur() == sortedCartes[1].getCouleur() &&
            sortedCartes[1].getCouleur() == sortedCartes[2].getCouleur() &&
            sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
@@ -21,8 +21,8 @@ bool Combinaison::estSuiteDeCouleur() const {
 
 bool Combinaison::estSuite() const {
     if (cartes.size() < 3) return false;
-    std::vector<Carte> sortedCartes = cartes;
-    std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
+    vector<Carte> sortedCartes = cartes;
+    sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
     return sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
            sortedCartes[1].getValeur() + 1 == sortedCartes[2].getValeur();
 }
