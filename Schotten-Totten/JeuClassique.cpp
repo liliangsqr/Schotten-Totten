@@ -17,11 +17,13 @@ void JeuClassique::initialiser(unsigned int nbJoueurs =2)// initialisation des c
 bool JeuClassique::terminer()
 {
 	//aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagner
+
 }
 
 void JeuClassique::jouerTour(Joueur& joueur)
 {
-
+	joueur.Jouer();
+	joueur.Piocher();
 }
 
 Combinaison JeuClassique::evaluerCombinaisonJoueur()

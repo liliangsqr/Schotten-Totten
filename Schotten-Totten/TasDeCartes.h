@@ -12,44 +12,57 @@ using namespace std;
 template<class T>
 class TasDeCartes
 {
-protected :
-    // Attributs
-    vector<unique_ptr<T>> tas;
-    unsigned int capacite;
+    protected :
+        // Attributs
+        vector<unique_ptr<T>> tas;
+        unsigned int capacite;
 
-public :
-    // Méthodes
+    public :
+        // Méthodes
 
-    // Mélange le tas aléatoirement
-    void Melanger()
-    {
-        random_device rd;
-        mt19937 g(rd());
-        shuffle(tas.begin(), tas.end(), g);
-    }
+        // Mélange le tas aléatoirement
+        void Melanger()
+        {
+            random_device rd;
+            mt19937 g(rd());
+            shuffle(tas.begin(), tas.end(), g);
+        }
 
-    // Ajoute/move une carte en RVALUE sur le haut du tas
-    void Ajouter(unique_ptr<T>&& carte)
-    {
-        tas.push_back(move(carte));
-    }
+        // Ajoute/move une carte en RVALUE sur le haut du tas
+        void Ajouter(unique_ptr<T>&& carte)
+        {
+            tas.push_back(move(carte));
+        }
 
-    // Retourne une référence const vers le T à la position index afin de seulement la consulter
-    // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
-    const T& operator[](unsigned int index)
-    {
-        return *tas[index];
-    }
+        // Retourne une référence const vers le T à la position index afin de seulement la consulter
+        // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
+        const T& operator[](unsigned int index)
+        {
+            return *tas[index];
+        }
 
-    unsigned int GetSizeTas() const {
-        return tas.size();
-    }
+        // Retire une carte du tas et renvoie un unique_ptr à cette carte
+        unique_ptr<T> Retirer(unsigned int index)
+        {
+            if (index >= tas.size()) {
+                throw out_of_range("Index hors limites");
+            }
 
-    const vector<unique_ptr<T>>& getCartes() const {
-        return tas;
-    }
+            unique_ptr<T> carte = move(tas[index]);
+            tas.erase(tas.begin() + index);
+            return carte;
+        }
 
-    unsigned int GetCapacite { return capacite; }
+        //get la taille du tas 
+        unsigned int GetSizeTas() const {
+            return tas.size();
+        }
+
+        const vector<unique_ptr<T>>& getCartes() const {
+            return tas;
+        }
+
+        unsigned int GetCapacite { return capacite; }
 };
 
 #endif TASDECARTES_H
