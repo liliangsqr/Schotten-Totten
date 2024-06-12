@@ -23,7 +23,7 @@ private:
 	void creerJoueurs(unsigned int nbJoueurs);
 
 	// Distribue les cartes dans les mains et la pioche au début du jeu
-	void DistribuerCartes(unsigned int nbJoueurs, unsigned int nbCartesMain = 7);
+	void DistribuerCartes(unsigned int nbCartesMain = 7);
 
 	
 public: // Partie publique, sert à accéder à l'instance unique

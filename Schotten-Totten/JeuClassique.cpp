@@ -9,10 +9,14 @@ void JeuClassique::creerJoueurs(unsigned int nbJoueurs)
     }
 }
 
-void JeuClassique::DistribuerCartes(unsigned int nbJoueurs, unsigned int nbCartesMain = 7)
+void JeuClassique::DistribuerCartes(unsigned int nbCartesMain = 7)
 {
-    for (unsigned int i; i < total.GetSizeTas(); i++) {
-
+    // A chaque joueur
+    for (unsigned int joueur = 0; joueur < totalJoueurs.size(); joueur++) {
+        // On distribue nbCartesMain cartes
+        for (unsigned int carte = 0; carte < nbCartesMain; carte++) {
+            totalJoueurs[joueur].get().ajouterCarteMain(move(total.Retirer()))
+        }
     }
 }
 
