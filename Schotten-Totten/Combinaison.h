@@ -14,8 +14,8 @@
 
 class Combinaison{
 private:
-    std::vector<CarteClan> cartes;
-   static bool comparerCartes(const CarteClan& a, const CarteClan& b);
+    std::vector<Carte> cartes;
+   static bool comparerCartes(const Carte& a, const Carte& b);
 
     bool estSuiteDeCouleur() const ;
 
@@ -29,7 +29,7 @@ private:
 
     bool estSomme() const ;
 public:
-    void ajouterCarte(const CarteClan& carte);
+    void ajouterCarte(const Carte& carte);
 
     CombinaisonType getMeilleureCombinaison() const ;
 };
