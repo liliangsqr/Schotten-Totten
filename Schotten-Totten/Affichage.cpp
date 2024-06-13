@@ -2,5 +2,5 @@
 
 void Affichage::carteClan(const CarteClan& CC)
 {	
-
+		
 }
