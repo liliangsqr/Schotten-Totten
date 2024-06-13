@@ -13,7 +13,7 @@ public :
 
 protected :
 	// ATTRIBUTS
-	vector<unique_ptr<Joueur>> totalJoueurs;
+	vector<shared_ptr<Joueur>> totalJoueurs;
 	Frontiere frontiere;
 	Pioche pioche;
 

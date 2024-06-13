@@ -6,6 +6,6 @@ private:
 	//Capacite 
 	// tas
 public:
-	 unique_ptr<Carte> getOnTop();
+	 unique_ptr<Carte>& getOnTop();
 };
 

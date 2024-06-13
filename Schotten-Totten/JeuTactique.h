@@ -11,7 +11,7 @@ class JeuTactique : public Jeu
 {
 private:
 	TotalTactique total;
-	// vector<unique_ptr<Joueur>> totalJoueurs;
+	// vector<shared_ptr<Joueur>> totalJoueurs;
 	// Frontiere frontiere;
 
 	// Empêche toute instatiation en dehors de la classe

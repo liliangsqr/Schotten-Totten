@@ -3,7 +3,7 @@
 
 
 
-unique_ptr<Carte> Pioche::getOnTop()
+unique_ptr<Carte>& Pioche::getOnTop()
 {
 	if (tas.empty()) throw runtime_error("la pioche est vide");
 	

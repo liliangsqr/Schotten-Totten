@@ -20,15 +20,15 @@ public:
     }
 
 
-    int getNombreDeBornesRevendiquablesParJoueur(const std::string& nomJoueur) const {
+    unsigned int getNombreDeBornesRevendiquablesParJoueur(const std::string& nomJoueur) const {
         return std::count_if(bornes.begin(), bornes.end(), [&](const Borne& borne) {
             return borne.estRevendiquableParJoueur(nomJoueur);
         });
     }
 
 
-    int getNombreTotalDeBornes() const {
-        return bornes.size();
+    unsigned int getNombreTotalDeBornes() const {
+        return (unsigned) bornes.size();
     }
 };
 

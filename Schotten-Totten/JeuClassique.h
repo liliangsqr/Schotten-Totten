@@ -12,7 +12,7 @@ class JeuClassique : public Jeu
 {
 private:
 	TotalClassique total;
-	// vector<unique_ptr<Joueur>> totalJoueurs;
+	// vector<shared_ptr<Joueur>> totalJoueurs;
 	// Frontiere frontiere;
 
 	// Empêche toute instatiation en dehors de la classe
@@ -20,7 +20,7 @@ private:
 
 	// Méthodes d'initialisation
 
-	// Crée les joueurs, les référence avec des unique_ptr, et les ajoute dans totalJoueurs
+	// Crée les joueurs, les référence avec des shared_ptr, et les ajoute dans totalJoueurs
 	void creerJoueurs(unsigned int nbJoueurs);
 
 	// Distribue les cartes dans les mains et la pioche au début du jeu

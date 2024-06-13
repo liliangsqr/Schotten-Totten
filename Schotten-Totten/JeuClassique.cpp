@@ -4,7 +4,7 @@ void JeuClassique::creerJoueurs(unsigned int nbJoueurs)
 {
     for (unsigned int i = 0; i < nbJoueurs; i++) {
         string nomJoueur = "Joueur " + to_string(i + 1);
-        unique_ptr<Joueur> joueur = make_unique<Joueur>(nomJoueur);
+        shared_ptr<Joueur> joueur = make_shared<Joueur>(nomJoueur);
         totalJoueurs.push_back(move(joueur));
     }
 }
@@ -24,7 +24,7 @@ void JeuClassique::distribuerCartes(unsigned int nbCartesMain)
 
     // Le reste va dans la pioche
     while (!total.estVide()) {
-        unique_ptr<Carte> carte = total.Retirer(total.getTaille() - 1);
+        unique_ptr<Carte> carte = move(total.Retirer(total.getTaille() - 1));
         pioche.Ajouter(move(carte));
     }
 }
