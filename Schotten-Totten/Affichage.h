@@ -1,6 +1,8 @@
 #ifndef AFFICHAGE_H
 #include "CarteClan.h"
 #include "CarteTactique.h"
+#include "Regles.h"
+#include "Jeu.h"
 
 // Définitions des séquences d'échappement ANSI pour différentes couleurs
 
@@ -22,11 +24,10 @@ private:
 
 public:
 
-	unsigned int static ChoixMode();
+	void static ChoixMode(Regles& regles);
 	void static carteClan(const CarteClan& CC);
 	void static carteTactique(const CarteTactique& CT);
-	void static debutJeu();
-	void static board();
+	void static board(Jeu& jeux);
 	string static Couleurs(unsigned int CarteCouelurs);
 
 

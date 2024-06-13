@@ -55,7 +55,7 @@ class TasDeCartes
 
         //get la taille du tas 
         unsigned int GetSizeTas() const {
-            return tas.size();
+            return (unsigned int)tas.size();
         }
 
         const vector<unique_ptr<T>>& getCartes() const {

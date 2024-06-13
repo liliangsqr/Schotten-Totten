@@ -1,8 +1,31 @@
 #include "Affichage.h"
 
+void Affichage::ChoixMode( Regles& regles)
+{
+	cout << " Veuiller choisir un mode de jeu :";
+	for (unsigned int numero = 0; numero< regles.getModesJeux().size(); numero++)
+	{
+		for (string mode : regles.getModesJeux())
+		{
+			cout << numero << ". " << mode << endl;
+		}
+	}
+}
+
 void Affichage::carteClan(const CarteClan& CC)
 {	
-	cout << Couleurs(CC.getCouleur()) << "[" << CC.getValeur() << "]";
+	cout << Couleurs(CC.getCouleur()) << "[" << CC.getValeur() << "]"<<RESET;
+}
+
+void Affichage::carteTactique(const CarteTactique& CT)
+{
+	cout << "[" << CT.getNom() << "]";
+
+}
+
+void Affichage::board(Jeu& jeux)
+{
+
 }
 
 string Affichage::Couleurs(unsigned int carteCouleurs)
