@@ -1,23 +1,48 @@
 #include "JeuClassique.h"
 
-void JeuClassique::initialiser()
+void JeuClassique::creerJoueurs(unsigned int nbJoueurs)
 {
-	//initialisation du tas de carte par defaut avec TotalClassqieur();
-	//initialisation des bornes dans Frontiere();
+    for (unsigned int i = 0; i < nbJoueurs; i++) {
+        string nomJoueur = "Joueur " + to_string(i + 1);
+        unique_ptr<Joueur> joueur = make_unique<Joueur>(nomJoueur);
+        totalJoueurs.push_back(move(joueur));
+    }
+}
 
-	string nomJoueur;
-	for (unsigned int i = 1; i <= nbJoueurs; i++)
-	{
-		nomJoueur = "Joueur" + i;
-		unique_ptr<Joueur> joueur = make_unique<Joueur>(nomJoueur);
-		totalJoueurs.push_back(joueur);
-	}
+// Distribue nbCartesMain par joueur et le reste dans la pioche
+void JeuClassique::distribuerCartes(unsigned int nbCartesMain = 7)
+{
+    // A chaque joueur
+    for (unsigned int joueur = 0; joueur < totalJoueurs.size(); joueur++) {
+        // On distribue nbCartesMain cartes
+        for (unsigned int carte = 0; carte < nbCartesMain; carte++) {
+            // Déplace la carte de l'indice 0 du total vers la main du joueur
+            // grâce au fait que les vectors se réorganisent tout seuls
+            totalJoueurs[joueur]->ajouterCarteMain(move(total.Retirer(0)));
+        }
+    }
+
+    // Le reste va dans la pioche
+    while (!total.estVide()) {
+        unique_ptr<Carte> carte = total.Retirer(total.getTaille() - 1);
+        pioche.Ajouter(move(carte));
+    }
+}
+
+// Met le jeu complètement en place
+void JeuClassique::initialiser(unsigned int nbJoueurs = 2)
+{
+    creerJoueurs(nbJoueurs);
+    // Total est rempli des cartes clan par son constructeur par défaut
+    
+    // Distribution des cartes
+    total.Melanger();
+    distribuerCartes();
 }
 
 bool JeuClassique::terminer()
 {
-	//aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagner
-
+	// Aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagné
 }
 
 void JeuClassique::jouerTour(Joueur& joueur)

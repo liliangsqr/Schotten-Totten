@@ -9,10 +9,13 @@
 
 using namespace std;
 
+
 class Combinaison{
 private:
     std::vector<Carte> cartes;
-   static bool comparerCartes(const Carte& a, const Carte& b);
+
+
+    static bool comparerCartes(const Carte& a, const Carte& b);
 
     bool estSuiteDeCouleur() const ;
 

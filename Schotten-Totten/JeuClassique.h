@@ -11,14 +11,19 @@ class JeuClassique : public Jeu
 {
 private:
 	TotalClassique total;
-	vector<unique_ptr<Joueur>> totalJoueurs;
-	Frontiere frontiere;
+	// vector<unique_ptr<Joueur>> totalJoueurs;
+	// Frontiere frontiere;
 
 	// Empêche toute instatiation en dehors de la classe
 	JeuClassique();
 
 	// Méthodes d'initialisation
-	void creerJoueurs
+
+	// Crée les joueurs, les référence avec des unique_ptr, et les ajoute dans totalJoueurs
+	void creerJoueurs(unsigned int nbJoueurs);
+
+	// Distribue les cartes dans les mains et la pioche au début du jeu
+	void distribuerCartes(unsigned int nbCartesMain = 7);
 
 	
 public: // Partie publique, sert à accéder à l'instance unique
@@ -30,7 +35,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	}
 
 	// Initialisation de tout le jeu, distribution des cartes dans les mains et dans la pioche, création des joueurs
-	void initialiser();
+	void initialiser(unsigned int nbJoueurs = 2);
 
 	bool terminer();
 	
