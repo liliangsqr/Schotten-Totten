@@ -11,8 +11,8 @@ private:
 public:
     Frontiere() : bornes(9) {}
 
-    const Borne& getBorne(int index) const {
-        return bornes.at(index);
+    const Borne& getBorne(int i) const {
+        return bornes.at(i);
     }
 
     int getNombreDeBornesRevendiquablesParJoueur1() const {
