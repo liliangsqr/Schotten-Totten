@@ -43,13 +43,15 @@ public:
         tasJoueurs[joueur.getNom()].Ajouter(std::move(carte));
     }
 
-    bool estRevendiquableParJoueur(const Joueur& joueur) const {
+    // Modification possible de la méthode estRevendiquableParJoueur
+    bool estRevendiquableParJoueur(const std::string& nomJoueur) const {
         Combinaison combinaisonJ;
-        for (const auto& carte : tasJoueurs.at(joueur.getNom()).getCartes()) {
+        for (const auto& carte : tasJoueurs.at(nomJoueur).getCartes()) {
             combinaisonJ.ajouterCarte(*carte);
         }
         return combinaisonJ.getMeilleureCombinaison() != CombinaisonType::Aucune;
     }
+
 };
 
 #endif // BORNE_H
