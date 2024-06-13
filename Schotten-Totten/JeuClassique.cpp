@@ -15,7 +15,8 @@ void JeuClassique::DistribuerCartes(unsigned int nbCartesMain = 7)
     for (unsigned int joueur = 0; joueur < totalJoueurs.size(); joueur++) {
         // On distribue nbCartesMain cartes
         for (unsigned int carte = 0; carte < nbCartesMain; carte++) {
-            totalJoueurs[joueur].get().ajouterCarteMain(move(total.Retirer()))
+            // Move la carte de l'index 0 du total vers la main du joueur
+            totalJoueurs[joueur]->ajouterCarteMain(move(total.Retirer(0)));
         }
     }
 }

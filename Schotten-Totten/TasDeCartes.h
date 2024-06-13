@@ -53,7 +53,7 @@ class TasDeCartes
             return carte;
         }
 
-        //get la taille du tas 
+        // Get la taille du tas 
         unsigned int GetSizeTas() const {
             return tas.size();
         }
