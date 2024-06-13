@@ -14,8 +14,8 @@ private:
 	string pNom;
 	Main pMain;
 public:
-	Joueur(const string& initNom) :pNom(initNom) {}
 
+	Joueur(const string& initNom) :pNom(initNom) {}
     const string& getNom() const {
         return pNom;
     }

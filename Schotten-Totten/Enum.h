@@ -2,11 +2,11 @@
 #define ENUM_H
 
 enum class Valeurs {
-    Un,Deux,Trois,Quatre,Cinq,Six,Sept,Huit,Neuf,Fin
+   Zero,Un,Deux,Trois,Quatre,Cinq,Six,Sept,Huit,Neuf,Fin
 };
 
 enum class Couleur {
-    Vert,Bleu,Rouge,Jaune,Marron,Violet,Fin
+    noire,Vert,Bleu,Rouge,Jaune,Marron,Violet,Fin
 };
 
 enum class CategorieCarteTactique{
