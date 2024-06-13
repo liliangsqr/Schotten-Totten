@@ -38,6 +38,9 @@ class TasDeCartes
         // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
         const T& operator[](unsigned int index)
         {
+            if (index >= tas.size()) {
+                throw out_of_range("Index hors limites");
+            }
             return *tas[index];
         }
 
@@ -65,4 +68,4 @@ class TasDeCartes
         unsigned int GetCapacite() { return capacite; }
 };
 
-#endif TASDECARTES_H
+#endif // TASDECARTES_H

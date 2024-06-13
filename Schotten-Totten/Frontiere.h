@@ -14,21 +14,18 @@ private:
 public:
     Frontiere() : bornes(9) {}
 
-
     const Borne& getBorne(int index) const {
         return bornes[index];
     }
 
-
     unsigned int getNombreDeBornesRevendiquablesParJoueur(const std::string& nomJoueur) const {
-        return std::count_if(bornes.begin(), bornes.end(), [&](const Borne& borne) {
+        return static_cast<unsigned int>(std::count_if(bornes.begin(), bornes.end(), [&](const Borne& borne) {
             return borne.estRevendiquableParJoueur(nomJoueur);
-        });
+        }));
     }
 
-
     unsigned int getNombreTotalDeBornes() const {
-        return (unsigned) bornes.size();
+        return static_cast<unsigned int>(bornes.size());
     }
 };
 

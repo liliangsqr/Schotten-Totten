@@ -1,7 +1,5 @@
-
-
-#ifndef SCHOTTEN_TOTTEN_
-#define SCHOTTEN_TOTTEN_
+#ifndef COMBINAISONTYPE_H
+#define COMBINAISONTYPE_H
 
 
 enum class CombinaisonType {

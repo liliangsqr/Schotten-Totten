@@ -48,7 +48,7 @@ bool Combinaison::estSomme() const {
 }
 
 void Combinaison::ajouterCarte(const Carte& carte) {
-    cartes.push_back(carte);
+    cartes.push_back(carte); // Push back fait une copie de carte
 }
 
 CombinaisonType Combinaison::getMeilleureCombinaison() const {

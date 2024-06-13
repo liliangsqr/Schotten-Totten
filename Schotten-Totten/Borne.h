@@ -31,8 +31,8 @@ public:
         return info;
     }
 
-    void AjouterJoueur(const string& nomJoueur, const TasBorne& tasBorne) {
-        tasJoueurs[nomJoueur] = tasBorne;
+    void AjouterJoueur(const string& nomJoueur, TasBorne&& tasBorne) {
+        tasJoueurs[nomJoueur] = move(tasBorne);
     }
 
     const TasBorne& getTasBorne(const string& nomJoueur) const {

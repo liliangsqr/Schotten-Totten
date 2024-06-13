@@ -7,8 +7,6 @@ Total::Total()
         for (unsigned int itCoul = 0; itCoul != 6; itCoul++) {
             std::unique_ptr<Carte> carte = std::make_unique<CarteClan>(itVal, itCoul);
             tas.push_back(std::move(carte));
-
-            //tas.push_back(make_unique<CarteClan>(itVal, itCoul));
         }
     }
 }

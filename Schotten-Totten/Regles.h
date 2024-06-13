@@ -1,5 +1,4 @@
 #ifndef REGLE_H
-
 #define REGLE_H
 #include <vector>
 #include <string>

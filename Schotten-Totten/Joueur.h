@@ -19,8 +19,8 @@ public:
     const string& getNom() const {
         return pNom;
     }
-	void PoserCarte(unsigned int positionCarte, TasDeCartes<Carte> tas);
-	void Piocher(Pioche pioche);
+	void PoserCarte(unsigned int positionCarte, TasDeCartes<Carte>& tas);
+	void Piocher(Pioche& pioche);
 	void ajouterCarteMain(unique_ptr<Carte>&& carte) { pMain.Ajouter(move(carte)); }
 };
 

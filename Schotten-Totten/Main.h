@@ -6,9 +6,11 @@ class Main : public TasDeCartes<Carte>
 {
 	// Attributs
 	// vector<unique_ptr<Carte>> tas;
+	// unsigned int capacite
+
 	
 public :
-
+	Main();
 };
 
 #endif
