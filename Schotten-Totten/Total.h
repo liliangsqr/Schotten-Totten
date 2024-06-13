@@ -22,6 +22,11 @@ public :
 
 	// Remplis le tas uniquement de toutes les cartes clan
 	Total();
+
+	// Méthodes
+
+    bool estVide() { return tas.empty(); }
+	unsigned int getTaille() { return (unsigned int)tas.size(); }
 };
 
 #endif TOTAL_H

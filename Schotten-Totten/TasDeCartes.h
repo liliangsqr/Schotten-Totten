@@ -62,7 +62,7 @@ class TasDeCartes
             return tas;
         }
 
-        unsigned int GetCapacite { return capacite; }
+        unsigned int GetCapacite() { return capacite; }
 };
 
 #endif TASDECARTES_H
