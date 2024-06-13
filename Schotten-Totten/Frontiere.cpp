@@ -1,33 +1,39 @@
+#ifndef FRONTIERE_H
+#define FRONTIERE_H
 
-#include "Frontiere.h"
+#include "Borne.h"
+#include <vector>
 
+class Frontiere {
+private:
+    std::vector<Borne> bornes;
 
+public:
+    Frontiere() : bornes(9) {}
 
-const Borne& Frontiere::getBorne(int i) const {
-    if (i < 0 || i >= bornes.size()) {
-        throw std::out_of_range("Indice invalide");
+    const Borne& getBorne(int index) const {
+        return bornes.at(index);
     }
-    return bornes[i];
-}
 
-
-
-int Frontiere::getNombreDeBornesRevendiquablesParJoueur1() const {
-    int count = 0;
-    for (auto it = bornes.begin(); it != bornes.end(); ++it) {
-        if (it->estRevendiquableParJoueur1()) {
-            count++;
+    int getNombreDeBornesRevendiquablesParJoueur1() const {
+        int count = 0;
+        for (const auto& borne : bornes) {
+            if (borne.estRevendiquableParJoueur("Joueur1")) {
+                count++;
+            }
         }
+        return count;
     }
-    return count;
-}
 
-int Frontiere::getNombreDeBornesRevendiquablesParJoueur2() const {
-    int count = 0;
-    for (auto it = bornes.begin(); it != bornes.end(); ++it) {
-        if (it->estRevendiquableParJoueur1()) {
-            count++;
+    int getNombreDeBornesRevendiquablesParJoueur2() const {
+        int count = 0;
+        for (const auto& borne : bornes) {
+            if (borne.estRevendiquableParJoueur("Joueur2")) {
+                count++;
+            }
         }
+        return count;
     }
-    return count;
-}
+};
+
+#endif // FRONTIERE_H
