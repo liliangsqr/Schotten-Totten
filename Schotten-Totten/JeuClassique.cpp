@@ -10,7 +10,7 @@ void JeuClassique::creerJoueurs(unsigned int nbJoueurs)
 }
 
 // Distribue nbCartesMain par joueur et le reste dans la pioche
-void JeuClassique::distribuerCartes(unsigned int nbCartesMain = 7)
+void JeuClassique::distribuerCartes(unsigned int nbCartesMain)
 {
     // A chaque joueur
     for (unsigned int joueur = 0; joueur < totalJoueurs.size(); joueur++) {
@@ -30,11 +30,10 @@ void JeuClassique::distribuerCartes(unsigned int nbCartesMain = 7)
 }
 
 // Met le jeu complètement en place
-void JeuClassique::initialiser(unsigned int nbJoueurs = 2)
+void JeuClassique::initialiser(unsigned int nbJoueurs)
 {
     creerJoueurs(nbJoueurs);
     // Total est rempli des cartes clan par son constructeur par défaut
-    
     // Distribution des cartes
     total.Melanger();
     distribuerCartes();
@@ -47,8 +46,11 @@ bool JeuClassique::terminer()
 
 void JeuClassique::jouerTour(Joueur& joueur)
 {
-	joueur.Jouer();
-	joueur.Piocher();
+    /*
+	jouer
+    poser carte
+    verifier victoire
+    */
 }
 
 Combinaison JeuClassique::evaluerCombinaisonJoueur()

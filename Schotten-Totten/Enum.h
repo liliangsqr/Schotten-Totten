@@ -1,3 +1,6 @@
+#ifndef ENUM_H
+#define ENUM_H
+
 enum class Valeurs {
     Un,Deux,Trois,Quatre,Cinq,Six,Sept,Huit,Neuf,Fin
 };
@@ -24,3 +27,4 @@ enum class NomCarteTactique{
 };
 
 
+#endif

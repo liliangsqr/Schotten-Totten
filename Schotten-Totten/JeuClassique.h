@@ -7,6 +7,7 @@
 #include "Jeu.h"
 #include "Combinaison.h"
 
+
 class JeuClassique : public Jeu
 {
 private:
@@ -42,7 +43,6 @@ public: // Partie publique, sert à accéder à l'instance unique
 	void jouerTour(Joueur& joueur);
 	
 	Combinaison evaluerCombinaisonJoueur();
-
 
 	// On empêche toute copie ou assignation
 	JeuClassique(const JeuClassique&) = delete;
