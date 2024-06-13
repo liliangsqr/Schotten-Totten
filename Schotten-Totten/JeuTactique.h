@@ -11,8 +11,8 @@ class JeuTactique : public Jeu
 {
 private:
 	TotalTactique total;
-	vector<unique_ptr<Joueur>> totalJoueurs;
-	Frontiere frontiere;
+	// vector<unique_ptr<Joueur>> totalJoueurs;
+	// Frontiere frontiere;
 
 	// Empêche toute instatiation en dehors de la classe
 	JeuTactique();
@@ -31,6 +31,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	void initialiser(unsigned int nbJoueurs = 2);
 	bool terminer();
 	void jouerTour(Joueur& joueur);
+
 	Combinaison evaluerCombinaisonJoueur();
 
 	// TotalTactique<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }

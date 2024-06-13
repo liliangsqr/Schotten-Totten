@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Affichage.cpp" />
     <ClCompile Include="Borne.cpp" />
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="CarteClan.cpp" />
@@ -143,6 +144,7 @@
     <ClCompile Include="ModeCombat.cpp" />
     <ClCompile Include="OnTop.cpp" />
     <ClCompile Include="Pioche.cpp" />
+    <ClCompile Include="Regles.cpp" />
     <ClCompile Include="Ruse.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
     <ClCompile Include="TasBorne.cpp" />
@@ -152,6 +154,7 @@
     <ClCompile Include="TroupeElite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Affichage.h" />
     <ClInclude Include="Borne.h" />
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />
@@ -167,6 +170,7 @@
     <ClInclude Include="ModeCombat.h" />
     <ClInclude Include="OnTop.h" />
     <ClInclude Include="Pioche.h" />
+    <ClInclude Include="Regles.h" />
     <ClInclude Include="Ruse.h" />
     <ClInclude Include="TasBorne.h" />
     <ClInclude Include="Total.h" />

@@ -12,8 +12,9 @@ public:
 
 	CarteTactique(unsigned int initValeur, unsigned int initCouleur, const string& initNom) :Carte(initValeur, initCouleur), pNom(initNom) {}
 
-	const string& getNom() { return pNom; }
+	const string& getNom() const{ return pNom; }
 	void toString() { cout << "Carte [" << pNom << "," << pCouleur << "] et as pour effet : " << pNom << endl; }
+
 };
 
 #endif CARTETACTIQUE_H

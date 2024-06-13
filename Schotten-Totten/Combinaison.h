@@ -1,4 +1,5 @@
-
+#ifndef COMBINAISON_H
+#define COMBINAISON_H
 
 #include <vector>
 #include <algorithm>
@@ -9,26 +10,31 @@
 
 using namespace std;
 
-class Combinaison{
+
+class Combinaison {
 private:
     std::vector<Carte> cartes;
-   static bool comparerCartes(const Carte& a, const Carte& b);
 
-    bool estSuiteDeCouleur() const ;
+
+    static bool comparerCartes(const Carte& a, const Carte& b);
+
+    bool estSuiteDeCouleur() const;
 
     bool estBrelan() const;
 
 
-    bool estCouleur() const ;
+    bool estCouleur() const;
 
-    bool estSuite() const ;
+    bool estSuite() const;
 
 
-    bool estSomme() const ;
+    bool estSomme() const;
 public:
 
     void ajouterCarte(const Carte& carte);
 
-    CombinaisonType getMeilleureCombinaison() const ;
+    CombinaisonType getMeilleureCombinaison() const;
 };
 
+
+#endif // !COMBINAISON_H
