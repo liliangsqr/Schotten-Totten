@@ -15,9 +15,6 @@ public:
 
     TasBorne() { capacite = 3; }
 
-    const unsigned int GetSize() const {
-        return (const unsigned int)tas.size();
-    }
 };
 
 #endif

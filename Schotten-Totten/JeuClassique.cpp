@@ -1,5 +1,10 @@
 #include "JeuClassique.h"
 
+JeuClassique::JeuClassique() {
+    
+}
+
+// Crée les joueurs et les insère dans totalJoueurs
 void JeuClassique::creerJoueurs(unsigned int nbJoueurs)
 {
     for (unsigned int i = 0; i < nbJoueurs; i++) {
@@ -42,6 +47,8 @@ void JeuClassique::initialiser(unsigned int nbJoueurs)
 bool JeuClassique::terminer()
 {
 	// Aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagné
+
+    return true;
 }
 
 void JeuClassique::jouerTour(Joueur& joueur)
@@ -55,5 +62,6 @@ void JeuClassique::jouerTour(Joueur& joueur)
 
 Combinaison JeuClassique::evaluerCombinaisonJoueur()
 {
-	
+    Combinaison a;
+    return a;
 }

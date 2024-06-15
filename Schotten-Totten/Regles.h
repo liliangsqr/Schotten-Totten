@@ -8,20 +8,28 @@ using namespace std;
 class Regles
 {
 private:
-	unsigned int pNbJoueur;
-	vector<string> pModesJeu;
+    unsigned int pNbJoueur;
+    vector<string> pModesJeu;
+    unsigned int capaciteMaxTasBorne;
 
-	// initialiser les règles
+    // Constructeur en privé
+    Regles() : pNbJoueur(2), pModesJeu({ "Classique", "Tactique" }), capaciteMaxTasBorne(3) { }
+
+    // Suppression des constructeur de copie et opérateur d'assignation
+    Regles(const Regles&) = delete;
+    void operator=(const Regles&) = delete;
+
 public:
+    // Méthode pour accéder à l'instance unique
+    static Regles& getInstance() {
+        static Regles instance; // Instance unique créée au premier appel
+        return instance;
+    }
 
-	Regles(unsigned int initNbJoueurs = 2,vector<string> iniModesJeu={"Classique","Tactique"});
-	vector<string>& getModesJeux() { return pModesJeu; }
-	unsigned int getNBjoueurs() { return pNbJoueur; }
-
-protected:
-
+    // Getters
+    const vector<string>& getModesJeux() const { return pModesJeu; }
+    unsigned int getNBjoueurs() const { return pNbJoueur; }
+    unsigned int getCapaciteMaxTasBorne() const { return capaciteMaxTasBorne; }
 };
 
 #endif // !REGLE_H
-
-

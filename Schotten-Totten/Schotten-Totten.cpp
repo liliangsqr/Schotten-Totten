@@ -6,17 +6,18 @@
 #include "TotalClassique.h"
 #include "TotalTactique.h"
 #include "Affichage.h"
+#include "JeuClassique.h"
 using namespace std;
 
 int main()
 {
-    //// Test de création d'un jeu complet du mode classique
-    //TotalClassique totCla = TotalClassique();
+    // Test de création d'un jeu complet du mode classique
+    TotalClassique totCla = TotalClassique();
 
-    //// Test de création d'un jeu complet du mode tactique
-    //TotalTactique totTac = TotalTactique();
+    // Test de création d'un jeu complet du mode tactique
+    TotalTactique totTac = TotalTactique();
 
-    CarteClan clan(1, 1);
-    Affichage::carteClan(clan);
+    // Test de l'initialisation du jeu
+    JeuClassique::getInstance().initialiser();
 
 }
