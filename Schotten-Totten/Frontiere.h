@@ -1,32 +1,48 @@
 #ifndef FRONTIERE_H
 #define FRONTIERE_H
 
-#include "Borne.h"
 #include <vector>
 #include <string>
 #include <algorithm>
+#include "Borne.h"
+#include "Regles.h"
 
+// Représente la frontière du jeu contenant toutes les bornes, à initialiser avec le constructeur prenant en paramètres la liste des joueurs
 class Frontiere
 {
 private:
     std::vector<Borne> bornes;
 
 public:
-    Frontiere() : bornes(9) {}
+    // Constructeur par défaut, ne devrait pas être utilisé, il faut utiliser le seul constructeur par paramètres
+    Frontiere() = delete;
 
-    const Borne& getBorne(int index) const {
+    // Crée toutes les bornes puis les initialise
+    Frontiere(vector<shared_ptr<Joueur>> joueurs);
+
+    // Revendique la borne à la position index si les conditions sont remplies
+    void revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& joueur);
+
+    // Renvoie true si le joueur a renvendiqué n bornes adjacentes ou bien plus de la moitié des bornes au total
+    bool joueurAGagne(const shared_ptr<Joueur>& joueur);
+
+
+
+
+    const Borne& getBorne(unsigned int index) const {
+        if (index < 0 || index >= bornes.size()) {
+            throw std::out_of_range("Index de borne invalide");
+        }
         return bornes[index];
     }
 
-    unsigned int getNombreDeBornesRevendicablesParJoueur(const std::string& nomJoueur) const {
+    unsigned int getNombreDeBornesRevendicablesParJoueur(const std::shared_ptr<Joueur>& joueur) const {
         return static_cast<unsigned int>(std::count_if(bornes.begin(), bornes.end(), [&](const Borne& borne) {
-            return borne.estRevendicableParJoueur(nomJoueur);
-        }));
+            return borne.estRevendicableParJoueur(joueur);
+            }));
     }
 
-    unsigned int getNombreTotalDeBornes() const {
-        return static_cast<unsigned int>(bornes.size());
-    }
+
 };
 
 #endif // FRONTIERE_H

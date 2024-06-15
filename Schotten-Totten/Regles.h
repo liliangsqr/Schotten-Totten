@@ -11,9 +11,11 @@ private:
     unsigned int pNbJoueur;
     vector<string> pModesJeu;
     unsigned int capaciteMaxTasBorne;
+    unsigned int nbBornes;
+    unsigned int nbBornesAdjacentesPourGagner;
 
     // Constructeur en privé
-    Regles() : pNbJoueur(2), pModesJeu({ "Classique", "Tactique" }), capaciteMaxTasBorne(3) { }
+    Regles() : pNbJoueur(2), pModesJeu({ "Classique", "Tactique" }), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3) { }
 
     // Suppression des constructeur de copie et opérateur d'assignation
     Regles(const Regles&) = delete;
@@ -30,6 +32,8 @@ public:
     const vector<string>& getModesJeux() const { return pModesJeu; }
     unsigned int getNBjoueurs() const { return pNbJoueur; }
     unsigned int getCapaciteMaxTasBorne() const { return capaciteMaxTasBorne; }
+    unsigned int getNbBornes() const { return nbBornes; }
+    unsigned int getNbBornesAdjacentesPourGagner() const { return nbBornesAdjacentesPourGagner; }
 };
 
 #endif // !REGLE_H

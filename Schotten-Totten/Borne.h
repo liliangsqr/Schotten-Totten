@@ -24,8 +24,12 @@ private:
     // Accueille les cartes Mode Combat
     OnTop onTop;
 
-    // Associe le nom d'un joueur à son tas de cartes sur la borne
+    // Associe un joueur à son tas de cartes sur la borne
     map<shared_ptr<Joueur>, TasBorne> tasJoueurs;
+
+
+
+
 
     // Renvoie true si tous les TasBorne sont pleins, false sinon
     bool tasSontTousPleins() const;
@@ -46,17 +50,17 @@ public:
     */
 
     // Ajoute le nom d'un joueur ainsi que son TasBorne à la borne
-    void AjouterJoueur(shared_ptr<Joueur> joueur, TasBorne&& tasBorne) {
+    void ajouterJoueur(shared_ptr<Joueur> joueur, TasBorne&& tasBorne) {
         tasJoueurs[joueur] = move(tasBorne);
     }
 
     // Ajoute une carte au TasBorne du joueur précisé
-    void AjouterCarteTasBorne(shared_ptr<Joueur> joueur, unique_ptr<Carte>&& carte) {
+    void ajouterCarteTasBorne(shared_ptr<Joueur> joueur, unique_ptr<Carte>&& carte) {
         tasJoueurs[joueur].Ajouter(std::move(carte));
     }
 
     // Ajoute une carte ModeCombat sur la borne
-    void AjouterCarteOnTop(unique_ptr<ModeCombat>&& carte) {
+    void ajouterCarteOnTop(unique_ptr<ModeCombat>&& carte) {
         onTop.Ajouter(move(carte));
     }
 
