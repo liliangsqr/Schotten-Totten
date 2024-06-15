@@ -10,9 +10,7 @@ class OnTop : public TasDeCartes<ModeCombat>
 	// unsigned int capacite;
 
 public :
-	OnTop() { /*capacite = nombre de cartes ModeCombat, jsp quoi faire donc pour l'instant je mets 100*/
-		capacite = 100; 
-	};
+	OnTop() : TasDeCartes(1000) { }
 };
 
 #endif ONTOP_H

@@ -5,15 +5,17 @@
 #include "Carte.h"
 #include <vector>
 #include <memory>
+#include "Regles.h"
 
-class TasBorne : public TasDeCartes<Carte> {
+class TasBorne : public TasDeCartes<Carte>
+{
     // Attributs
     // vector<unique_ptr<Carte>> tas;
     // unsigned int capacite;
 
 public:
 
-    TasBorne() { capacite = 3; }
+    TasBorne() : TasDeCartes(Regles::getInstance().getCapaciteMaxTasBorne()) { }
 
 };
 

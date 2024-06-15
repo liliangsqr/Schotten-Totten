@@ -14,10 +14,15 @@ class TasDeCartes
 {
     protected :
         // Attributs
+
         vector<unique_ptr<T>> tas;
-        unsigned int capacite;
+        unsigned int capacite = 0;
 
     public :
+        // Constructeurs
+        
+        TasDeCartes(unsigned int cap) : capacite(cap) { }
+
         // Méthodes
 
         // Mélange le tas aléatoirement
@@ -35,7 +40,7 @@ class TasDeCartes
         }
 
         // Retourne une référence const vers le T à la position index afin de seulement la consulter
-        // Attention on doit pas pouvoir faire delete sur l'adresse de la valeur retournée
+        // Attention on ne doit pas pouvoir faire delete sur l'adresse de la valeur retournée
         const T& operator[](unsigned int index)
         {
             if (index >= tas.size()) {

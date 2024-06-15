@@ -18,6 +18,11 @@ int main()
     TotalTactique totTac = TotalTactique();
 
     // Test de l'initialisation du jeu
-    JeuClassique::getInstance().initialiser();
+    try {
+        JeuClassique::getInstance();
+    }
+    catch (exception e) {
+        cout << e.what() << endl;
+    }
 
 }

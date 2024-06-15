@@ -14,8 +14,8 @@ private:
     std::vector<Borne> bornes;
 
 public:
-    // Constructeur par défaut, ne devrait pas être utilisé, il faut utiliser le seul constructeur par paramètres
-    Frontiere() = delete;
+
+    Frontiere() : bornes(Regles::getInstance().getNbBornes()) { }
 
     // Crée toutes les bornes puis les initialise
     Frontiere(vector<shared_ptr<Joueur>> joueurs);

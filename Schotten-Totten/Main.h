@@ -2,6 +2,9 @@
 #define MAIN_H
 
 #include "TasDeCartes.h"
+#include "Regles.h"
+
+
 class Main : public TasDeCartes<Carte>
 {
 	// Attributs
@@ -10,7 +13,8 @@ class Main : public TasDeCartes<Carte>
 
 	
 public :
-	Main();
+	// Initialise la main avec pour capacité celle spécifiée dans les règles
+	Main() : TasDeCartes(Regles::getInstance().getTailleMain()) { }
 };
 
 #endif

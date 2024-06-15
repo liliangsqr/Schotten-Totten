@@ -18,11 +18,12 @@ protected :
 	Pioche pioche;
 
 	// CONSTRUCTEURS
+
 	Jeu() = default;
 
 public :
 	// METHODES
-	virtual void initialiser(unsigned int nbJoueurs = 2) = 0;
+	virtual void initialiser() = 0;
 	virtual bool terminer() = 0;
 	virtual void jouerTour(Joueur& joueurActuel) = 0;
 	virtual Combinaison evaluerCombinaisonJoueur() = 0;

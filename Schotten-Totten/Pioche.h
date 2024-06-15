@@ -1,11 +1,16 @@
 #pragma once
 #include "TasDeCartes.h"
+#include "Regles.h"
+
+
 class Pioche :public TasDeCartes<Carte>
 {
 private:
-	//Capacite 
-	// tas
+	// vector<unique_ptr<T>> tas;
+	// unsigned int capacite;
 public:
-	 unique_ptr<Carte>& getOnTop();
+	Pioche() : TasDeCartes(100) { }
+
+	unique_ptr<Carte>& getOnTop();
 };
 
