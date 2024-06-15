@@ -13,7 +13,7 @@ bool Borne::tasSontTousPleins() const
     return true;
 }
 
-bool Borne::estRevendicableParJoueur(const std::string& nomJoueur) const 
+bool Borne::estRevendicableParJoueur(shared_ptr<Joueur> joueur) const
 {
     // VOIR TODO DANS LE .H
     return tasSontTousPleins();

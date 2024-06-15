@@ -18,7 +18,7 @@ public:
         return bornes[index];
     }
 
-    unsigned int getNombreDeBornesRevendiquablesParJoueur(const std::string& nomJoueur) const {
+    unsigned int getNombreDeBornesRevendicablesParJoueur(const std::string& nomJoueur) const {
         return static_cast<unsigned int>(std::count_if(bornes.begin(), bornes.end(), [&](const Borne& borne) {
             return borne.estRevendicableParJoueur(nomJoueur);
         }));

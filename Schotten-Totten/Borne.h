@@ -25,7 +25,7 @@ private:
     OnTop onTop;
 
     // Associe le nom d'un joueur à son tas de cartes sur la borne
-    map<string, TasBorne> tasJoueurs;
+    map<shared_ptr<Joueur>, TasBorne> tasJoueurs;
 
     // Renvoie true si tous les TasBorne sont pleins, false sinon
     bool tasSontTousPleins() const;
@@ -46,13 +46,13 @@ public:
     */
 
     // Ajoute le nom d'un joueur ainsi que son TasBorne à la borne
-    void AjouterJoueur(const string& nomJoueur, TasBorne&& tasBorne) {
-        tasJoueurs[nomJoueur] = move(tasBorne);
+    void AjouterJoueur(shared_ptr<Joueur> joueur, TasBorne&& tasBorne) {
+        tasJoueurs[joueur] = move(tasBorne);
     }
 
     // Ajoute une carte au TasBorne du joueur précisé
-    void AjouterCarteTasBorne(const Joueur& joueur, unique_ptr<Carte>&& carte) {
-        tasJoueurs[joueur.getNom()].Ajouter(std::move(carte));
+    void AjouterCarteTasBorne(shared_ptr<Joueur> joueur, unique_ptr<Carte>&& carte) {
+        tasJoueurs[joueur].Ajouter(std::move(carte));
     }
 
     // Ajoute une carte ModeCombat sur la borne
@@ -61,15 +61,15 @@ public:
     }
 
     // TODO : même si tas adversaire pas plein prouver que victoire dans tous les cas
-    bool estRevendicableParJoueur(const std::string& nomJoueur) const;
+    bool estRevendicableParJoueur(shared_ptr<Joueur> joueur) const;
 
     // Rend joueur propriétaire de la borne
     void reclamer(shared_ptr<Joueur> joueur) {
         joueurProprietaire = joueur;
     }
 
-    const TasBorne& getTasBorne(const string& nomJoueur) const {
-        return tasJoueurs.at(nomJoueur);
+    const TasBorne& getTasBorne(shared_ptr<Joueur> joueur) const {
+        return tasJoueurs.at(joueur);
     }
 
     shared_ptr<Joueur> getProprietaire() const {
