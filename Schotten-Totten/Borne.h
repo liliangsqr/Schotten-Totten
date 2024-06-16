@@ -64,13 +64,18 @@ public:
         onTop.Ajouter(move(carte));
     }
 
+    // Renvoie true si le joueur peut réclamer la borne
     // TODO : même si tas adversaire pas plein prouver que victoire dans tous les cas
     bool estRevendicableParJoueur(shared_ptr<Joueur> joueur) const;
 
-    // Rend joueur propriétaire de la borne
-    void reclamer(shared_ptr<Joueur> joueur) {
+    // Rend joueur propriétaire de la borne /!\ SANS VERIFICATIONS
+    void revendiquer(shared_ptr<Joueur> joueur) {
         joueurProprietaire = joueur;
     }
+
+
+
+
 
     const TasBorne& getTasBorne(shared_ptr<Joueur> joueur) const {
         return tasJoueurs.at(joueur);

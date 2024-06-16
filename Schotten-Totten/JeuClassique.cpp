@@ -23,7 +23,7 @@ void JeuClassique::distribuerCartes(unsigned int nbCartesMain)
     // Vérifie qu'il y a assez de cartes dans le total pour distribuer à tous les joueurs
     size_t totalCartesNecessaires = nbCartesMain * totalJoueurs.size();
     if (total.getTaille() < totalCartesNecessaires) {
-        throw runtime_error("Pas assez de cartes pour distribuer à tous les joueurs.");
+        throw runtime_error("Pas assez de cartes pour distribuer a tous les joueurs.");
     }
 
 
@@ -32,7 +32,7 @@ void JeuClassique::distribuerCartes(unsigned int nbCartesMain)
         // On distribue nbCartesMain cartes
         for (unsigned int carte = 0; carte < nbCartesMain; carte++) {
             if (total.estVide()) {
-                throw runtime_error("Plus assez de carte dans Total pour la distribution");
+                throw runtime_error("Plus assez de carte dans total pour la distribution");
             }
 
             // Déplace la carte de l'indice 0 du total vers la main du joueur
@@ -104,4 +104,19 @@ Combinaison JeuClassique::evaluerCombinaisonJoueur()
 {
     Combinaison a;
     return a;
+}
+
+bool JeuClassique::borneEstRevendicableParJoueur(unsigned int index, const shared_ptr<Joueur> joueur) const
+{
+    if (frontiere.getBorne(index).estRevendicableParJoueur(joueur)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+void JeuClassique::revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& joueur)
+{
+    frontiere.revendiquerBorne(index, joueur);
 }

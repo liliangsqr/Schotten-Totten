@@ -14,10 +14,10 @@ void Frontiere::revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& j
 {
     // Effectuer les vérifications avant l'appel à cette méthode, ce if sert de sécurité
     if (bornes[index].estRevendicableParJoueur(joueur)) {
-        bornes[index].reclamer(joueur);
+        bornes[index].revendiquer(joueur);
     }
     else {
-		throw std::runtime_error("La borne n'est pas revendicable par ce joueur, effectuez des vérifications avant d'appeler Frontiere::revendiquerBorne");
+		throw std::runtime_error("La borne n'est pas revendicable par ce joueur, effectuez des verifications avant d'appeler Frontiere::revendiquerBorne");
 	}
 }
 

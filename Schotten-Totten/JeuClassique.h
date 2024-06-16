@@ -47,7 +47,6 @@ public: // Partie publique, sert à accéder à l'instance unique
 	JeuClassique(const JeuClassique&) = delete;
 	void operator=(const JeuClassique&) = delete;
 
-
 	// Parcourt tous les joueurs pour vérifier si l'un deux a gagné, et si c'est le cas retourne une référence const vers lui
 	const std::shared_ptr<Joueur> getGagnant() const;
 	
@@ -58,9 +57,15 @@ public: // Partie publique, sert à accéder à l'instance unique
 	
 	Combinaison evaluerCombinaisonJoueur();
 
+	// Appelle estRevendicableParJoueur sur la borne à l'index index de la frontière
+	bool borneEstRevendicableParJoueur(unsigned int index, const shared_ptr<Joueur> joueur) const;
+
+	// Appelle simplement revendiquerBorne de la classe Frontiere
+	void revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& joueur);
 
 
 
+	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }
 };
 
 

@@ -31,6 +31,15 @@ bool Combinaison::estSuite() const {
     return true;
 }
 
+unsigned int Combinaison::getValSomme() const
+{
+    unsigned int somme = 0;
+    for (const Carte& carte : cartes) {
+        somme += carte.getValeur();
+    }
+    return somme;
+}
+
 bool Combinaison::estBrelan() const {
     const size_t minSize = Regles::getInstance().getTailleMinCombinaison();
     if (cartes.size() < minSize) return false;
@@ -56,7 +65,7 @@ bool Combinaison::estCouleur() const {
 
 void Combinaison::ajouterCarte(const Carte& carte) {
     if (cartes.size() < Regles::getInstance().getCapaciteMaxTasBorne()) {
-        cartes.push_back(carte);
+        cartes.push_back(carte); // push_back fait une copie
     }
     else {
         throw std::runtime_error("Vous essayez d'ajouter trop de cartes à la combinaison");

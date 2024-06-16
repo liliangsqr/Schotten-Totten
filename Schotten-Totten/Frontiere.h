@@ -34,12 +34,6 @@ public:
         return bornes[index];
     }
 
-    unsigned int getNombreDeBornesRevendicablesParJoueur(const std::shared_ptr<Joueur>& joueur) const {
-        return static_cast<unsigned int>(std::count_if(bornes.begin(), bornes.end(), [&](const Borne& borne) {
-            return borne.estRevendicableParJoueur(joueur);
-            }));
-    }
-
 
 };
 
