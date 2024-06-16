@@ -20,7 +20,6 @@ int main()
     // Test de l'initialisation du jeu
     try {
         JeuClassique::getInstance();
-        JeuClassique::getInstance().revendiquerBorne(0, JeuClassique::getInstance().getJoueurs()[0]);
 
         cout << "" << endl;
     }

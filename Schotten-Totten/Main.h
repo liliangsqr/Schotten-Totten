@@ -5,6 +5,7 @@
 #include "Regles.h"
 
 
+// TasDeCartes repésentant la main du joueur
 class Main : public TasDeCartes<Carte>
 {
 	// Attributs

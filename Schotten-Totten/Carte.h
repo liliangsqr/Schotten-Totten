@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Classe servant de base aux différents types de cartes existants
 class Carte
 {
 protected :

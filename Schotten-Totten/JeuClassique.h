@@ -8,6 +8,7 @@
 #include "Combinaison.h"
 
 
+// Jeu classique, gère tout le fonctionnement interne des mécaniques du jeu et les met à disposition pour être utilisées dans Application
 class JeuClassique : public Jeu
 {
 private:
@@ -62,6 +63,10 @@ public: // Partie publique, sert à accéder à l'instance unique
 
 	// Appelle simplement revendiquerBorne de la classe Frontiere
 	void revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& joueur);
+
+	// Fait piocher le joueur passé en paramètres
+	// Lève une exception si la main du joueur est pleine ou si la pioche est vide
+	void piocher(shared_ptr<Joueur>& joueur);
 
 
 

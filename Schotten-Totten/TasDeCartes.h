@@ -9,6 +9,7 @@
 
 using namespace std;
 
+// Template servant de base à tous les tas de cartes du jeu qui en héritent
 template<class T>
 class TasDeCartes
 {

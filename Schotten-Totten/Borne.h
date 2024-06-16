@@ -16,6 +16,7 @@
 
 using namespace std;
 
+// Une borne a n (2 de base) tas associés à des joueurs. Elle peut être revendiquée si un joueur a une meilleure combinaison que le/les autres
 class Borne {
 private:
     // Joueur propriétaire de la borne

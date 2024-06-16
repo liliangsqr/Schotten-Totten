@@ -7,6 +7,7 @@
 #include <memory>
 #include "Regles.h"
 
+// TasDeCartes posé à côté d'une borne, associé à un joueur
 class TasBorne : public TasDeCartes<Carte>
 {
     // Attributs

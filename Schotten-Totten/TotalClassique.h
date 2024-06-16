@@ -2,7 +2,7 @@
 #define TOTALCLASSIQUE_H
 #include "Total.h"
 
-
+// Représente tout le paquet de cartes pour le mode classique, ne sert qu'à distribuer aléatoirement les cartes en début de partie
 class TotalClassique : public Total
 {
 	// Attributs

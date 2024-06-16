@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Singleton contenant toutes les constantes liées aux règles du jeu
 class Regles
 {
 private:

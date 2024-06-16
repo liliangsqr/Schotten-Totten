@@ -120,3 +120,18 @@ void JeuClassique::revendiquerBorne(unsigned int index, const shared_ptr<Joueur>
 {
     frontiere.revendiquerBorne(index, joueur);
 }
+
+void JeuClassique::piocher(shared_ptr<Joueur>& joueur)
+{
+    // Si la main du joueur est pleine
+    if (joueur.get()->getMain().GetSizeTas() == Regles::getInstance().getTailleMain()) {
+        throw runtime_error("Vous essayez de piocher alors que la main du joueur est pleine");
+    }
+    // Sinon si la pioche est vide
+    else if (pioche.GetSizeTas() == 0) {
+        throw runtime_error("Vous essayez de piocher alors que la pioche est vide");
+    }
+    else {
+        joueur.get()->Piocher(pioche);
+    }
+}

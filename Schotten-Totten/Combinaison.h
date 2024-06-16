@@ -11,7 +11,7 @@
 
 using namespace std;
 
-
+// Représente une combinaison de cartes et est utilisée pour être comparée à une ou plusieurs autres
 class Combinaison {
 private:
     std::vector<Carte> cartes;

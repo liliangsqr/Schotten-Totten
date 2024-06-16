@@ -5,7 +5,8 @@
 #include "Combinaison.h"
 
 
-// Jeu est une classe abstraite, ses classes filles sont des singletons
+// Jeu est une classe abstraite, ses classes filles sont des singletons qui gèrent le fonctionnement interne des mécaniques de jeu
+// et les met à disposition pour qu'elles soient utilisées par Application
 class Jeu
 {
 public :

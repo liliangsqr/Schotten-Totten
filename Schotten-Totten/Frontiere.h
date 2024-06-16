@@ -14,7 +14,6 @@ private:
     std::vector<Borne> bornes;
 
 public:
-
     Frontiere() : bornes(Regles::getInstance().getNbBornes()) { }
 
     // Crée toutes les bornes puis les initialise

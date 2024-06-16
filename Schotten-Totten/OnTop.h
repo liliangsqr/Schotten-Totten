@@ -3,6 +3,8 @@
 
 #include "TasDeCartes.h"
 #include "ModeCombat.h"
+
+// TasDeCartes n'accueillant que des cartes tactiques de type ModeCombat et se plaçant sur une borne
 class OnTop : public TasDeCartes<ModeCombat>
 {
 	// ATTRIBUTS

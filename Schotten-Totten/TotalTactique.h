@@ -4,6 +4,7 @@
 #include "CarteTactique.h"
 #include <memory>
 
+// Représente tout le paquet de cartes pour le mode tactique, ne sert qu'à distribuer aléatoirement les cartes en début de partie
 class TotalTactique : public Total
 {
 	// Attributs

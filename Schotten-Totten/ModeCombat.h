@@ -1,6 +1,8 @@
 #ifndef MODECOMBAT_H
 #define MODECOMBAT_H
 #include "CarteTactique.h"
+
+// Carte tactique se jouant sur une borne directement
 class ModeCombat : public CarteTactique
 {
 private:

@@ -7,6 +7,7 @@
 #include "Jeu.h"
 #include "Combinaison.h"
 
+// Variante tactique du jeu, gère tout le fonctionnement interne des mécaniques de jeu et y donne accès pour l'utiliser dans Application
 class JeuTactique : public Jeu
 {
 private:
