@@ -65,7 +65,8 @@ public:
     }
 
     // Renvoie true si le joueur peut réclamer la borne
-    // TODO : même si tas adversaire pas plein prouver que victoire dans tous les cas
+    // TODO 1 : même si tas adversaire pas plein prouver que victoire dans tous les cas
+    // TODO 2 : si mêmes combinaison et somme, choisir joueur arrivé en premier (pour l'instant choix injuste)
     bool estRevendicableParJoueur(shared_ptr<Joueur> joueur) const;
 
     // Rend joueur propriétaire de la borne /!\ SANS VERIFICATIONS

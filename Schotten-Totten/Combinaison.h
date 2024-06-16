@@ -27,11 +27,12 @@ private:
 
     bool estSuite() const;
 
-    unsigned int getValSomme() const;
 
 
 
 public:
+    unsigned int getValSomme() const;
+
     CombinaisonType getMeilleureCombinaison() const;
 
     void ajouterCarte(const Carte& carte);

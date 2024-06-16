@@ -33,19 +33,20 @@ bool Borne::estRevendicableParJoueur(shared_ptr<Joueur> joueur) const
     // On trouve le joueur qui a la meilleure combinaison
     shared_ptr<Joueur> meilleurJoueur = nullptr;
     CombinaisonType meilleureCombinaison = CombinaisonType::Aucune;
+    unsigned int meilleureSomme = 0;
+
     for (const auto& [joueur, comb] : combinaisons) {
         CombinaisonType type = comb.getMeilleureCombinaison();
-        if (type > meilleureCombinaison) {
+        unsigned int somme = comb.getValSomme();
+
+        // Comparaison des combinaisons
+        if (type > meilleureCombinaison || (type == meilleureCombinaison && somme > meilleureSomme)) {
             meilleurJoueur = joueur;
             meilleureCombinaison = type;
+            meilleureSomme = somme;
         }
     }
 
     // Si le joueur avec la meilleure combinaison est celui passé en paramètres alors on renvoie true
-    if (meilleurJoueur == joueur) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return (meilleurJoueur == joueur);
 }
