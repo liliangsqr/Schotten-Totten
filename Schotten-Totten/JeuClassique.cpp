@@ -65,7 +65,7 @@ void JeuClassique::finDePartie()
     
 }
 
-const std::shared_ptr<Joueur>& JeuClassique::getGagnant() const
+const std::shared_ptr<Joueur> JeuClassique::getGagnant() const
 {
     for (const auto& joueur : totalJoueurs) {
         // Si joueur a gagné

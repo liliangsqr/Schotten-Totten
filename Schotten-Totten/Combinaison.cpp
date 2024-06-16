@@ -1,61 +1,87 @@
-#include <vector>
-#include <algorithm>
-#include "Carte.h"
 #include "Combinaison.h"
 
-
-
-bool Combinaison:: comparerCartes(const Carte& a, const Carte& b) {
+bool Combinaison::comparerCartes(const Carte& a, const Carte& b) {
     return a.getValeur() < b.getValeur();
 }
 
 bool Combinaison::estSuiteDeCouleur() const {
-    if (cartes.size() < 3) return false;
-    vector<Carte> sortedCartes = cartes;
-    sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
-    return sortedCartes[0].getCouleur() == sortedCartes[1].getCouleur() &&
-           sortedCartes[1].getCouleur() == sortedCartes[2].getCouleur() &&
-           sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
-           sortedCartes[1].getValeur() + 1 == sortedCartes[2].getValeur();
+    const size_t minSize = Regles::getInstance().getTailleMinCombinaison();
+    if (cartes.size() < minSize) return false;
+    std::vector<Carte> sortedCartes = cartes;
+    std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
+    for (size_t i = 1; i < sortedCartes.size(); ++i) {
+        if (sortedCartes[i].getCouleur() != sortedCartes[i - 1].getCouleur() ||
+            sortedCartes[i].getValeur() != sortedCartes[i - 1].getValeur() + 1) {
+            return false;
+        }
+    }
+    return true;
 }
 
 bool Combinaison::estSuite() const {
-    if (cartes.size() < 3) return false;
-    vector<Carte> sortedCartes = cartes;
-    sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
-    return sortedCartes[0].getValeur() + 1 == sortedCartes[1].getValeur() &&
-           sortedCartes[1].getValeur() + 1 == sortedCartes[2].getValeur();
+    const size_t minSize = Regles::getInstance().getTailleMinCombinaison();
+    if (cartes.size() < minSize) return false;
+    std::vector<Carte> sortedCartes = cartes;
+    std::sort(sortedCartes.begin(), sortedCartes.end(), comparerCartes);
+    for (size_t i = 1; i < sortedCartes.size(); ++i) {
+        if (sortedCartes[i].getValeur() != sortedCartes[i - 1].getValeur() + 1) {
+            return false;
+        }
+    }
+    return true;
 }
 
-
 bool Combinaison::estBrelan() const {
-    if (cartes.size() < 3) return false;
-    return cartes[0].getValeur() == cartes[1].getValeur() &&
-           cartes[1].getValeur() == cartes[2].getValeur();
+    const size_t minSize = Regles::getInstance().getTailleMinCombinaison();
+    if (cartes.size() < minSize) return false;
+    for (size_t i = 0; i < cartes.size() - 2; ++i) {
+        if (cartes[i].getValeur() == cartes[i + 1].getValeur() &&
+            cartes[i + 1].getValeur() == cartes[i + 2].getValeur()) {
+            return true;
+        }
+    }
+    return false;
 }
 
 bool Combinaison::estCouleur() const {
-    if (cartes.size() < 3) return false;
-    return cartes[0].getCouleur() == cartes[1].getCouleur() &&
-           cartes[1].getCouleur() == cartes[2].getCouleur();
-}
-
-
-bool Combinaison::estSomme() const {
-    if (cartes.size() < 3) return false;
-    int somme = cartes[0].getValeur() + cartes[1].getValeur() + cartes[2].getValeur();
-    return somme <= 9;
+    const size_t minSize = Regles::getInstance().getTailleMinCombinaison();
+    if (cartes.size() < minSize) return false;
+    for (size_t i = 1; i < cartes.size(); ++i) {
+        if (cartes[i].getCouleur() != cartes[i - 1].getCouleur()) {
+            return false;
+        }
+    }
+    return true;
 }
 
 void Combinaison::ajouterCarte(const Carte& carte) {
-    cartes.push_back(carte); // Push back fait une copie de carte
+    if (cartes.size() < Regles::getInstance().getCapaciteMaxTasBorne()) {
+        cartes.push_back(carte);
+    }
+    else {
+        throw std::runtime_error("Vous essayez d'ajouter trop de cartes à la combinaison");
+    }
 }
 
 CombinaisonType Combinaison::getMeilleureCombinaison() const {
-    if (estSuiteDeCouleur()) return CombinaisonType::SuiteDeCouleur;
-    if (estBrelan()) return CombinaisonType::Brelan;
-    if (estCouleur()) return CombinaisonType::Couleur;
-    if (estSuite()) return CombinaisonType::Suite;
-    if (estSomme()) return CombinaisonType::Somme;
-    return CombinaisonType::Aucune;
+    if (estSuiteDeCouleur()) {
+        return CombinaisonType::SuiteDeCouleur;
+    }
+    else if (estBrelan()) {
+        return CombinaisonType::Brelan;
+    }
+    else if (estCouleur()) {
+        return CombinaisonType::Couleur;
+    }
+    else if (estSuite()) {
+        return CombinaisonType::Suite;
+    }
+    else {
+        return CombinaisonType::Somme;
+    }
+}
+
+
+size_t Combinaison::getTaille() const {
+    return cartes.size();
 }

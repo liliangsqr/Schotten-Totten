@@ -7,6 +7,7 @@
 #include "Carte.h"
 #include "Enum.h"
 #include "CombinaisonType.h"
+#include "Regles.h"
 
 using namespace std;
 
@@ -22,18 +23,17 @@ private:
 
     bool estBrelan() const;
 
-
     bool estCouleur() const;
 
     bool estSuite() const;
 
-
-    bool estSomme() const;
 public:
 
     void ajouterCarte(const Carte& carte);
 
     CombinaisonType getMeilleureCombinaison() const;
+
+    size_t getTaille() const;
 };
 
 

@@ -49,7 +49,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 
 
 	// Parcourt tous les joueurs pour vérifier si l'un deux a gagné, et si c'est le cas retourne une référence const vers lui
-	const std::shared_ptr<Joueur>& getGagnant() const;
+	const std::shared_ptr<Joueur> getGagnant() const;
 	
 	// Si la partie est bien terminée, y met fin et fait les nettoyages nécessaires en appelant finDePartie(), sinon renvoie false
 	bool terminer();
