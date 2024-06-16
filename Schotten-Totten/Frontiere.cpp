@@ -21,7 +21,7 @@ void Frontiere::revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& j
 	}
 }
 
-bool Frontiere::joueurAGagne(const shared_ptr<Joueur>& joueur)
+bool Frontiere::joueurAGagne(const shared_ptr<Joueur>& joueur) const
 {
 	size_t nbRequisTotal = bornes.size() / 2; // Division entière
 	if (bornes.size() % 2 != 0) { // Si le nb de bornes est impair alors on arrondit nbRequis au-dessus
@@ -44,7 +44,6 @@ bool Frontiere::joueurAGagne(const shared_ptr<Joueur>& joueur)
 		}
 		else {
 			compteurAdjacentes = 0;
-			compteurTotal++;
 		}
 	}
 

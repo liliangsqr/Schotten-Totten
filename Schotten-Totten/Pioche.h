@@ -11,6 +11,6 @@ private:
 public:
 	Pioche() : TasDeCartes(100) { }
 
-	unique_ptr<Carte>& getOnTop();
+	unique_ptr<Carte> getOnTop();
 };
 

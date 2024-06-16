@@ -60,11 +60,35 @@ void JeuClassique::initialiser()
     frontiere = Frontiere(totalJoueurs);
 }
 
+void JeuClassique::finDePartie()
+{
+    
+}
+
+const std::shared_ptr<Joueur>& JeuClassique::getGagnant() const
+{
+    for (const auto& joueur : totalJoueurs) {
+        // Si joueur a gagné
+        if (frontiere.joueurAGagne(joueur)) {
+            return joueur;
+        }
+    }
+
+    // Si aucun joueur n'a gagné
+    return nullptr;
+}
+
 bool JeuClassique::terminer()
 {
-	// Aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagné
+    // Si un joueur a gagné la partie
+    if (getGagnant() != nullptr) {
+        finDePartie();
 
-    return true;
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 void JeuClassique::jouerTour(Joueur& joueur)

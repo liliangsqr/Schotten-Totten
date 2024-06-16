@@ -21,9 +21,11 @@ protected :
 
 	Jeu() = default;
 
+	virtual void initialiser() = 0;
+
+
 public :
 	// METHODES
-	virtual void initialiser() = 0;
 	virtual bool terminer() = 0;
 	virtual void jouerTour(Joueur& joueurActuel) = 0;
 	virtual Combinaison evaluerCombinaisonJoueur() = 0;

@@ -20,6 +20,7 @@ int main()
     // Test de l'initialisation du jeu
     try {
         JeuClassique::getInstance();
+        cout << JeuClassique::getInstance().terminer() << endl;
     }
     catch (exception e) {
         cout << e.what() << endl;

@@ -24,9 +24,7 @@ public:
     void revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& joueur);
 
     // Renvoie true si le joueur a renvendiqué n bornes adjacentes ou bien plus de la moitié des bornes au total
-    bool joueurAGagne(const shared_ptr<Joueur>& joueur);
-
-
+    bool joueurAGagne(const shared_ptr<Joueur>& joueur) const;
 
 
     const Borne& getBorne(unsigned int index) const {

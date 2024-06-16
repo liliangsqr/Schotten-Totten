@@ -36,7 +36,13 @@ class TasDeCartes
         // Ajoute/move une carte en RVALUE sur le haut du tas
         void Ajouter(unique_ptr<T>&& carte)
         {
-            tas.push_back(move(carte));
+            // Si le tas n'est pas plein
+            if (tas.size() < capacite) {
+                tas.push_back(move(carte));
+            }
+            else {
+                throw runtime_error("Vous essayez d'ajouter une carte à un tas plein");
+            }
         }
 
         // Retourne une référence const vers le T à la position index afin de seulement la consulter
@@ -60,6 +66,9 @@ class TasDeCartes
             tas.erase(tas.begin() + index);
             return carte;
         }
+
+        // Vide complètement le tas
+        void vider() { tas.clear(); }
 
         // Get la taille du tas 
         unsigned int GetSizeTas() const {
