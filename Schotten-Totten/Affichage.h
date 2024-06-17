@@ -18,6 +18,8 @@
 #define MARRON "\033[33m";
 #define VIOLET "\033[35m";
 
+
+// Gère complètement l'affichage console du projet
 class Affichage
 {
 private:

@@ -1,6 +1,6 @@
 #include "JeuTactique.h"
 
-void JeuTactique::initialiser(unsigned int nbJoueurs)
+void JeuTactique::initialiser()
 {
 }
 

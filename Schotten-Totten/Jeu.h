@@ -5,7 +5,8 @@
 #include "Combinaison.h"
 
 
-// Jeu est une classe abstraite, ses classes filles sont des singletons
+// Jeu est une classe abstraite, ses classes filles sont des singletons qui gèrent le fonctionnement interne des mécaniques de jeu
+// et les met à disposition pour qu'elles soient utilisées par Application
 class Jeu
 {
 public :
@@ -18,11 +19,14 @@ protected :
 	Pioche pioche;
 
 	// CONSTRUCTEURS
+
 	Jeu() = default;
+
+	virtual void initialiser() = 0;
+
 
 public :
 	// METHODES
-	virtual void initialiser(unsigned int nbJoueurs = 2) = 0;
 	virtual bool terminer() = 0;
 	virtual void jouerTour(Joueur& joueurActuel) = 0;
 	virtual Combinaison evaluerCombinaisonJoueur() = 0;

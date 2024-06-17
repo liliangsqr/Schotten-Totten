@@ -3,6 +3,7 @@
 
 #include "Joueur.h"
 
+// Représente un joueur contrôlé par l'ordinateur, a un comportement hasardeux
 class IA : public Joueur
 {
 private: 

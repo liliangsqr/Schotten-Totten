@@ -8,8 +8,7 @@
 
 using namespace std;
 
-// Sert de base aux totaux spécialisés, le type stocké dans le vector est Carte, la restriction du type de cartes
-// se fait dans les types des méthodes
+// Sert de base aux totaux spécialisés, le type stocké dans le vector est Carte, la restriction du type de cartes se fait dans les types des méthodes
 class Total : public TasDeCartes<Carte>
 {
 	// Attributs

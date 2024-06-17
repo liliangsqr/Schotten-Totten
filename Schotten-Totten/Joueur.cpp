@@ -12,6 +12,6 @@ void Joueur::PoserCarte(unsigned int positionCarte,TasDeCartes<Carte>& tas)
 
 void Joueur::Piocher(Pioche& pioche)
 {
-	if(pMain.GetSizeTas()<7) 
+	if(pMain.GetSizeTas() < 7) 
 		pMain.Ajouter(move(pioche.getOnTop()));
 }

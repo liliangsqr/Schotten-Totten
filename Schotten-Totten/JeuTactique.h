@@ -7,6 +7,7 @@
 #include "Jeu.h"
 #include "Combinaison.h"
 
+// Variante tactique du jeu, gère tout le fonctionnement interne des mécaniques de jeu et y donne accès pour l'utiliser dans Application
 class JeuTactique : public Jeu
 {
 private:
@@ -28,7 +29,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	JeuTactique(const JeuTactique&) = delete;
 	JeuTactique& operator=(const JeuTactique&) = delete;
 
-	void initialiser(unsigned int nbJoueurs = 2);
+	void initialiser();
 	bool terminer();
 	void jouerTour(Joueur& joueur);
 

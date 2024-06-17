@@ -2,6 +2,8 @@
 #define CARTETACTIQUE_H
 #include "Carte.h"
 #include "iomanip"
+
+// Carte ayant un comportement spécial, utilisée dans la variante tactique du jeu
 class CarteTactique : public Carte
 {
 private:

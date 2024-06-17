@@ -1,6 +1,8 @@
 #ifndef CARTECLAN_H
 #define CARTECLAN_H
 #include "Carte.h"
+
+// Carte de base avec une couleur et une valeur
 using namespace std;
 class CarteClan : public Carte
 {

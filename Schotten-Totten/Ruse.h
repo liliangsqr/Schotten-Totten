@@ -1,6 +1,8 @@
 #ifndef RUSE_H
 #define RUSE_H
 #include "CarteTactique.h"
+
+// Carte tactique se jouant dans la défausse
 class Ruse : public CarteTactique
 {
 private:

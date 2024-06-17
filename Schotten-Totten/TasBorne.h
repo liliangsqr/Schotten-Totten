@@ -5,19 +5,19 @@
 #include "Carte.h"
 #include <vector>
 #include <memory>
+#include "Regles.h"
 
-class TasBorne : public TasDeCartes<Carte> {
+// TasDeCartes posé à côté d'une borne, associé à un joueur
+class TasBorne : public TasDeCartes<Carte>
+{
     // Attributs
     // vector<unique_ptr<Carte>> tas;
     // unsigned int capacite;
 
 public:
 
-    TasBorne() { capacite = 3; }
+    TasBorne() : TasDeCartes(Regles::getInstance().getCapaciteMaxTasBorne()) { }
 
-    const unsigned int GetSize() const {
-        return (const unsigned int)tas.size();
-    }
 };
 
 #endif

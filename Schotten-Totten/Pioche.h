@@ -1,11 +1,19 @@
-#pragma once
+#ifndef PIOCHE_H
+#define PIOCHE_H
+
 #include "TasDeCartes.h"
-class Pioche :public TasDeCartes<Carte>
+#include "Regles.h"
+
+// TasDeCartes qui donne libre accès à la carte au-dessus du tas pour être piochée
+class Pioche : public TasDeCartes<Carte>
 {
 private:
-	//Capacite 
-	// tas
+	// vector<unique_ptr<T>> tas;
+	// unsigned int capacite;
 public:
-	 unique_ptr<Carte>& getOnTop();
+	Pioche() : TasDeCartes(100) { }
+
+	unique_ptr<Carte> getOnTop();
 };
 
+#endif

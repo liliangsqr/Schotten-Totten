@@ -7,10 +7,11 @@
 #include "Carte.h"
 #include "Enum.h"
 #include "CombinaisonType.h"
+#include "Regles.h"
 
 using namespace std;
 
-
+// Représente une combinaison de cartes et est utilisée pour être comparée à une ou plusieurs autres
 class Combinaison {
 private:
     std::vector<Carte> cartes;
@@ -22,18 +23,21 @@ private:
 
     bool estBrelan() const;
 
-
     bool estCouleur() const;
 
     bool estSuite() const;
 
 
-    bool estSomme() const;
+
+
 public:
+    unsigned int getValSomme() const;
+
+    CombinaisonType getMeilleureCombinaison() const;
 
     void ajouterCarte(const Carte& carte);
 
-    CombinaisonType getMeilleureCombinaison() const;
+    size_t getTaille() const;
 };
 
 

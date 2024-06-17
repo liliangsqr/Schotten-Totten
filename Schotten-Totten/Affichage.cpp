@@ -3,9 +3,9 @@
 void Affichage::ChoixMode( Regles& regles)
 {
 	cout << " Veuiller choisir un mode de jeu :";
-	for (unsigned int numero = 0; numero< regles.getModesJeux().size(); numero++)
+	for (unsigned int numero = 0; numero< regles.getModesJeu().size(); numero++)
 	{
-		for (string mode : regles.getModesJeux())
+		for (string mode : regles.getModesJeu())
 		{
 			cout << numero << ". " << mode << endl;
 		}
@@ -42,6 +42,7 @@ string Affichage::Couleurs(unsigned int carteCouleurs)
 	case 6:return VIOLET; break;
 
 	default:
+		return string("");
 		break;
 	}
 }
