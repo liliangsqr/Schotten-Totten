@@ -13,124 +13,124 @@ int main()
 {
     // Tests
     try {
-        JeuClassique::getInstance();
-        shared_ptr<Joueur> J1 = JeuClassique::getInstance().getJoueurs()[0];
-        shared_ptr<Joueur> J2 = JeuClassique::getInstance().getJoueurs()[1];
-        JeuClassique::getInstance().poserCarte(0, 0, J1);
-        JeuClassique::getInstance().poserCarte(0, 0, J2);
-        JeuClassique::getInstance().poserCarte(0, 0, J1);
-        JeuClassique::getInstance().poserCarte(0, 0, J2);
-        JeuClassique::getInstance().poserCarte(0, 0, J1);
-        JeuClassique::getInstance().poserCarte(0, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
+        JeuClassique& jeu = JeuClassique::getInstance();
+        shared_ptr<Joueur> J1 = jeu.getJoueurs()[0];
+        shared_ptr<Joueur> J2 = jeu.getJoueurs()[1];
+        jeu.poserCarte(0, 0, J1);
+        jeu.poserCarte(0, 0, J2);
+        jeu.poserCarte(0, 0, J1);
+        jeu.poserCarte(0, 0, J2);
+        jeu.poserCarte(0, 0, J1);
+        jeu.poserCarte(0, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
 
-        JeuClassique::getInstance().poserCarte(1, 0, J1);
-        JeuClassique::getInstance().poserCarte(1, 0, J2);
-        JeuClassique::getInstance().poserCarte(1, 0, J1);
-        JeuClassique::getInstance().poserCarte(1, 0, J2);
-        JeuClassique::getInstance().poserCarte(1, 0, J1);
-        JeuClassique::getInstance().poserCarte(1, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
+        jeu.poserCarte(1, 0, J1);
+        jeu.poserCarte(1, 0, J2);
+        jeu.poserCarte(1, 0, J1);
+        jeu.poserCarte(1, 0, J2);
+        jeu.poserCarte(1, 0, J1);
+        jeu.poserCarte(1, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
 
-        JeuClassique::getInstance().poserCarte(2, 0, J1);
-        JeuClassique::getInstance().poserCarte(2, 0, J2);
-        JeuClassique::getInstance().poserCarte(2, 0, J1);
-        JeuClassique::getInstance().poserCarte(2, 0, J2);
-        JeuClassique::getInstance().poserCarte(2, 0, J1);
-        JeuClassique::getInstance().poserCarte(2, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
+        jeu.poserCarte(2, 0, J1);
+        jeu.poserCarte(2, 0, J2);
+        jeu.poserCarte(2, 0, J1);
+        jeu.poserCarte(2, 0, J2);
+        jeu.poserCarte(2, 0, J1);
+        jeu.poserCarte(2, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
 
-        JeuClassique::getInstance().poserCarte(3, 0, J1);
-        JeuClassique::getInstance().poserCarte(3, 0, J2);
-        JeuClassique::getInstance().poserCarte(3, 0, J1);
-        JeuClassique::getInstance().poserCarte(3, 0, J2);
-        JeuClassique::getInstance().poserCarte(3, 0, J1);
-        JeuClassique::getInstance().poserCarte(3, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
+        jeu.poserCarte(3, 0, J1);
+        jeu.poserCarte(3, 0, J2);
+        jeu.poserCarte(3, 0, J1);
+        jeu.poserCarte(3, 0, J2);
+        jeu.poserCarte(3, 0, J1);
+        jeu.poserCarte(3, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
 
-        JeuClassique::getInstance().poserCarte(4, 0, J1);
-        JeuClassique::getInstance().poserCarte(4, 0, J2);
-        JeuClassique::getInstance().poserCarte(4, 0, J1);
-        JeuClassique::getInstance().poserCarte(4, 0, J2);
-        JeuClassique::getInstance().poserCarte(4, 0, J1);
-        JeuClassique::getInstance().poserCarte(4, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
+        jeu.poserCarte(4, 0, J1);
+        jeu.poserCarte(4, 0, J2);
+        jeu.poserCarte(4, 0, J1);
+        jeu.poserCarte(4, 0, J2);
+        jeu.poserCarte(4, 0, J1);
+        jeu.poserCarte(4, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
 
-        JeuClassique::getInstance().poserCarte(5, 0, J1);
-        JeuClassique::getInstance().poserCarte(5, 0, J2);
-        JeuClassique::getInstance().poserCarte(5, 0, J1);
-        JeuClassique::getInstance().poserCarte(5, 0, J2);
-        JeuClassique::getInstance().poserCarte(5, 0, J1);
-        JeuClassique::getInstance().poserCarte(5, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J2);
+        jeu.poserCarte(5, 0, J1);
+        jeu.poserCarte(5, 0, J2);
+        jeu.poserCarte(5, 0, J1);
+        jeu.poserCarte(5, 0, J2);
+        jeu.poserCarte(5, 0, J1);
+        jeu.poserCarte(5, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
 
-        JeuClassique::getInstance().poserCarte(6, 0, J1);
-        JeuClassique::getInstance().poserCarte(6, 0, J2);
-        JeuClassique::getInstance().poserCarte(6, 0, J1);
-        JeuClassique::getInstance().poserCarte(6, 0, J2);
-        JeuClassique::getInstance().poserCarte(6, 0, J1);
-        JeuClassique::getInstance().poserCarte(6, 0, J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
-        JeuClassique::getInstance().piocher(J1);
-        JeuClassique::getInstance().piocher(J2);
+        jeu.poserCarte(6, 0, J1);
+        jeu.poserCarte(6, 0, J2);
+        jeu.poserCarte(6, 0, J1);
+        jeu.poserCarte(6, 0, J2);
+        jeu.poserCarte(6, 0, J1);
+        jeu.poserCarte(6, 0, J2);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
 
 
-        JeuClassique::getInstance().poserCarte(7, 0, J1);
-        JeuClassique::getInstance().poserCarte(7, 0, J2);
-        JeuClassique::getInstance().poserCarte(7, 0, J1);
-        JeuClassique::getInstance().poserCarte(7, 0, J2);
-        JeuClassique::getInstance().poserCarte(7, 0, J1);
-        JeuClassique::getInstance().poserCarte(7, 0, J2);
+        jeu.poserCarte(7, 0, J1);
+        jeu.poserCarte(7, 0, J2);
+        jeu.poserCarte(7, 0, J1);
+        jeu.poserCarte(7, 0, J2);
+        jeu.poserCarte(7, 0, J1);
+        jeu.poserCarte(7, 0, J2);
 
-        JeuClassique::getInstance().poserCarte(8, 0, J1);
-        JeuClassique::getInstance().poserCarte(8, 0, J2);
-        JeuClassique::getInstance().poserCarte(8, 0, J1);
-        JeuClassique::getInstance().poserCarte(8, 0, J2);
-        JeuClassique::getInstance().poserCarte(8, 0, J1);
-        JeuClassique::getInstance().poserCarte(8, 0, J2);
+        jeu.poserCarte(8, 0, J1);
+        jeu.poserCarte(8, 0, J2);
+        jeu.poserCarte(8, 0, J1);
+        jeu.poserCarte(8, 0, J2);
+        jeu.poserCarte(8, 0, J1);
+        jeu.poserCarte(8, 0, J2);
 
         // Boucle qui réclame toutes les bornes pour tester
         for (unsigned int i = 0; i < 9; ++i) {
-            if (JeuClassique::getInstance().borneEstRevendicableParJoueur(i, J1)) {
-                JeuClassique::getInstance().revendiquerBorne(i, J1);
+            if (jeu.borneEstRevendicableParJoueur(i, J1)) {
+                jeu.revendiquerBorne(i, J1);
             }
             else {
-                JeuClassique::getInstance().revendiquerBorne(i, J2);
+                jeu.revendiquerBorne(i, J2);
             }
         }
 
-        cout << JeuClassique::getInstance().getGagnant().get()->getNom() << endl;
+        cout << jeu.getGagnant().get()->getNom() << endl;
         
     }
     catch (exception e) {
