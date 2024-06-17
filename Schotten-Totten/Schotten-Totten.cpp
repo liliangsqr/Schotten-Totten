@@ -23,6 +23,13 @@ int main()
         shared_ptr<Joueur> J1 = JeuClassique::getInstance().getJoueurs()[0];
         shared_ptr<Joueur> J2 = JeuClassique::getInstance().getJoueurs()[1];
         JeuClassique::getInstance().poserCarte(0, 0, J1);
+        JeuClassique::getInstance().poserCarte(0, 0, J2);
+        JeuClassique::getInstance().poserCarte(0, 0, J1);
+        JeuClassique::getInstance().poserCarte(0, 0, J2);
+        JeuClassique::getInstance().poserCarte(0, 0, J1);
+        JeuClassique::getInstance().poserCarte(0, 0, J2);
+        cout << JeuClassique::getInstance().borneEstRevendicableParJoueur(0, J1) << endl;
+        JeuClassique::getInstance().revendiquerBorne(0, J1);
         
     }
     catch (exception e) {

@@ -3,12 +3,12 @@
 
 
 enum class CombinaisonType {
-    SuiteDeCouleur,
-    Brelan,
-    Couleur,
-    Suite,
+    Aucune,
     Somme,
-    Aucune
+    Suite,
+    Couleur,
+    Brelan,
+    SuiteDeCouleur
 };
 
 

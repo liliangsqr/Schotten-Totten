@@ -6,11 +6,11 @@ enum class Valeurs {
 };
 
 enum class Couleur {
-    noire,Vert,Bleu,Rouge,Jaune,Marron,Violet,Fin
+    Vert,Bleu,Rouge,Jaune,Marron,Violet,Noir,Fin
 };
 
 enum class CategorieCarteTactique{
-    TTroupeElite,ModeCombat,Ruse,Action,Fin
+    TroupeElite,ModeCombat,Ruse,Action,Fin
 };
 
 enum class NomCarteTactique{
