@@ -126,7 +126,7 @@ int main()
         JeuClassique::getInstance().poserCarte(8, 0, J1);
         JeuClassique::getInstance().poserCarte(8, 0, J2);
 
-
+        // Boucle qui réclame toutes les bornes pour tester
         for (unsigned int i = 0; i < 9; ++i) {
             if (JeuClassique::getInstance().borneEstRevendicableParJoueur(i, J1)) {
                 JeuClassique::getInstance().revendiquerBorne(i, J1);
