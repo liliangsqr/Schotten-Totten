@@ -135,3 +135,8 @@ void JeuClassique::piocher(shared_ptr<Joueur>& joueur)
         joueur.get()->Piocher(pioche);
     }
 }
+
+void JeuClassique::poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur)
+{
+    frontiere.poserCarte(indexBorne, indexCarte, joueur);
+}

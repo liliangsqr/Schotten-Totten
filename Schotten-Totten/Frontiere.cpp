@@ -54,3 +54,8 @@ bool Frontiere::joueurAGagne(const shared_ptr<Joueur>& joueur) const
 
 	return false;
 }
+
+void Frontiere::poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur)
+{
+	bornes[indexBorne].ajouterCarteTasBorne(joueur, indexCarte);
+}

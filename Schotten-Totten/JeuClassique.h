@@ -68,6 +68,10 @@ public: // Partie publique, sert à accéder à l'instance unique
 	// Lève une exception si la main du joueur est pleine ou si la pioche est vide
 	void piocher(shared_ptr<Joueur>& joueur);
 
+	// Déplace la carte de la position indexCarte de la main du joueur vers le tasBorne associé au joueur sur la borne numéro indexBorne
+	// Lève une exception si les valeurs entrées sont incorrectes, donc faire les vérifications avant
+	void poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur);
+
 
 
 	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }

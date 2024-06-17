@@ -55,9 +55,14 @@ public:
         tasJoueurs[joueur] = move(tasBorne);
     }
 
-    // Ajoute une carte au TasBorne du joueur précisé
+    // Ajoute une carte au TasBorne du joueur précisé (prend directement la carte en paramètres)
     void ajouterCarteTasBorne(shared_ptr<Joueur> joueur, unique_ptr<Carte>&& carte) {
         tasJoueurs[joueur].Ajouter(std::move(carte));
+    }
+
+    // Ajoute une carte au TasBorne du joueur précisé (prend l'index de la carte dans la main du joueur en paramètres)
+    void ajouterCarteTasBorne(shared_ptr<Joueur> joueur, unsigned int indexCarte) {
+        joueur.get()->PoserCarte(indexCarte, tasJoueurs[joueur]);
     }
 
     // Ajoute une carte ModeCombat sur la borne

@@ -22,12 +22,6 @@ public:
 	// N'accepte que des cartes tactiques, effectue un move car carte doit être une RVALUE
 	void Ajouter(unique_ptr<CarteTactique>&& carte);
 
-	const CarteTactique& operator[](unsigned int index) const
-	{
-		if (auto carteRet = dynamic_cast<CarteTactique*>(tas[index].get())) {
-			return *carteRet;
-		}
-	}
 };
 
 #endif TOTALTACTIQUE_H

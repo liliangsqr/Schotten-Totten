@@ -17,11 +17,13 @@ int main()
     // Test de création d'un jeu complet du mode tactique
     TotalTactique totTac = TotalTactique();
 
-    // Test de l'initialisation du jeu
+    // Tests
     try {
         JeuClassique::getInstance();
-
-        cout << "" << endl;
+        shared_ptr<Joueur> J1 = JeuClassique::getInstance().getJoueurs()[0];
+        shared_ptr<Joueur> J2 = JeuClassique::getInstance().getJoueurs()[1];
+        JeuClassique::getInstance().poserCarte(0, 0, J1);
+        
     }
     catch (exception e) {
         cout << e.what() << endl;

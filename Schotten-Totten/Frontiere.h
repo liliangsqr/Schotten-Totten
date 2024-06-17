@@ -25,6 +25,8 @@ public:
     // Renvoie true si le joueur a renvendiqué n bornes adjacentes ou bien plus de la moitié des bornes au total
     bool joueurAGagne(const shared_ptr<Joueur>& joueur) const;
 
+    // Déplace la carte de la position indexCarte de la main du joueur vers le tasBorne associé au joueur sur la borne numéro indexBorne
+    void poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur);
 
     const Borne& getBorne(unsigned int index) const {
         if (index < 0 || index >= bornes.size()) {
