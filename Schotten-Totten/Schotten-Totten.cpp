@@ -101,8 +101,10 @@ int main()
         jeu.poserCarte(6, 0, J1);
         jeu.poserCarte(6, 0, J2);
         jeu.piocher(J1);
-        jeu.piocher(J2);
         jeu.piocher(J1);
+        jeu.piocher(J1);
+        jeu.piocher(J2);
+        jeu.piocher(J2);
         jeu.piocher(J2);
 
 

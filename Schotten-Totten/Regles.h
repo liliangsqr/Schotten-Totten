@@ -18,7 +18,7 @@ private:
     size_t tailleMinCombinaison;
 
     // Constructeur en privé
-    Regles() : nbJoueurs(2), modesJeu({ "Classique", "Tactique" }), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3), tailleMain(7), tailleMinCombinaison(2) { }
+    Regles() : nbJoueurs(2), modesJeu({ "Classique", "Tactique" }), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3), tailleMain(6), tailleMinCombinaison(2) { }
 
     // Suppression des constructeur de copie et opérateur d'assignation
     Regles(const Regles&) = delete;
