@@ -22,14 +22,14 @@ private:
 public:
     Borne() = default;
 
-    string GetInfo() const {
+    /*string GetInfo() const {
         string info = "Borne Info:\n";
         info += "OnTop size: " + to_string(OnTop.GetSizeTas()) + "\n";
         for (const auto& [nomJoueur, tas] : tasJoueurs) {
             info += "Joueur " + nomJoueur + " size: " + to_string(tas.GetSize()) + "\n";
         }
         return info;
-    }
+    }*/
 
     void AjouterJoueur(const string& nomJoueur, TasBorne&& tasBorne) {
         tasJoueurs[nomJoueur] = move(tasBorne);

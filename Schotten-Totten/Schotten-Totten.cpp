@@ -16,7 +16,7 @@ int main()
     //// Test de création d'un jeu complet du mode tactique
     //TotalTactique totTac = TotalTactique();
 
-    CarteClan clan(1, 1);
+    CarteClan clan(4, 5);
     Affichage::carteClan(clan);
 
 }

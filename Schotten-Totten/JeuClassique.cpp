@@ -42,6 +42,7 @@ void JeuClassique::initialiser(unsigned int nbJoueurs)
 bool JeuClassique::terminer()
 {
 	// Aller chercher dans la map qu'il y a dans frontiere pour savoir si un joueur a gagné
+    return false;
 }
 
 void JeuClassique::jouerTour(Joueur& joueur)
@@ -55,5 +56,6 @@ void JeuClassique::jouerTour(Joueur& joueur)
 
 Combinaison JeuClassique::evaluerCombinaisonJoueur()
 {
-	
+    Combinaison a;
+    return  a;;;
 }
