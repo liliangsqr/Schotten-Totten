@@ -11,12 +11,6 @@ using namespace std;
 
 int main()
 {
-    // Test de création d'un jeu complet du mode classique
-    TotalClassique totCla = TotalClassique();
-
-    // Test de création d'un jeu complet du mode tactique
-    TotalTactique totTac = TotalTactique();
-
     // Tests
     try {
         JeuClassique::getInstance();
