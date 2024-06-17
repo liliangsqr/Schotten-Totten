@@ -54,9 +54,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	// Si la partie est bien terminée, y met fin et fait les nettoyages nécessaires en appelant finDePartie(), sinon renvoie false
 	bool terminer();
 	
-	void jouerTour(Joueur& joueur);
 	
-	Combinaison evaluerCombinaisonJoueur();
 
 	// Appelle estRevendicableParJoueur sur la borne à l'index index de la frontière
 	bool borneEstRevendicableParJoueur(unsigned int index, const shared_ptr<Joueur> joueur) const;
@@ -72,6 +70,8 @@ public: // Partie publique, sert à accéder à l'instance unique
 	// Lève une exception si les valeurs entrées sont incorrectes, donc faire les vérifications avant
 	void poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur);
 
+	// Joue un tour entier, contient donc la logique d'un tour spécifique au mode classique
+	void jouerTour(shared_ptr<Joueur>& joueur);
 
 
 	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }

@@ -91,20 +91,6 @@ bool JeuClassique::terminer()
     }
 }
 
-void JeuClassique::jouerTour(Joueur& joueur)
-{
-    /*
-	jouer
-    poser carte
-    verifier victoire
-    */
-}
-
-Combinaison JeuClassique::evaluerCombinaisonJoueur()
-{
-    Combinaison a;
-    return a;
-}
 
 bool JeuClassique::borneEstRevendicableParJoueur(unsigned int index, const shared_ptr<Joueur> joueur) const
 {
@@ -139,4 +125,9 @@ void JeuClassique::piocher(shared_ptr<Joueur>& joueur)
 void JeuClassique::poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur)
 {
     frontiere.poserCarte(indexBorne, indexCarte, joueur);
+}
+
+void JeuClassique::jouerTour(shared_ptr<Joueur>& joueur)
+{
+    // écrire le déroulement d'un tour en mode classique
 }
