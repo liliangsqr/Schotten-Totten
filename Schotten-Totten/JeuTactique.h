@@ -10,13 +10,25 @@
 // Variante tactique du jeu, gère tout le fonctionnement interne des mécaniques de jeu et y donne accès pour l'utiliser dans Application
 class JeuTactique : public Jeu
 {
+
 private:
 	TotalTactique total;
 	// vector<shared_ptr<Joueur>> totalJoueurs;
 	// Frontiere frontiere;
+	// Pioche pioche
+
+	// PiocheTactique piocheTactique
+	// Defausse defausse
+
 
 	// Empêche toute instatiation en dehors de la classe
-	JeuTactique();
+	JeuTactique() : Jeu() { initialiser(); }
+
+	// Méthodes d'initialisation
+	void creerJoueurs(unsigned int nbJoueurs) { }
+	void distribuerCartes(unsigned int nbCartesMain) { }
+	void initialiser() { }
+	void finDePartie() { }
 
 
 public: // Partie publique, sert à accéder à l'instance unique
@@ -29,14 +41,21 @@ public: // Partie publique, sert à accéder à l'instance unique
 	JeuTactique(const JeuTactique&) = delete;
 	JeuTactique& operator=(const JeuTactique&) = delete;
 
-	void initialiser();
-	bool terminer();
-	void jouerTour(Joueur& joueur);
+	
 
-	Combinaison evaluerCombinaisonJoueur();
 
-	// TotalTactique<CarteClan> getTotalCarteClassique() { return totalCarteClassique; }
+	// Méthodes
 
+	const std::shared_ptr<Joueur> getGagnant() const { std::shared_ptr<Joueur> a; return a; }
+	bool terminer() { return true; }
+	bool borneEstRevendicableParJoueur(unsigned int index, const shared_ptr<Joueur> joueur) const { return true; }
+	void revendiquerBorne(unsigned int index, const shared_ptr<Joueur>& joueur) { }
+	void piocher(shared_ptr<Joueur>& joueur) { }
+	void poserCarte(unsigned int indexBorne, unsigned int indexCarte, shared_ptr<Joueur>& joueur) { }
+	void jouerTour(shared_ptr<Joueur>& joueur) { }
+
+	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }
+	virtual const Frontiere& getFrontiere() { return frontiere; }
 };
 
 #endif

@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Affichage.cpp" />
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Borne.cpp" />
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="CarteClan.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="Combinaison.cpp" />
     <ClCompile Include="Frontiere.cpp" />
     <ClCompile Include="IA.cpp" />
+    <ClCompile Include="Interaction.cpp" />
     <ClCompile Include="JeuClassique.cpp" />
     <ClCompile Include="Jeu.cpp" />
     <ClCompile Include="JeuTactique.cpp" />
@@ -155,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Borne.h" />
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />
@@ -162,6 +165,7 @@
     <ClInclude Include="Combinaison.h" />
     <ClInclude Include="Frontiere.h" />
     <ClInclude Include="IA.h" />
+    <ClInclude Include="Interaction.h" />
     <ClInclude Include="JeuClassique.h" />
     <ClInclude Include="Jeu.h" />
     <ClInclude Include="JeuTactique.h" />
