@@ -7,12 +7,15 @@
 #include "TotalTactique.h"
 #include "Affichage.h"
 #include "JeuClassique.h"
+#include "Application.h"
+
 using namespace std;
 
 int main()
 {
     // Tests
     try {
+        /*
         JeuClassique& jeu = JeuClassique::getInstance();
 
         // getJoueur renvoie un CONST shared_ptr<Joueur>, ça veut dire que le pointeur en lui même est const mais pas l'objet à l'intérieur
@@ -137,7 +140,11 @@ int main()
         }
 
         cout << jeu.getGagnant().get()->getNom() << endl;
+        cout << Interaction::arreterRevendication() << endl;
+        */
         
+        Application a;
+        a.lancerApplication();
     }
     catch (exception e) {
         cout << e.what() << endl;

@@ -55,7 +55,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 	void jouerTour(shared_ptr<Joueur>& joueur) { }
 
 	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }
-
+	virtual const Frontiere& getFrontiere() { return frontiere; }
 };
 
 #endif

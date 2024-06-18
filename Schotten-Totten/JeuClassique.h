@@ -6,6 +6,7 @@
 #include "TasDeCartes.h"
 #include "Jeu.h"
 #include "Combinaison.h"
+#include "Interaction.h"
 
 
 // Jeu classique, gère tout le fonctionnement interne des mécaniques du jeu et les met à disposition pour être utilisées dans Application
@@ -75,6 +76,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 
 
 	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }
+	const Frontiere& getFrontiere() { return frontiere; }
 };
 
 

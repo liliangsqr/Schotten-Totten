@@ -1,8 +1,8 @@
 #include "Application.h"
 
-void Application::jouerTour(shared_ptr<Joueur>& joueur)
+void Application::jouerTour(Jeu& jeu, shared_ptr<Joueur>& joueur)
 {
-
+	jeu.jouerTour(joueur);
 }
 
 
@@ -25,9 +25,15 @@ void Application::jouerPartie(Jeu& jeu)
 		for (auto& joueur : jeu.getJoueurs()) {
 			// Cette assignation permet de modifier l'objet pointé par joueur mais pas le pointeur en lui-même
 			shared_ptr<Joueur> J = joueur;
-			jouerTour(J);
+			jouerTour(jeu, J);
 		}
 	}
+
+	// Une fois le jeu fini on annonce le gagnant
+
+	
+	// Affichage::victoire(jeu.getGagnant());
+	cout << jeu.getGagnant().get()->getNom() << endl;
 }
 
 void Application::terminerJeu(Jeu& jeu)

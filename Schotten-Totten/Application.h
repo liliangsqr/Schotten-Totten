@@ -9,7 +9,7 @@
 // Design pattern : Façade
 class Application {
 private:
-    void jouerTour(shared_ptr<Joueur>& joueur);
+    void jouerTour(Jeu& jeu, shared_ptr<Joueur>& joueur);
 
     void demarrerJeu(Jeu& jeu);
     void jouerPartie(Jeu& jeu);
