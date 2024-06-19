@@ -2,15 +2,15 @@
 
 void Affichage::ChoixMode()
 {
-	cout << " Veuiller choisir un mode de jeu :" << endl;
 	for (unsigned int numero = 1; numero< Regles::getInstance().getModesJeu().size(); numero++)
 	{
 		for (string mode : Regles::getInstance().getModesJeu())
 		{
-			cout << numero << ". " << mode << endl;
+			cout << numero << ". " << mode <<endl;
 			numero++;
 		}
 	}
+	cout << endl << " Veuiller choisir un mode de jeu :";
 }
 
 void Affichage::Toursjoueur(const shared_ptr<Joueur>& Joueur)
