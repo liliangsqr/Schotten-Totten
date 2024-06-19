@@ -39,17 +39,6 @@ public:
 
     Borne() : joueurProprietaire(nullptr) { }
 
-    /*
-    string GetInfo() const {
-        string info = "Borne Info:\n";
-        info += "OnTop size: " + to_string(OnTop.GetSizeTas()) + "\n";
-        for (const auto& [nomJoueur, tas] : tasJoueurs) {
-            info += "Joueur " + nomJoueur + " size: " + to_string(tas.GetSizeTas()) + "\n";
-        }
-        return info;
-    }
-    */
-
     // Ajoute le nom d'un joueur ainsi que son TasBorne à la borne
     void ajouterJoueur(shared_ptr<Joueur> joueur, TasBorne&& tasBorne) {
         tasJoueurs[joueur] = move(tasBorne);

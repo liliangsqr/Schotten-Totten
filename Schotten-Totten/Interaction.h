@@ -7,7 +7,7 @@
 #include "Affichage.h"
 
 
-// Classe statique, gère les input Joueur
+// Classe statique, gère tous les input Joueur
 class Interaction {
 private :
     static unsigned int choixPlage(unsigned int min, unsigned int max);

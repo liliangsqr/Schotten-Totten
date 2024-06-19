@@ -24,9 +24,11 @@
 // Gère complètement l'affichage console du projet
 class Affichage
 {
-private:
-
 public:
+	
+	// On rend la classe statique
+	Affichage() = delete;
+	~Affichage() = delete;
 
 	void static ChoixMode();
 
