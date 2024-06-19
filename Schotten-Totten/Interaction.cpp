@@ -54,7 +54,7 @@ unsigned int Interaction::choisirBorne(Jeu& jeu, const shared_ptr<Joueur>& joueu
 {
     Affichage::demanderBorne();
 
-    while (true) { //si plein  alor infini /!\ 
+    while (true) { // Si plein alors infini /!\ 
         unsigned int borne = choixPlage(1, Regles::getInstance().getNbBornes()) - 1; // -1 car pour nous les indexBorne commencent à 0, et pour les joueurs à 1
 
         // Si la borne est pleine

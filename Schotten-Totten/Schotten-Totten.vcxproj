@@ -135,6 +135,7 @@
     <ClCompile Include="CarteClan.cpp" />
     <ClCompile Include="CarteTactique.cpp" />
     <ClCompile Include="Combinaison.cpp" />
+    <ClCompile Include="Defausse.cpp" />
     <ClCompile Include="Frontiere.cpp" />
     <ClCompile Include="IA.cpp" />
     <ClCompile Include="Interaction.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="ModeCombat.cpp" />
     <ClCompile Include="OnTop.cpp" />
     <ClCompile Include="Pioche.cpp" />
+    <ClCompile Include="PiocheTactique.cpp" />
     <ClCompile Include="Regles.cpp" />
     <ClCompile Include="Ruse.cpp" />
     <ClCompile Include="Schotten-Totten.cpp" />
@@ -163,6 +165,7 @@
     <ClInclude Include="CarteClan.h" />
     <ClInclude Include="CarteTactique.h" />
     <ClInclude Include="Combinaison.h" />
+    <ClInclude Include="Defausse.h" />
     <ClInclude Include="Frontiere.h" />
     <ClInclude Include="IA.h" />
     <ClInclude Include="Interaction.h" />
@@ -174,6 +177,7 @@
     <ClInclude Include="ModeCombat.h" />
     <ClInclude Include="OnTop.h" />
     <ClInclude Include="Pioche.h" />
+    <ClInclude Include="PiocheTactique.h" />
     <ClInclude Include="Regles.h" />
     <ClInclude Include="Ruse.h" />
     <ClInclude Include="TasBorne.h" />
