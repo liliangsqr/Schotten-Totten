@@ -131,8 +131,8 @@ void JeuClassique::jouerTour(shared_ptr<Joueur>& joueur)
 {
     unsigned int indexBorne;
     unsigned int indexCarte;
-    
-    
+
+
     // Choix de la borne puis de la carte à y poser
     indexBorne = Interaction::choisirBorne(*this, joueur); // Les verifs sont faites dans choisirBorne
     indexCarte = Interaction::choisirCarte(joueur); // Les verifs sont faites dans choisirCarte
