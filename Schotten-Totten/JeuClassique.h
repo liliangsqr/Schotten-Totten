@@ -76,7 +76,7 @@ public: // Partie publique, sert à accéder à l'instance unique
 
 
 	const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }
-	const Frontiere& getFrontiere() { return frontiere; }
+	const Frontiere& getFrontiere() const { return frontiere; }
 };
 
 
