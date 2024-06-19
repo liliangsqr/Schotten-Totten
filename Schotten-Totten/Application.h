@@ -8,15 +8,16 @@
 // Orchestre tout le déroulement du jeu et de l'application
 // Design pattern : Façade
 class Application {
-private:
-    void jouerTour(Jeu& jeu, shared_ptr<Joueur>& joueur);
 
+private:
+
+    void jouerTour(Jeu& jeu, shared_ptr<Joueur>& joueur);
     void demarrerJeu(Jeu& jeu);
     void jouerPartie(Jeu& jeu);
     void terminerJeu(Jeu& jeu);
 
-
 public:
+
     void lancerApplication();
 
 

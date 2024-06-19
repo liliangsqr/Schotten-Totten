@@ -119,6 +119,7 @@ void JeuClassique::piocher(shared_ptr<Joueur>& joueur)
     }
     else {
         joueur.get()->Piocher(pioche);
+        //afficher carte piochée
     }
 }
 

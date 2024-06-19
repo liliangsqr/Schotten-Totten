@@ -2,16 +2,17 @@
 
 void Application::jouerTour(Jeu& jeu, shared_ptr<Joueur>& joueur)
 {
+	Affichage::board(jeu);
+	Affichage::Toursjoueur(joueur); //ajout
 	jeu.jouerTour(joueur);
 }
 
 
 void Application::demarrerJeu(Jeu& jeu)
 {
-	// Affichage::demarrerJeu() (tu peux dire : distribution aléatoire du paquet, tout ça tout ça)
-
-
 	// L'initialisation du jeu a déjà eu lieu lors de l'appel à l'instance dans Application
+	Affichage::demarrerJeu();
+	
 
 	// TODO : choisir qui joue en premier
 }
@@ -26,14 +27,12 @@ void Application::jouerPartie(Jeu& jeu)
 			// Cette assignation permet de modifier l'objet pointé par joueur mais pas le pointeur en lui-même
 			shared_ptr<Joueur> J = joueur;
 			jouerTour(jeu, J);
+			//afficher Board(jeu)
 		}
 	}
 
 	// Une fois le jeu fini on annonce le gagnant
-
-	
-	// Affichage::victoire(jeu.getGagnant());
-	cout << jeu.getGagnant().get()->getNom() << endl;
+	Affichage::victoire(jeu); //ajout
 }
 
 void Application::terminerJeu(Jeu& jeu)

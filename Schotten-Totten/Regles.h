@@ -35,7 +35,7 @@ public:
     const vector<string>& getModesJeu() const { return modesJeu; }
     unsigned int getNbJoueurs() const { return nbJoueurs; }
     unsigned int getCapaciteMaxTasBorne() const { return capaciteMaxTasBorne; }
-    unsigned int getNbBornes() const { return nbBornes; }
+    unsigned int getNbBornes() { return nbBornes; }
     unsigned int getNbBornesAdjacentesPourGagner() const { return nbBornesAdjacentesPourGagner; }
     unsigned int getTailleMain() const { return tailleMain; }
     size_t getTailleMinCombinaison() const { return tailleMinCombinaison; }

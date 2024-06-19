@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Jeu.h"
 #include "Regles.h"
+#include "Affichage.h"
 
 
 // Classe statique, gère les input Joueur

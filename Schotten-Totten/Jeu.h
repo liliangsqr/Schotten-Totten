@@ -66,7 +66,7 @@ public :
 
 
 	virtual const vector<shared_ptr<Joueur>>& getJoueurs() { return totalJoueurs; }
-	virtual const Frontiere& getFrontiere() { return frontiere; }
+	virtual Frontiere& getFrontiere() { return frontiere; }
 };
 
 

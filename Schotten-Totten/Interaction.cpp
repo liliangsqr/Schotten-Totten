@@ -30,6 +30,7 @@ unsigned int Interaction::choixPlage(unsigned int min, unsigned int max)
 
 bool Interaction::choixTrueFalse()
 {
+    
     unsigned int choix = choixPlage(1, 2);
     if (choix == 1) {
         return true;
@@ -45,24 +46,20 @@ bool Interaction::choixTrueFalse()
 // Renvoie un unsigned int représentant un des modes de jeu, gère tous les cas de cassage
 unsigned int Interaction::demanderModeJeu()
 {
-    // Affichage::demanderModeJeu();
-    cout << "quel mode de jeu ?" << endl;
-
-    return choixPlage(1, (unsigned int)Regles::getInstance().getModesJeu().size());
+    Affichage::ChoixMode();
+    return choixPlage(1, (unsigned int)Regles::getInstance().getModesJeu().size()); // choix = 1;
 }
 
 unsigned int Interaction::choisirBorne(Jeu& jeu, const shared_ptr<Joueur>& joueur)
 {
-    // Affichage::demanderBorne();
-    cout << "sur quelle borne poser ?" << endl;
+    Affichage::demanderBorne();
 
-    while (true) {
+    while (true) { //si plein  alor infini /!\ 
         unsigned int borne = choixPlage(1, Regles::getInstance().getNbBornes()) - 1; // -1 car pour nous les indexBorne commencent à 0, et pour les joueurs à 1
 
         // Si la borne est pleine
         if (jeu.getFrontiere().getBorne(borne).getTasBorne(joueur).GetSizeTas() == Regles::getInstance().getCapaciteMaxTasBorne()) {
-            // Affichage::bornePleine();
-            cout << "borne pleine" << endl;
+            Affichage::bornePleine();
         }
         else {
             return borne;
@@ -72,32 +69,28 @@ unsigned int Interaction::choisirBorne(Jeu& jeu, const shared_ptr<Joueur>& joueu
 
 unsigned int Interaction::choisirCarte(const shared_ptr<Joueur>& joueur)
 {
-    // Affichage::demanderCarte()
-    cout << "quelle carte poser ?" << endl;
+    Affichage::demanderCarte();     // Affichage::demanderCarte()
 
     return choixPlage(1, joueur.get()->getMain().GetSizeTas()) - 1; // idem pour le -1
 }
 
 bool Interaction::joueurVeutRevendiquer()
 {
-    // Affichage::demanderPhaseRevendication();
-    cout << "tu veux revendiquer ?" << endl;
-
+    Affichage::demanderPhaseRevendication();
+  
     return choixTrueFalse();
 }
 
 unsigned int Interaction::getBorneARevendiquer(Jeu& jeu)
 {
-    // Affichage::demanderBorneARevendiquer();
-    cout << "revendiquer quelle borne ?" << endl;
+    Affichage::demanderBorneARevendiquer();
 
     return choixPlage(1, Regles::getInstance().getNbBornes()) - 1;
 }
 
 bool Interaction::arreterRevendication()
 {
-    // Affichage::demanderArretRevendication();
-    cout << "arreter revendication ?" << endl;
+    Affichage::demanderArretRevendication();
     
     return choixTrueFalse();
 }
