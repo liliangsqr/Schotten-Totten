@@ -44,15 +44,15 @@ public:
 
 	void static victoire(Jeu& jeu){ cout << jeu.getGagnant().get()->getNom() << endl;}
 
-	void static demanderBorne(){ cout << "sur quelle borne poser ? : ";}
+	void static demanderBorne(){ cout << "Choisir la borne : ";}
 
-	void static bornePleine(){ cout << "borne pleine :"; }
+	void static bornePleine(){ cout << "La borne est pleine, autre choix :"; }
 
-	void static demanderCarte() {cout << "quelle carte poser ? : ";};
+	void static demanderCarte() {cout << "Poser la carte : ";};
 
-	void static demanderPhaseRevendication(){cout << "tu veux revendiquer ? oui(1) non(2) :" ;}
+	void static demanderPhaseRevendication(){cout << "Veux-tu revendiquer une brone ? oui(1) non(2) :" ;}
 
-	void static demanderBorneARevendiquer() {cout << "revendiquer quelle borne ? coix possible entre (1) et ("<< Regles::getInstance().getNbBornes()-1<<") : "; }
+	void static demanderBorneARevendiquer() {cout << "Revendiquer la borne  : "; }
 
 	void static demanderArretRevendication(){ cout << "Vouliez vous faire une autre revendication ? non(1) oui(2) : ";}
 

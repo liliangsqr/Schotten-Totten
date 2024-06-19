@@ -67,7 +67,7 @@ void Affichage::board(Jeu& jeux)
 string Affichage::Couleurs(unsigned int carteCouleurs)
 {
 
-	switch (carteCouleurs) //!\\ Les cartes ont une couleur en unsigned int. la classe Ennum.h nous permet de savoir quel ui correspond a quelle couleur;
+	switch (carteCouleurs+1) //!\\ Les cartes ont une couleur en unsigned int. la classe Ennum.h nous permet de savoir quel ui correspond a quelle couleur;
 	{
 	case 0: return ""; break;
 	case 1:return VERT; break;
