@@ -10,7 +10,7 @@ void Affichage::ChoixMode()
 			numero++;
 		}
 	}
-	cout << endl << " Veuiller choisir un mode de jeu :";
+	cout << endl << " Veuillez choisir un mode de jeu :";
 }
 
 void Affichage::Toursjoueur(const shared_ptr<Joueur>& Joueur)

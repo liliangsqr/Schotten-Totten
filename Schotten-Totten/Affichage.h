@@ -30,7 +30,7 @@ public:
 
 	void static ChoixMode();
 
-	void static demarrerJeu() { cout << "distribution aléatoire du paquet" << endl; }
+	void static demarrerJeu() { cout << "Distribution aléatoire du paquet" << endl; }
 
 	void static Toursjoueur(const shared_ptr<Joueur>& Joueur);
 
@@ -42,19 +42,19 @@ public:
 
 	string static Couleurs(unsigned int CarteCouelurs);
 
-	void static victoire(Jeu& jeu){ cout << jeu.getGagnant().get()->getNom() << endl;}
+	void static victoire(Jeu& jeu){ cout << "Victoire de : " + jeu.getGagnant().get()->getNom() + " !!!!!" << endl; }
 
 	void static demanderBorne(){ cout << "Choisir la borne : ";}
 
-	void static bornePleine(){ cout << "La borne est pleine, autre choix :"; }
+	void static bornePleine(){ cout << "La borne est pleine, autre choix : "; }
 
 	void static demanderCarte() {cout << "Poser la carte : ";};
 
-	void static demanderPhaseRevendication(){cout << "Veux-tu revendiquer une brone ? oui(1) non(2) :" ;}
+	void static demanderPhaseRevendication(){cout << "Voulez-vous revendiquer une borne ?\n 1: Oui\n 2: Non" ;}
 
-	void static demanderBorneARevendiquer() {cout << "Revendiquer la borne  : "; }
+	void static demanderBorneARevendiquer() {cout << "Revendiquer la borne : "; }
 
-	void static demanderArretRevendication(){ cout << "Vouliez vous faire une autre revendication ? non(1) oui(2) : ";}
+	void static demanderArretRevendication(){ cout << "Voulez-vous faire une autre revendication ? \n 1: Non\n 2: Oui";}
 
 	void static staticclearConsole() {
 		#ifdef _WIN32

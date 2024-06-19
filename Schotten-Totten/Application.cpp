@@ -24,10 +24,15 @@ void Application::jouerPartie(Jeu& jeu)
 
 		// On fait jouer chaque joueur dans l'ordre
 		for (auto& joueur : jeu.getJoueurs()) {
-			// Cette assignation permet de modifier l'objet pointé par joueur mais pas le pointeur en lui-même
-			shared_ptr<Joueur> J = joueur;
-			jouerTour(jeu, J);
-			//afficher Board(jeu)
+
+			// On revérifie pour que la victoire soit effective dès la fin du tour du joueur gagnant
+			if (!jeu.terminer()) {
+				// Cette assignation permet de modifier l'objet pointé par joueur mais pas le pointeur en lui-même
+				// On pourrait aussi juste faire joueur.get() et faire que jouerTour prenne un Joueur en param
+				shared_ptr<Joueur> J = joueur;
+				jouerTour(jeu, J);
+				//afficher Board(jeu)
+			}
 		}
 	}
 
