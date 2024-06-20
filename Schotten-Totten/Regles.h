@@ -16,9 +16,13 @@ private:
     unsigned int nbBornesAdjacentesPourGagner;
     unsigned int tailleMain;
     size_t tailleMinCombinaison;
+    unsigned int tailleMaxOnTop;
+    unsigned int tailleMaxPioche;
+    unsigned int tailleTotal;
 
     // Constructeur en privé
-    Regles() : nbJoueurs(2), modesJeu({ (string)"Classique", (string)"Tactique" }), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3), tailleMain(6), tailleMinCombinaison(2) { }
+    Regles() : nbJoueurs(2), modesJeu({ (string)"Classique", (string)"Tactique" }), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3), tailleMain(6), tailleMinCombinaison(2), tailleMaxOnTop(2), tailleMaxPioche(54),
+        tailleTotal(54) { }
 
     // Suppression des constructeur de copie et opérateur d'assignation
     Regles(const Regles&) = delete;
@@ -39,6 +43,9 @@ public:
     unsigned int getNbBornesAdjacentesPourGagner() const { return nbBornesAdjacentesPourGagner; }
     unsigned int getTailleMain() const { return tailleMain; }
     size_t getTailleMinCombinaison() const { return tailleMinCombinaison; }
+    unsigned int getTailleMaxOnTop() const { return tailleMaxOnTop; }
+    unsigned int getTailleMaxPioche() const { return tailleMaxPioche; }
+    unsigned int getTailleTotal() const { return tailleTotal; }
 };
 
 #endif // !REGLE_H

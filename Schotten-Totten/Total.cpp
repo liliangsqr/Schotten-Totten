@@ -1,6 +1,6 @@
 #include "Total.h"
 
-Total::Total() : TasDeCartes(1000)
+Total::Total() : TasDeCartes(Regles::getInstance().getTailleTotal())
 {
     // Crée des unique_ptr vers toutes les cartes Clan et les stocke dans tas
     for (unsigned int itVal = 1; itVal != 10; itVal++) {

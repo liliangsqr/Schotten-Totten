@@ -6,6 +6,7 @@
 #include <random> // Pour random_device et mt19937
 #include <algorithm> // Pour shuffle
 #include "Carte.h"
+#include "Regles.h"
 
 using namespace std;
 

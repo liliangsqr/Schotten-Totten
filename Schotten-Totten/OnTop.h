@@ -12,7 +12,7 @@ class OnTop : public TasDeCartes<ModeCombat>
 	// unsigned int capacite;
 
 public :
-	OnTop() : TasDeCartes(1000) { }
+	OnTop() : TasDeCartes(Regles::getInstance().getTailleMaxOnTop()) { }
 };
 
 #endif ONTOP_H
