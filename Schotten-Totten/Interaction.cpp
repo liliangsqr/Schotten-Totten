@@ -10,7 +10,7 @@ unsigned int Interaction::choixPlage(unsigned int min, unsigned int max)
         // Si le joueur n'a pas entré un entier
         if (!(cin >> mode))
         {
-            cout << "Veuillez entrer un entier valide." << endl;
+            Affichage::entierNonValide();
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             continue;
@@ -21,7 +21,7 @@ unsigned int Interaction::choixPlage(unsigned int min, unsigned int max)
             condition = false;
         }
         else {
-            cout << "Cette option n'existe pas." << endl;
+            Affichage::optionExistePas();
         }
     }
 

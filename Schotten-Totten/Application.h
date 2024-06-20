@@ -4,6 +4,7 @@
 #include "JeuClassique.h"
 #include "JeuTactique.h"
 #include "Interaction.h"
+#include "JeuClassiqueExperts.h"
 
 // Orchestre tout le déroulement du jeu et de l'application
 // Design pattern : Façade

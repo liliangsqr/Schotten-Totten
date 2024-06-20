@@ -21,7 +21,7 @@ private:
     unsigned int tailleTotal;
 
     // Constructeur en privé
-    Regles() : nbJoueurs(2), modesJeu({ (string)"Classique", (string)"Tactique" }), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3), tailleMain(6), tailleMinCombinaison(2), tailleMaxOnTop(2), tailleMaxPioche(54),
+    Regles() : nbJoueurs(2), modesJeu({ (string)"Classique", (string)"Tactique", (string)"Classique Experts"}), capaciteMaxTasBorne(3), nbBornes(9), nbBornesAdjacentesPourGagner(3), tailleMain(6), tailleMinCombinaison(2), tailleMaxOnTop(2), tailleMaxPioche(54),
         tailleTotal(54) { }
 
     // Suppression des constructeur de copie et opérateur d'assignation

@@ -149,12 +149,10 @@ void JeuClassique::jouerTour(shared_ptr<Joueur>& joueur)
              if (borneEstRevendicableParJoueur(indexBorneARevendiquer, joueur)) {
                  revendiquerBorne(indexBorneARevendiquer, joueur);
                  
-                 // Affichage::borneRevendiquee();
-                 cout << "borne revendiquee" << endl;
+                 Affichage::borneRevendiquee();
              }
              else {
-                 // Affichage::borneNonRevendicable();
-                 cout << "borne non revendicable" << endl;
+                 Affichage::borneNonRevendicable();
              }
              arreter = Interaction::arreterRevendication(); // Est-ce que le joueur veut essayer de revendiquer d'autres bornes
          }

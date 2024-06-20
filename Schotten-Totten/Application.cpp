@@ -71,6 +71,14 @@ void Application::lancerApplication()
 			break;
 		}
 
+		case 3: {
+			JeuClassiqueExperts& jeu = JeuClassiqueExperts::getInstance();
+			demarrerJeu(jeu);
+			jouerPartie(jeu);
+			terminerJeu(jeu);
+			break;
+		}
+
 		default: {
 			throw runtime_error("Choix de mode de jeu invalide, vérifier Interaction::demanderModeJeu()");
 			break;

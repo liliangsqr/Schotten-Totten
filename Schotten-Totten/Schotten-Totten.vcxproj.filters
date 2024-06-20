@@ -132,6 +132,9 @@
     <ClCompile Include="Regles.cpp">
       <Filter>Fichiers sources\Fonctionnement</Filter>
     </ClCompile>
+    <ClCompile Include="JeuClassiqueExperts.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carte.h">
@@ -202,6 +205,9 @@
     </ClInclude>
     <ClInclude Include="OnTop.h">
       <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
+    </ClInclude>
+    <ClInclude Include="JeuClassiqueExperts.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
