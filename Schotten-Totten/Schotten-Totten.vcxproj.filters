@@ -37,6 +37,12 @@
     <Filter Include="Fichiers d%27en-tête\Fichier Tas sans lien">
       <UniqueIdentifier>{8290dd1f-b12c-46fb-b4e5-41cfaee170bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fonctionnement">
+      <UniqueIdentifier>{fedcad53-538b-47f3-885b-6a62a2edd36c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fonctionnement">
+      <UniqueIdentifier>{8f50ab20-9be5-4434-ad52-84e496a1406f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Schotten-Totten.cpp">
@@ -87,44 +93,44 @@
     <ClCompile Include="Borne.cpp">
       <Filter>Fichiers sources\Fichier Borne</Filter>
     </ClCompile>
-    <ClCompile Include="JeuClassique.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Combinaison.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Frontiere.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Jeu.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="JeuTactique.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="OnTop.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="PiocheTactique.cpp">
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
     </ClCompile>
     <ClCompile Include="Pioche.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
+    </ClCompile>
+    <ClCompile Include="OnTop.cpp">
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
     </ClCompile>
     <ClCompile Include="Affichage.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Regles.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Interaction.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fonctionnement</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fonctionnement</Filter>
     </ClCompile>
-    <ClCompile Include="PiocheTactique.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="Combinaison.cpp">
+      <Filter>Fichiers sources\Fonctionnement</Filter>
     </ClCompile>
     <ClCompile Include="Defausse.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Fichiers Tas sans liens</Filter>
+    </ClCompile>
+    <ClCompile Include="Frontiere.cpp">
+      <Filter>Fichiers sources\Fichier Borne</Filter>
+    </ClCompile>
+    <ClCompile Include="Jeu.cpp">
+      <Filter>Fichiers sources\Fonctionnement</Filter>
+    </ClCompile>
+    <ClCompile Include="Interaction.cpp">
+      <Filter>Fichiers sources\Fonctionnement</Filter>
+    </ClCompile>
+    <ClCompile Include="JeuClassique.cpp">
+      <Filter>Fichiers sources\Fonctionnement</Filter>
+    </ClCompile>
+    <ClCompile Include="JeuTactique.cpp">
+      <Filter>Fichiers sources\Fonctionnement</Filter>
+    </ClCompile>
+    <ClCompile Include="Regles.cpp">
+      <Filter>Fichiers sources\Fonctionnement</Filter>
     </ClCompile>
     <ClCompile Include="JeuClassiqueExperts.cpp">
       <Filter>Fichiers sources</Filter>
@@ -161,44 +167,44 @@
     <ClInclude Include="Borne.h">
       <Filter>Fichiers d%27en-tête\Fichiers Borne</Filter>
     </ClInclude>
+    <ClInclude Include="Interaction.h">
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
+    </ClInclude>
     <ClInclude Include="JeuClassique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Combinaison.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Frontiere.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
     </ClInclude>
     <ClInclude Include="Jeu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
     </ClInclude>
     <ClInclude Include="JeuTactique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="OnTop.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Pioche.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Affichage.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
     </ClInclude>
     <ClInclude Include="Regles.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Interaction.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
     </ClInclude>
-    <ClInclude Include="PiocheTactique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Combinaison.h">
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
+    </ClInclude>
+    <ClInclude Include="Affichage.h">
+      <Filter>Fichiers d%27en-tête\Fonctionnement</Filter>
     </ClInclude>
     <ClInclude Include="Defausse.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
+    </ClInclude>
+    <ClInclude Include="Frontiere.h">
+      <Filter>Fichiers d%27en-tête\Fichiers Borne</Filter>
+    </ClInclude>
+    <ClInclude Include="Pioche.h">
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
+    </ClInclude>
+    <ClInclude Include="PiocheTactique.h">
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
+    </ClInclude>
+    <ClInclude Include="OnTop.h">
+      <Filter>Fichiers d%27en-tête\Fichier Tas sans lien</Filter>
     </ClInclude>
     <ClInclude Include="JeuClassiqueExperts.h">
       <Filter>Fichiers d%27en-tête</Filter>

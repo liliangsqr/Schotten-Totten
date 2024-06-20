@@ -32,7 +32,7 @@ public:
 
 	void static ChoixMode();
 
-	void static demarrerJeu() { cout << "Distribution aléatoire du paquet" << endl; }
+	void static demarrerJeu() { cout << "Distribution al\202atoire du paquet" << endl; }
 
 	void static Toursjoueur(const shared_ptr<Joueur>& Joueur);
 
@@ -52,11 +52,11 @@ public:
 
 	void static demanderCarte() {cout << "Poser la carte : ";};
 
-	void static demanderPhaseRevendication(){cout << "Voulez-vous revendiquer une borne ?\n 1: Oui\n 2: Non" ;}
+	void static demanderPhaseRevendication(){cout << "Voulez-vous revendiquer une borne ? (1) Oui (2) Non:" ;}
 
 	void static demanderBorneARevendiquer() {cout << "Revendiquer la borne : "; }
 
-	void static demanderArretRevendication(){ cout << "Voulez-vous faire une autre revendication ? \n 1: Non\n 2: Oui";}
+	void static demanderArretRevendication(){ cout << "Voulez-vous faire une autre revendication ? (1)Non (2)Oui :";}
 
 	void static entierNonValide() { cout << "Veuillez entrer un entier valide." << endl; }
 	
