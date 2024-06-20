@@ -12,9 +12,9 @@ public:
         return instance;
     }
 
-    void jouerTour(std::shared_ptr<Joueur>& joueur) override;
+    void jouerTour(shared_ptr<Joueur>& joueur);
 
-private:
+protected:
     JeuClassiqueExperts() = default;
     JeuClassiqueExperts(const JeuClassiqueExperts&) = delete;
     JeuClassiqueExperts& operator=(const JeuClassiqueExperts&) = delete;

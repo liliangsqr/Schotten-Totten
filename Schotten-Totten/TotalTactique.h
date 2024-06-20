@@ -5,6 +5,7 @@
 #include <memory>
 
 // Représente tout le paquet de cartes pour le mode tactique, ne sert qu'à distribuer aléatoirement les cartes en début de partie
+// /!\  Attention la classe TotalTactique est fausse pour l'instant, ne pas utiliser telle quelle
 class TotalTactique : public Total
 {
 	// Attributs
