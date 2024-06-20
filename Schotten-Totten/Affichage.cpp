@@ -69,7 +69,7 @@ string Affichage::Couleurs(unsigned int carteCouleurs)
 
 	switch (carteCouleurs+1) //!\\ Les cartes ont une couleur en unsigned int. la classe Ennum.h nous permet de savoir quel ui correspond a quelle couleur;
 	{
-	case 0: return ""; break;
+	case 0: return ""; break; //carte tactique en blanc
 	case 1:return VERT; break;
 	case 2:return BLEU; break;
 	case 3:return ROUGE; break;
