@@ -39,20 +39,36 @@ void Affichage::board(Jeu& jeux)
 		{
 			if (position == 1)
 			{
+				if (jeux.getFrontiere().getBorne(i).getProprietaire() == joueur) {
+					cout << "|Borne " << i + 1 << "|";
+				}
 				cout <<"	"<< joueur.get()->getNom() << " ->";
 				for (const auto& carte : jeux.getFrontiere().getBorne(i).getTasBorne(joueur).getCartes())
 				{
 					Affichage::carteClan(carte);
 
 				}
-				cout << "|Borne " << i + 1 << "|";
+				if (jeux.getFrontiere().getBorne(i).getProprietaire() == joueur) {
+					cout <<"|";
+				}
+				if (jeux.getFrontiere().getBorne(i).getProprietaire() == nullptr) {
+					cout << "|Borne " << i + 1 << "|";
+				}
 			}
 			if (position == 2) {
+
 				for (const auto& carte : jeux.getFrontiere().getBorne(i).getTasBorne(joueur).getCartes())
 				{
 					Affichage::carteClan(carte);
 				}
-				cout << "<- " << joueur.get()->getNom() << endl;
+
+				if (jeux.getFrontiere().getBorne(i).getProprietaire() == joueur) {
+					cout << "|Borne " << i + 1 << "|" << endl;
+				}
+				else {
+					cout << "<- " << joueur.get()->getNom() << endl;
+
+				}
 
 			}
 			position++;
