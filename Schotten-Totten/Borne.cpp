@@ -22,9 +22,10 @@ bool Borne::estRevendicableParJoueur(shared_ptr<Joueur> joueur) const
 
     // Création des combinaisons
     map<shared_ptr<Joueur>, Combinaison> combinaisons;
-    for (const auto& [joueur, tas] : tasJoueurs) {
+    for (const auto& itMap : tasJoueurs) {
+        shared_ptr<Joueur> joueur = itMap.first;
         Combinaison comb;
-        for (const auto& carte : tas.getCartes()) {
+        for (const auto& carte : itMap.second.getCartes()) {
             comb.ajouterCarte(*carte);
         }
         combinaisons[joueur] = comb;
@@ -35,7 +36,9 @@ bool Borne::estRevendicableParJoueur(shared_ptr<Joueur> joueur) const
     CombinaisonType meilleureCombinaison = CombinaisonType::Aucune;
     unsigned int meilleureSomme = 0;
 
-    for (const auto& [joueur, comb] : combinaisons) {
+    for (auto it = combinaisons.begin(); it != combinaisons.end(); ++it) {
+        shared_ptr<Joueur> joueur = it->first;
+        Combinaison comb = it->second;
         CombinaisonType type = comb.getMeilleureCombinaison();
         unsigned int somme = comb.getValSomme();
 
