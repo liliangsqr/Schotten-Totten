@@ -58,6 +58,14 @@ public:
 
 	void static demanderArretRevendication(){ cout << "Voulez-vous faire une autre revendication ? \n 1: Non\n 2: Oui";}
 
+	void static entierNonValide() { cout << "Veuillez entrer un entier valide." << endl; }
+	
+	void static optionExistePas() { cout << "Cette option n'existe pas." << endl; }
+
+	void static borneRevendiquee() { cout << "borne revendiquee" << endl; }
+
+	void static borneNonRevendicable() { cout << "borne non revendicable" << endl; }
+
 	void static staticclearConsole() {
 		#ifdef _WIN32
 				std::system("cls");

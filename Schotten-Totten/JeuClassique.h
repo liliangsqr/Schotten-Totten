@@ -12,6 +12,10 @@
 // Jeu classique, gère tout le fonctionnement interne des mécaniques du jeu et les met à disposition pour être utilisées dans Application
 class JeuClassique : public Jeu
 {
+protected:
+	// Empêche toute instatiation en dehors de la classe
+	JeuClassique();
+
 private:
 	TotalClassique total;
 	// vector<shared_ptr<Joueur>> totalJoueurs;
@@ -19,9 +23,7 @@ private:
 	// Pioche pioche;
 
 
-	// Empêche toute instatiation en dehors de la classe
-	JeuClassique();
-
+private :
 	// Méthodes d'initialisation
 
 	// Crée les joueurs, les référence avec des shared_ptr, et les ajoute dans totalJoueurs

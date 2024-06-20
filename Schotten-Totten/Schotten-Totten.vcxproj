@@ -141,6 +141,7 @@
     <ClCompile Include="Interaction.cpp" />
     <ClCompile Include="JeuClassique.cpp" />
     <ClCompile Include="Jeu.cpp" />
+    <ClCompile Include="JeuClassiqueExperts.cpp" />
     <ClCompile Include="JeuTactique.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Interaction.h" />
     <ClInclude Include="JeuClassique.h" />
     <ClInclude Include="Jeu.h" />
+    <ClInclude Include="JeuClassiqueExperts.h" />
     <ClInclude Include="JeuTactique.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Main.h" />

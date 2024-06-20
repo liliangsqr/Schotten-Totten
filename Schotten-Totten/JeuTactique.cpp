@@ -164,11 +164,11 @@ void JeuTactique::jouerTour(std::shared_ptr<Joueur>& joueur)
             if (borneEstRevendicableParJoueur(indexBorneARevendiquer, joueur))
             {
                 revendiquerBorne(indexBorneARevendiquer, joueur);
-                std::cout << "Borne revendiquee" << std::endl;
+                Affichage::borneRevendiquee();
             }
             else
             {
-                std::cout << "Borne non revendicable" << std::endl;
+                Affichage::borneNonRevendicable();
             }
             arreter = Interaction::arreterRevendication();
         }
